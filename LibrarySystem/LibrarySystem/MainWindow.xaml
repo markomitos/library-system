@@ -1,25 +1,25 @@
-﻿<Window x:Name="loginWindow" x:Class="LibrarySystem.MainWindow"
+<Window x:Name="loginWindow" x:Class="LibrarySystem.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystem"
         xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:utils="clr-namespace:LibrarySystem.Utils"
         mc:Ignorable="d"
         Title="Library" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <b:Interaction.Triggers>
-        <b:EventTrigger EventName="KeyDown">
-            <b:InvokeCommandAction Command="{Binding KeyDownCommand}" />
-        </b:EventTrigger>
-    </b:Interaction.Triggers>
+    
     <Grid>
-        <Label x:Name="loginLabel" Content="Login form" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" Width="98" FontSize="36"/>
-        <TextBox x:Name="usernameTextbox" Text="{Binding Username}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="45" Margin="0,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" FontSize="20" />
-        <PasswordBox x:Name="passwordTextbox" Password="{Binding Password, Mode=TwoWay}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="45" Margin="0,218,0,0" VerticalAlignment="Top" Width="422" FontSize="20" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="loginLabel" Content="Login form" HorizontalAlignment="Left" Margin="351,38,0,0" VerticalAlignment="Top" Width="98" FontSize="36"/>
+        <TextBox x:Name="usernameTextbox" Text="{Binding Username}" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="45" Margin="189,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="422" FontSize="20" />
+        <PasswordBox x:Name="passwordTextbox" utils:PasswordBoxHelper.BindPassword="True" utils:PasswordBoxHelper.Password="{Binding Password, Mode=TwoWay}" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="45" Margin="189,218,0,0" VerticalAlignment="Top" Width="422" FontSize="20" />
         <Label x:Name="usernameLabel" Content="Username" HorizontalAlignment="Left" Margin="189,106,0,0" VerticalAlignment="Top" Width="159" FontSize="14" Opacity="0.8"/>
         <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="189,189,0,0" VerticalAlignment="Top" Width="159" FontSize="14" Opacity="0.8"/>
-        <Button x:Name="loginBtn" Command="{Binding LogIn}"  Content="Log in" HorizontalAlignment="Center" Height="49" Margin="0,297,0,0" VerticalAlignment="Top" Width="120" FontSize="20" Background="#FF2498E4" BorderBrush="#FF5591B7" Foreground="White" Cursor="Hand"/>
-        <Label x:Name="errorLabel" Content="incorrect username or password" HorizontalAlignment="Left" Margin="403,263,0,0" VerticalAlignment="Top" Foreground="#FFD82828" FontSize="14" Visibility="Hidden"/>
+        <Button x:Name="loginBtn" Command="{Binding LogIn}"  Content="Log in" HorizontalAlignment="Left" Height="49" Margin="340,297,0,0" VerticalAlignment="Top" Width="120" FontSize="20"  Background="#FF2498E4" BorderBrush="#FF5591B7" Foreground="White" Cursor="Hand"/>
 
     </Grid>
 </Window>

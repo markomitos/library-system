@@ -8,14 +8,16 @@ using System.Threading.Tasks;
 using static LibrarySystem.Users.Account;
 using System.Windows.Input;
 using System.Windows;
+using LibrarySystem.MainCommands;
 using LibrarySystem.Utils;
 using ZdravoCorp.MainUI.NotificationDialogs;
+using ZdravoCorp.MainUI.NotificationDialogs.Presentation;
 
 namespace LibrarySystem
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private readonly AccountService _accountService;
+        
         private readonly MainWindow _mainWindow;
 
         private string? _username;
@@ -32,6 +34,14 @@ namespace LibrarySystem
 
         private ICommand? _logIn { get; set; }
 
+        public ICommand LogIn
+        {
+            get
+            {
+                return _logIn ??= new LogInCommand(this, _mainWindow);
+            }
+        }
+
         private string? _password;
         public string? Password
         {
@@ -45,7 +55,6 @@ namespace LibrarySystem
 
         public MainWindowViewModel(MainWindow mainWindow)
         {
-            _accountService = new(new AccountRepository());
             _mainWindow = mainWindow;
         }
 
