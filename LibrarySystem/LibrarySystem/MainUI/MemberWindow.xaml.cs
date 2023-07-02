@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibrarySystem.MainUI.ViewModels;
 
 namespace LibrarySystem.MainUI
 {
@@ -21,6 +22,7 @@ namespace LibrarySystem.MainUI
     {
         public MemberWindow()
         {
+            DataContext = new MemberWindowViewModel(this);
             InitializeComponent();
         }
     }

@@ -1,1 +1,112 @@
-﻿
+﻿[
+  {
+    "isEmailWarning": true,
+    "Type": "Student",
+    "JMBG": "123456789",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Address": "123 Main Street",
+    "Phone": "123-456-7890",
+    "Email": "john.doe@example.com",
+    "Username": "michael_jones"
+  },
+  {
+    "isEmailWarning": false,
+    "Type": "Pupil",
+    "JMBG": "2345678901234",
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "Address": "456 Elm Street",
+    "Phone": "987-654-3210",
+    "Email": "jane.smith@example.com",
+    "Username": "janesmith"
+  },
+  {
+    "isEmailWarning": true,
+    "Type": "Student",
+    "JMBG": "3456789012345",
+    "FirstName": "Michael",
+    "LastName": "Johnson",
+    "Address": "789 Oak Street",
+    "Phone": "555-123-4567",
+    "Email": "michael.johnson@example.com",
+    "Username": "michaeljohnson"
+  },
+  {
+    "isEmailWarning": false,
+    "Type": "Employer",
+    "JMBG": "4567890123456",
+    "FirstName": "Emily",
+    "LastName": "Brown",
+    "Address": "321 Pine Street",
+    "Phone": "222-333-4444",
+    "Email": "emily.brown@example.com",
+    "Username": "emilybrown"
+  },
+  {
+    "isEmailWarning": true,
+    "Type": "Pensioner",
+    "JMBG": "5678901234567",
+    "FirstName": "David",
+    "LastName": "Wilson",
+    "Address": "654 Maple Street",
+    "Phone": "777-888-9999",
+    "Email": "david.wilson@example.com",
+    "Username": "davidwilson"
+  },
+  {
+    "isEmailWarning": false,
+    "Type": "Child",
+    "JMBG": "6789012345678",
+    "FirstName": "Olivia",
+    "LastName": "Taylor",
+    "Address": "987 Birch Street",
+    "Phone": "444-555-6666",
+    "Email": "olivia.taylor@example.com",
+    "Username": "oliviataylor"
+  },
+  {
+    "isEmailWarning": true,
+    "Type": "Pupil",
+    "JMBG": "7890123456789",
+    "FirstName": "William",
+    "LastName": "Anderson",
+    "Address": "789 Oak Street",
+    "Phone": "111-222-3333",
+    "Email": "william.anderson@example.com",
+    "Username": "williamanderson"
+  },
+  {
+    "isEmailWarning": false,
+    "Type": "Student",
+    "JMBG": "8901234567890",
+    "FirstName": "Sophia",
+    "LastName": "Clark",
+    "Address": "654 Maple Street",
+    "Phone": "888-999-0000",
+    "Email": "sophia.clark@example.com",
+    "Username": "sophiaclark"
+  },
+  {
+    "isEmailWarning": true,
+    "Type": "Employer",
+    "JMBG": "9012345678901",
+    "FirstName": "James",
+    "LastName": "White",
+    "Address": "789 Oak Street",
+    "Phone": "999-888-7777",
+    "Email": "james.white@example.com",
+    "Username": "jameswhite"
+  },
+  {
+    "isEmailWarning": false,
+    "Type": "Pensioner",
+    "JMBG": "0123456789012",
+    "FirstName": "Lily",
+    "LastName": "Martinez",
+    "Address": "654 Maple Street",
+    "Phone": "666-777-8888",
+    "Email": "lily.martinez@example.com",
+    "Username": "lilymartinez"
+  }
+]
