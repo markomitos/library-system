@@ -15,5 +15,17 @@ namespace LibrarySystem.Users
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Username { get; set; }
+
+        public User(string jmbg, string firstName, string lastName, string adress, string phone, string email, string username)
+        {
+            Jmbg = jmbg;
+            FirstName = firstName;
+            LastName = lastName;
+            Adress = adress;
+            Phone = phone;
+            Email = email;
+            Username = username;
+        }
+
     }
 }
