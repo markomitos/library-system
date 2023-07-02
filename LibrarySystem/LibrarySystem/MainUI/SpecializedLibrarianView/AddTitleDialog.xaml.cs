@@ -21,6 +21,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
     {
         public AddTitleDialog()
         {
+            DataContext = new AddTitleDialogViewModel(this);
             InitializeComponent();
         }
     }

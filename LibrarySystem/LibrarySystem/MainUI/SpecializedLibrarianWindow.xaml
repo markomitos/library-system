@@ -5,22 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystem.MainUI"
         mc:Ignorable="d"
-        Title="SpecializedLibrarianWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="SpecializedLibrarianWindow" Height="550" Width="1092" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="addButton" Content="Add " HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="89" Height="28" FontSize="18" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
-        <DataGrid x:Name="appointmentsDataGrid" ItemsSource="{Binding Titles}" Margin="12,43,7,39" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" Height="NaN">
+        <Button x:Name="addButton" Command="{Binding ShowAddTitleDialogCommand}"  Content="Add title" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Width="89" Height="28" FontSize="18" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <DataGrid x:Name="titlesDataGrid" ItemsSource="{Binding Titles}" Margin="12,40,10,295" CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" AlternatingRowBackground="LightGray">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Start" Binding="{Binding Language}"></DataGridTextColumn>
-                <DataGridTextColumn Header="End" Binding="{Binding UDK}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Doctor username" Binding="{Binding Genre}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Patient username" Binding="{Binding Authors}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Language" Binding="{Binding Language}"></DataGridTextColumn>
+                <DataGridTextColumn Header="UDK" Binding="{Binding UDK}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Genre" Binding="{Binding Genre}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Authors">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ListBox ItemsSource="{Binding Authors}"></ListBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 
         <Label x:Name="loggedUsernameLabel" Content="USERNAME" HorizontalAlignment="Left" Margin="90,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
         <Label x:Name="loggedLabel" Content="Logged in:" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
         <Button x:Name="logOutButton" Content="Log out" HorizontalAlignment="Right" Height="32" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="106" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" Cursor="Hand"/>
-        <Button x:Name="chooseBookButton" Content="Choose book" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top" Width="158" Height="28" FontSize="18" Background="#009FFF" Foreground="White" Cursor="Hand"/>
+        <DataGrid x:Name="BooksDataGrid" ItemsSource="{Binding Books}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="12,279,594,39">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Published" Binding="{Binding Published}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Covering" Binding="{Binding Covering}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Format" Binding="{Binding Format}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Title UDK" Binding="{Binding TitleUDK}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Publisher Name" Binding="{Binding PublisherName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Titles" HorizontalAlignment="Left" Margin="19,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Books" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center"/>
+        <DataGrid x:Name="CopiesDataGrid" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,276,10,42">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Header="Is damaged" Binding="{Binding IsDamaged}"></DataGridCheckBoxColumn>
+                <DataGridTextColumn Header="Book ISBN" Binding="{Binding ISBN}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

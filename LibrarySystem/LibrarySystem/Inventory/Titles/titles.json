@@ -1,10 +1,112 @@
-{
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
-}
+[
+  {
+    "Name": "Robinzon Kruso",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Prezivljavanje",
+    "Authors": [
+      "1",
+      "2"
+    ],
+    "Books": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "Robinzon Kruso",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Prezivljavanje",
+    "Authors": [
+      "1",
+      "2"
+    ],
+    "Books": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "Robinzon Kruso",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Prezivljavanje",
+    "Authors": [
+      "1",
+      "2"
+    ],
+    "Books": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "Robinzon Kruso",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Prezivljavanje",
+    "Authors": [
+      "1",
+      "2"
+    ],
+    "Books": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "Robinzon Kruso",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Prezivljavanje",
+    "Authors": [
+      "1",
+      "2"
+    ],
+    "Books": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "Robinzon Kruso",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Prezivljavanje",
+    "Authors": [
+      "1",
+      "2"
+    ],
+    "Books": [
+      1,
+      2
+    ]
+  },
+  {
+    "Name": "Little prince",
+    "Language": "Serbian",
+    "UDK": 3,
+    "Genre": "Sci-fi",
+    "Authors": [],
+    "Books": []
+  },
+  {
+    "Name": "asd",
+    "Language": "asd",
+    "UDK": 5,
+    "Genre": "asd",
+    "Authors": [],
+    "Books": []
+  },
+  {
+    "Name": "Hugh Jock",
+    "Language": "English",
+    "UDK": 6,
+    "Genre": "Horror",
+    "Authors": [
+      "2"
+    ],
+    "Books": []
+  }
+]
