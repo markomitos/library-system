@@ -1,43 +1,42 @@
 [
-    {
-      "name": "Book 1",
-      "language": "English",
-      "udk": 123456,
-      "genre": "Fiction",
-      "authors": [ "Author 1" ],
-      "books": [ "Book 1-1", "Book 1-2" ]
-    },
-    {
-      "name": "Book 2",
-      "language": "Spanish",
-      "udk": 789012,
-      "genre": "Mystery",
-      "authors": [ "Author 2", "Author 3" ],
-      "books": [ "Book 2-1" ]
-    },
-    {
-      "name": "Book 3",
-      "language": "French",
-      "udk": 345678,
-      "genre": "Romance",
-      "authors": [ "Author 4" ],
-      "books": [ "Book 3-1", "Book 3-2", "Book 3-3" ]
-    },
-    {
-      "name": "Book 4",
-      "language": "German",
-      "udk": 901234,
-      "genre": "Thriller",
-      "authors": [ "Author 5", "Author 6" ],
-      "books": [ "Book 4-1" ]
-    },
-    {
-      "name": "Book 5",
-      "language": "Italian",
-      "udk": 567890,
-      "genre": "Drama",
-      "authors": [ "Author 7" ],
-      "books": [ "Book 5-1", "Book 5-2", "Book 5-3", "Book 5-4" ]
-    }
- ]
-
+  {
+    "name": "Title 1",
+    "language": "English",
+    "udk": 123456,
+    "genre": "Fiction",
+    "authors": [ "Author 1" ],
+    "books": [ 1, 2 ]
+  },
+  {
+    "name": "Title 2",
+    "language": "Spanish",
+    "udk": 789012,
+    "genre": "Mystery",
+    "authors": [ "Author 2", "Author 3" ],
+    "books": [ 3, 4, 5 ]
+  },
+  {
+    "name": "Title 3",
+    "language": "French",
+    "udk": 345678,
+    "genre": "Romance",
+    "authors": [ "Author 4" ],
+    "books": [ 6 ]
+  },
+  {
+    "name": "Title 4",
+    "language": "German",
+    "udk": 901234,
+    "genre": "Thriller",
+    "authors": [ "Author 5", "Author 6" ],
+    "books": []
+  },
+  {
+    "name": "Title 5",
+    "language": "Italian",
+    "udk": 567890,
+    "genre": "Drama",
+    "authors": [ "Author 7" ],
+    "books": [ 2, 5 ]
+  }
+]

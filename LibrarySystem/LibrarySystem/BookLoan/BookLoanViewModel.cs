@@ -16,7 +16,16 @@ namespace LibrarySystem.BookLoan
 {
     public class BookLoanViewModel : ViewModelBase
     {
-        public ObservableCollection<Title> Titles { get; set; }
+        private ObservableCollection<Title> _titles;
+        public ObservableCollection<Title> Titles
+        {
+            get { return _titles; }
+            set
+            {
+                _titles = value;
+                OnPropertyChanged(nameof(Titles));
+            }
+        }
 
         private ObservableCollection<Book> _books;
         public ObservableCollection<Book> Books
@@ -51,6 +60,39 @@ namespace LibrarySystem.BookLoan
             }
         }
 
+        private Title _selectedTitle;
+        public Title SelectedTitle
+        {
+            get { return _selectedTitle; }
+            set
+            {
+                _selectedTitle = value;
+                OnPropertyChanged(nameof(SelectedTitle));
+            }
+        }
+
+        private Book _selectedBook;
+        public Book SelectedBook
+        {
+            get { return _selectedBook; }
+            set
+            {
+                _selectedBook = value;
+                OnPropertyChanged(nameof(SelectedBook));
+            }
+        }
+
+        private Copy _selectedCopy;
+        public Copy SelectedCopy
+        {
+            get { return _selectedCopy; }
+            set
+            {
+                _selectedCopy = value;
+                OnPropertyChanged(nameof(SelectedCopy));
+            }
+        }
+
 
 
         public ICommand LoadBooksCommand { get; set; }
@@ -62,6 +104,7 @@ namespace LibrarySystem.BookLoan
         public BookLoanViewModel()
         {
             LoadData();
+            LoadBooksCommand = new LoadBooksCommand(this);
         }
 
         public void LoadData()

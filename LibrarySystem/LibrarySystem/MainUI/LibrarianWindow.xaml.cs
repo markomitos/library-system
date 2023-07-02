@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LibrarySystem.BookLoan;
+using LibrarySystem.Inventory.Books;
+using LibrarySystem.Inventory.Copies;
+using LibrarySystem.Inventory.Titles;
 
 namespace LibrarySystem.MainUI
 {
@@ -24,6 +27,33 @@ namespace LibrarySystem.MainUI
         {
             InitializeComponent();
             DataContext = new BookLoanViewModel();
+        }
+
+        private void Titles_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Title SelectedTitle)
+            {
+                var viewModel = DataContext as BookLoanViewModel;
+                viewModel.SelectedTitle = SelectedTitle;
+            }
+        }
+
+        private void Books_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Book SelectedBook)
+            {
+                var viewModel = DataContext as BookLoanViewModel;
+                viewModel.SelectedBook = SelectedBook;
+            }
+        }
+
+        private void Copies_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Copy SelectedCopy)
+            {
+                var viewModel = DataContext as BookLoanViewModel;
+                viewModel.SelectedCopy = SelectedCopy;
+            }
         }
 
     }
