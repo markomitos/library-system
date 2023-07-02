@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using LibrarySystem.Reservations.Commands;
 using LibrarySystem.Utils;
 
 namespace LibrarySystem.MainUI.ViewModels
 {
-    internal class MemberWindowViewModel : ViewModelBase
+    internal class CancelReservationViewModel : ViewModelBase
     {
         private string? _loggedUser;
 
@@ -28,15 +29,24 @@ namespace LibrarySystem.MainUI.ViewModels
         {
             get
             {
-                return _logoutCommand ??= new LogoutCommand(_memberWindow);
+                return _logoutCommand ??= new LogoutCommand(_cancelReservationView);
+            }
+        }
+        private ICommand? _backCommand { get; set; }
+
+        public ICommand BackCommand
+        {
+            get
+            {
+                return _backCommand ??= new BackToMemberWindowCommand(_cancelReservationView);
             }
         }
 
-        private readonly MemberWindow _memberWindow;
+        private readonly CancelReservationView _cancelReservationView;
         
-        public MemberWindowViewModel(MemberWindow memberWindow)
+        public CancelReservationViewModel(CancelReservationView cancelReservationView)
         {
-            _memberWindow = memberWindow;
+            _cancelReservationView = cancelReservationView;
             LoggedUser = Globals.LoggedUser!.Username;
         }
     }
