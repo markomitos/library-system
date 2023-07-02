@@ -38,5 +38,10 @@ namespace LibrarySystem.Inventory.Titles
         {
             return Titles.FirstOrDefault(title => title.UDK == udk);
         }
+
+        public List<Title> GetAll()
+        {
+            return Titles;
+        }
     }
 }

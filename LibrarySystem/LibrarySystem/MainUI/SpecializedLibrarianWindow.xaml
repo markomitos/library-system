@@ -8,16 +8,13 @@
         Title="SpecializedLibrarianWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Button x:Name="addButton" Content="Add " HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="89" Height="28" FontSize="18" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
-        <DataGrid x:Name="appointmentsDataGrid" ItemsSource="{Binding Appointments}" Margin="12,43,7,39" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" Height="NaN">
+        <DataGrid x:Name="appointmentsDataGrid" ItemsSource="{Binding Titles}" Margin="12,43,7,39" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" Height="NaN">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Start" Binding="{Binding TimeSlot.Start}"></DataGridTextColumn>
-                <DataGridTextColumn Header="End" Binding="{Binding TimeSlot.End}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Doctor username" Binding="{Binding DoctorUsername}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Patient username" Binding="{Binding PatientUsername}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Type" Binding="{Binding Type}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Room name" Binding="{Binding RoomName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Start" Binding="{Binding Language}"></DataGridTextColumn>
+                <DataGridTextColumn Header="End" Binding="{Binding UDK}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor username" Binding="{Binding Genre}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Patient username" Binding="{Binding Authors}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 
