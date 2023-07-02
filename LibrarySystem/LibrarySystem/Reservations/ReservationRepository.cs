@@ -71,5 +71,24 @@ namespace LibrarySystem.Reservations
             }
             Save();
         }
+
+        public void ApproveNextInQueueForBook(int reservationTitleUdk, int? reservationCopyId)
+        {
+            DateTime latestReservationDate = DateTime.MaxValue;
+            Reservation nextReservationInQueue = new Reservation();
+            foreach (Reservation reservation in Reservations)
+            {
+                if (reservation.TitleUDK == reservationTitleUdk && reservation.State == Reservation.ReservationState.Waiting && reservation.ReservationDate < latestReservationDate )
+                {
+                    latestReservationDate = reservation.ReservationDate;
+                    nextReservationInQueue = reservation;
+                }
+            }
+
+            nextReservationInQueue.State = Reservation.ReservationState.Approved;
+            nextReservationInQueue.ApprovalDate = DateTime.Now;
+            nextReservationInQueue.CopyId = reservationCopyId;
+            Save();
+        }
     }
 }
