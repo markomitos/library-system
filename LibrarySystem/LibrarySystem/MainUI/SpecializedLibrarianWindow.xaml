@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="SpecializedLibrarianWindow" Height="550" Width="1092" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button x:Name="addButton" Command="{Binding ShowAddTitleDialogCommand}"  Content="Add title" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Width="89" Height="28" FontSize="18" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
         <DataGrid x:Name="titlesDataGrid" ItemsSource="{Binding Titles}" Margin="12,40,10,295" CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" AlternatingRowBackground="LightGray">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
@@ -49,5 +48,7 @@
                 <DataGridTextColumn Header="Book ISBN" Binding="{Binding ISBN}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="addBookButton" Command="{Binding ShowAddBookDialogCommand}"  Content="Add book" HorizontalAlignment="Left" Margin="88,0,0,0" VerticalAlignment="Center" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="addTitleButton" Command="{Binding ShowAddTitleDialogCommand}"  Content="Add title" HorizontalAlignment="Left" Margin="88,18,0,0" VerticalAlignment="Top" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
     </Grid>
 </Window>
