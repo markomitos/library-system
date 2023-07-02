@@ -7,25 +7,25 @@
   },
   {
     "Id": 2,
-    "Status": 1,
+    "Status": 0,
     "Price": 15,
     "IsDamaged": false
   },
   {
     "Id": 3,
-    "Status": 0,
+    "Status": 1,
     "Price": 25,
     "IsDamaged": false
   },
   {
     "Id": 4,
-    "Status": 0,
+    "Status": 1,
     "Price": 18,
     "IsDamaged": false
   },
   {
     "Id": 5,
-    "Status": 1,
+    "Status": 0,
     "Price": 30,
     "IsDamaged": true
   },

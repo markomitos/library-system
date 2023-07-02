@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Documents;
+using LibrarySystem.BookBorrowings.ViewModel;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
 using LibrarySystem.NotificationDialogs;
-using LibrarySystem.Users.Accounts;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.BookLoan
+namespace LibrarySystem.BookBorrowings.Commands
 {
     internal class LoadBooksCommand : CommandBase
     {
         private BookBorrowingViewModel _viewModel;
-        private BookService _bookService; 
+        private BookService _bookService;
+        private TitleService _titleService;
 
         public LoadBooksCommand(BookBorrowingViewModel viewModel)
         {
             _viewModel = viewModel;
             _bookService = new BookService(new BookRepository());
+            _titleService = new TitleService(new TitleRepository());
         }
 
 
@@ -29,15 +29,16 @@ namespace LibrarySystem.BookLoan
         {
             try
             {
-                List<Book> books = _bookService.GetBooksByIsbn(_viewModel.SelectedTitle.Books);
+                Title title = _titleService.Get(_viewModel.SelectedTitle.UDK);
+                List<Book> books = _bookService.GetBooksByIsbn(title.Books);
 
                 if (books.Count == 0) throw new Exception("There are no books for chosen title! ");
-                _viewModel.Books = new ObservableCollection<Book>(books);
+
+                _viewModel.LoadBooks(books);
             }
             catch (Exception ex)
             {
                 Notification.ShowErrorDialog(ex.Message);
-                _viewModel.Books = new ObservableCollection<Book>(new List<Book>());
             }
             
         }

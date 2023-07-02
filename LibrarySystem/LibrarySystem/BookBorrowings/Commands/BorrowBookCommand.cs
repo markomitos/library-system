@@ -1,19 +1,12 @@
-﻿using LibrarySystem.Inventory.Books;
-using LibrarySystem.Inventory.Copies;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+﻿using System;
 using LibrarySystem.BookBorrowings.Borrowing;
+using LibrarySystem.BookBorrowings.ViewModel;
+using LibrarySystem.Inventory.Copies;
 using LibrarySystem.MainUI;
 using LibrarySystem.NotificationDialogs;
-using LibrarySystem.Users.Members;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.BookLoan
+namespace LibrarySystem.BookBorrowings.Commands
 {
     internal class BorrowBookCommand : CommandBase
     {
