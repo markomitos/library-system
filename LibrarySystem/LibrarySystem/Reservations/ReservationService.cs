@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,11 @@ namespace LibrarySystem.Reservations
         public void Save()
         {
             _reservationRepository.Save();
+        }
+
+        public ObservableCollection<Reservation> GetNotFinishedReservations()
+        {
+            return _reservationRepository.GetNotFinishedReservations();
         }
     }
 }
