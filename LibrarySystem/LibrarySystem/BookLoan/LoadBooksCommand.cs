@@ -27,10 +27,8 @@ namespace LibrarySystem.BookLoan
 
         public override void Execute(object? parameter)
         {
-
+            Console.WriteLine(_viewModel.SelectedTitle.Genre);
             _viewModel.Books = new ObservableCollection<Book>(_bookService.GetBooksByIsbn(_viewModel.SelectedTitle.Books));
-
-
         }
 
 

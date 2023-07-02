@@ -32,5 +32,10 @@ namespace LibrarySystem.Inventory.Copies
             return _bookRepository.GetBooksByIsbn(isbns);
         }
 
+        public List<Book> GetAllBooks()
+        {
+            return _bookRepository.GetAllBooks();
+        }
+
     }
 }
