@@ -24,10 +24,10 @@ namespace LibrarySystem.Inventory.Books
         public BookFormat Format { get; set; }
         public int TitleUDK { get; set; }
         public string PublisherName { get; set; }
-        public List<string> Copies { get; set; }
+        public List<int> Copies { get; set; }
 
         public Book(int isbn, DateTime published, int price, string covering, BookFormat format, int titleUDK,
-            string publisherName, List<string> copies)
+            string publisherName, List<int> copies)
         {
             ISBN = isbn;
             Published = published;

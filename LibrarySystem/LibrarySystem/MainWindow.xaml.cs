@@ -27,6 +27,5 @@ namespace LibrarySystem
             DataContext = new MainWindowViewModel(this);
             InitializeComponent();
         }
-
     }
 }

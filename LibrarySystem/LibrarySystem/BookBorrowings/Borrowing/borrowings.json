@@ -1,0 +1,11 @@
+[
+  {
+    "Id": 999,
+    "ReturnDate": "2023-07-13T00:00:00",
+    "BorrowDate": "2023-07-02T20:20:25.2318039+02:00",
+    "IsBookReturned": false,
+    "IsBookLost": false,
+    "BookId": 5,
+    "Jmbg": "7890123456789"
+  }
+]
