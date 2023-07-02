@@ -35,6 +35,5 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _copiesRepository.GetCopiesById(ids);
         }
-
     }
 }

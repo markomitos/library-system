@@ -26,9 +26,14 @@ namespace LibrarySystem.Inventory.Titles
             return _titleRepository.Get(udk);
         }
 
-        public List<Title> GetAllTitles()
+        public List<Title> GetAll()
         {
-            return _titleRepository.GetAllTitles();
+            return _titleRepository.GetAll();
+        }
+
+        public bool AlreadyExists(int udk)
+        {
+            return _titleRepository.AlreadyExists(udk);
         }
     }
 }

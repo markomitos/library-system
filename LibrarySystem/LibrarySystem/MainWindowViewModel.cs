@@ -55,5 +55,28 @@ namespace LibrarySystem
         {
             _mainWindow = mainWindow;
         }
+
+        private void openRoleWindow(Account account)
+        {
+            switch (account.Type)
+            {
+                case UserType.Administrator:
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
+                    break;
+                case UserType.Librarian:
+                    LibrarianWindow librarianWindow = new LibrarianWindow();
+                    librarianWindow.Show();
+                    break;
+                case UserType.SpecializedLibrarian:
+                    SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
+                    specializedLibrarianWindow.Show();
+                    break;
+                case UserType.Member:
+                    MemberWindow memberWindow = new MemberWindow();
+                    memberWindow.Show();
+                    break;
+            }
+        }
     }
 }

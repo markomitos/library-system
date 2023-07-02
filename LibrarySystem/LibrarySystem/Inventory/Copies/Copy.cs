@@ -20,7 +20,6 @@ namespace LibrarySystem.Inventory.Copies
         public CopyStatus Status { get; set; }
         public int Price { get; set; }
         public bool IsDamaged { get; set; }
-
         public Copy(int id, CopyStatus status, int price, bool isDamaged)
         {
             Id = id;

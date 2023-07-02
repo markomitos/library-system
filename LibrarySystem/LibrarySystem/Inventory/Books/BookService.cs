@@ -36,6 +36,5 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _bookRepository.GetAllBooks();
         }
-
     }
 }

@@ -39,9 +39,18 @@ namespace LibrarySystem.Inventory.Titles
             return Titles.FirstOrDefault(title => title.UDK == udk);
         }
 
-        public List<Title> GetAllTitles()
+        public List<Title> GetAll()
         {
             return Titles;
+        }
+
+        public bool AlreadyExists(int udk)
+        {
+            foreach (var title in Titles)
+            {
+                if (title.UDK == udk) return true;
+            }
+            return false;
         }
     }
 }
