@@ -8,10 +8,7 @@ using System.Threading.Tasks;
 using static LibrarySystem.Users.Account;
 using System.Windows.Input;
 using System.Windows;
-using LibrarySystem.MainCommands;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
-using ZdravoCorp.MainUI.NotificationDialogs.Presentation;
 
 namespace LibrarySystem
 {

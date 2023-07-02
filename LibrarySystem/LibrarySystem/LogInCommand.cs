@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LibrarySystem.MainUI;
+using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
 using static LibrarySystem.Users.Account;
 
-namespace LibrarySystem.MainCommands
+namespace LibrarySystem
 {
     internal class LogInCommand : CommandBase
     {

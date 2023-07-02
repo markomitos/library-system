@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace ZdravoCorp.MainUI.NotificationDialogs.Presentation
+namespace LibrarySystem.NotificationDialogs.Presentation
 {
     /// <summary>
     /// Interaction logic for SuccessfulDialog.xaml

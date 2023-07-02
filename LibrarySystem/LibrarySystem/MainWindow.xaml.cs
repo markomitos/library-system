@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LibrarySystem.MainUI;
 using LibrarySystem.Users;
-using ZdravoCorp.MainUI.NotificationDialogs;
 using static LibrarySystem.Users.Account;
 
 namespace LibrarySystem
