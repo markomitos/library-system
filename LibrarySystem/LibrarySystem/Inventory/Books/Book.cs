@@ -17,16 +17,27 @@ namespace LibrarySystem.Inventory.Books
             Physical
         }
 
-        public int Isbn { get; set; }
-        public DateTime ReleaseDate { get; set; }
+        public int ISBN { get; set; }
+        public DateTime Published { get; set; }
         public int Price { get; set; }
         public string Covering { get; set; }
         public BookFormat Format { get; set; }
-        public Title Title { get; set; }
-        public Publisher Publisher { get; set; }
-        public List<Copy> Copies { get; set; }
+        public int TitleUDK { get; set; }
+        public string PublisherName { get; set; }
+        public List<string> Copies { get; set; }
 
-
+        public Book(int isbn, DateTime published, int price, string covering, BookFormat format, int titleUDK,
+            string publisherName, List<string> copies)
+        {
+            ISBN = isbn;
+            Published = published;
+            Price = price;
+            Covering = covering;
+            Format = format;
+            TitleUDK = titleUDK;
+            PublisherName = publisherName;
+            Copies = copies;
+        }
 
     }
 }
