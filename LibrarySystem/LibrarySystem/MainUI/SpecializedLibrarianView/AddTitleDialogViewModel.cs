@@ -18,6 +18,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
         private readonly AuthorService _authorService = new(new AuthorRepository());
         public TitleService _titleService = new(new TitleRepository());
         public ObservableCollection<string> Authors { get; set; }
+        public SpecializedLibrarianViewModel _viewModel;
 
         private ICommand _AddAuthorCommand;
         public ICommand AddAuthorCommand
@@ -35,11 +36,12 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
 
         public ICommand AddTitleCommand
         {
-            get { return _AddTitleCommand ??= new AddTitleCommand(this); }
+            get { return _AddTitleCommand ??= new AddTitleCommand(this, _viewModel); }
         }
 
-        public AddTitleDialogViewModel(AddTitleDialog addTitleDialog)
+        public AddTitleDialogViewModel(AddTitleDialog addTitleDialog, SpecializedLibrarianViewModel viewModel)
         {
+            _viewModel = viewModel;
             LoadAuthors();
             _addTitleDialog = addTitleDialog;
         }

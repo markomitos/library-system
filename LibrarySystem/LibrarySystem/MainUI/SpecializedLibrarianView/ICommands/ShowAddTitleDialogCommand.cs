@@ -9,11 +9,16 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.ICommands
 {
     class ShowAddTitleDialogCommand : CommandBase
     {
-        public ShowAddTitleDialogCommand() { }
+        public SpecializedLibrarianViewModel _viewModel;
+
+        public ShowAddTitleDialogCommand(SpecializedLibrarianViewModel viewModel)
+        {
+            _viewModel = viewModel;
+        }
 
         public override void Execute(object? Parameter)
         {
-            AddTitleDialog addTitleDialog = new AddTitleDialog();
+            AddTitleDialog addTitleDialog = new AddTitleDialog(_viewModel);
             addTitleDialog.ShowDialog();
         }
     }

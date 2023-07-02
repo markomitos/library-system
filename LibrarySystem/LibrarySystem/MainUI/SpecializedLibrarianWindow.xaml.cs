@@ -9,7 +9,7 @@ namespace LibrarySystem.MainUI
     {
         public SpecializedLibrarianWindow()
         {
-            DataContext = new SpecializedLibrarianViewModel();
+            DataContext = new SpecializedLibrarianViewModel(this);
             InitializeComponent();
         }
     }

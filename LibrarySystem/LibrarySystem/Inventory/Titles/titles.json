@@ -1,109 +1,30 @@
 [
   {
-    "Name": "Robinzon Kruso",
-    "Language": "Srpski",
-    "UDK": 1,
-    "Genre": "Prezivljavanje",
-    "Authors": [
-      "1",
-      "2"
-    ],
-    "Books": [
-      1,
-      2
-    ]
-  },
-  {
-    "Name": "Robinzon Kruso",
-    "Language": "Srpski",
-    "UDK": 1,
-    "Genre": "Prezivljavanje",
-    "Authors": [
-      "1",
-      "2"
-    ],
-    "Books": [
-      1,
-      2
-    ]
-  },
-  {
-    "Name": "Robinzon Kruso",
-    "Language": "Srpski",
-    "UDK": 1,
-    "Genre": "Prezivljavanje",
-    "Authors": [
-      "1",
-      "2"
-    ],
-    "Books": [
-      1,
-      2
-    ]
-  },
-  {
-    "Name": "Robinzon Kruso",
-    "Language": "Srpski",
-    "UDK": 1,
-    "Genre": "Prezivljavanje",
-    "Authors": [
-      "1",
-      "2"
-    ],
-    "Books": [
-      1,
-      2
-    ]
-  },
-  {
-    "Name": "Robinzon Kruso",
-    "Language": "Srpski",
-    "UDK": 1,
-    "Genre": "Prezivljavanje",
-    "Authors": [
-      "1",
-      "2"
-    ],
-    "Books": [
-      1,
-      2
-    ]
-  },
-  {
-    "Name": "Robinzon Kruso",
-    "Language": "Srpski",
-    "UDK": 1,
-    "Genre": "Prezivljavanje",
-    "Authors": [
-      "1",
-      "2"
-    ],
-    "Books": [
-      1,
-      2
-    ]
-  },
-  {
-    "Name": "Little prince",
-    "Language": "Serbian",
-    "UDK": 3,
-    "Genre": "Sci-fi",
-    "Authors": [],
-    "Books": []
-  },
-  {
-    "Name": "asd",
-    "Language": "asd",
-    "UDK": 5,
-    "Genre": "asd",
-    "Authors": [],
-    "Books": []
-  },
-  {
-    "Name": "Hugh Jock",
+    "Name": "On Drina a bridge",
     "Language": "English",
-    "UDK": 6,
-    "Genre": "Horror",
+    "UDK": 1,
+    "Genre": "History",
+    "Authors": [
+      "1"
+    ],
+    "Books": []
+  },
+  {
+    "Name": "Fall in my street",
+    "Language": "English",
+    "UDK": 2,
+    "Genre": "History",
+    "Authors": [
+      "2",
+      "1"
+    ],
+    "Books": []
+  },
+  {
+    "Name": "Sveti Sava gradi prozore",
+    "Language": "Srpski",
+    "UDK": 3,
+    "Genre": "Nemanjici",
     "Authors": [
       "2"
     ],

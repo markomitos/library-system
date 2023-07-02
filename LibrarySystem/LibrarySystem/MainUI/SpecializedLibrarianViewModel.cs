@@ -14,19 +14,20 @@ namespace LibrarySystem.MainUI
     public class SpecializedLibrarianViewModel : ViewModelBase
     {
         private readonly TitleService _titleService = new(new TitleRepository());
-
+        public SpecializedLibrarianWindow _SpecializedLibrarianWindow;
         public ObservableCollection<Title> Titles { get; set; }
 
         private ICommand _showAddTitleDialogCommand;
 
         public ICommand ShowAddTitleDialogCommand
         {
-            get { return _showAddTitleDialogCommand ??= new ShowAddTitleDialogCommand(); }
+            get { return _showAddTitleDialogCommand ??= new ShowAddTitleDialogCommand(this); }
         }
 
-        public SpecializedLibrarianViewModel()
+        public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
         {
             LoadTitles();
+            _SpecializedLibrarianWindow = specializedLibrarianWindow;
         }
 
         private void LoadTitles()

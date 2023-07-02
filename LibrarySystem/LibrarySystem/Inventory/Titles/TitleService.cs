@@ -30,5 +30,10 @@ namespace LibrarySystem.Inventory.Titles
         {
             return _titleRepository.GetAll();
         }
+
+        public bool AlreadyExists(int udk)
+        {
+            return _titleRepository.AlreadyExists(udk);
+        }
     }
 }

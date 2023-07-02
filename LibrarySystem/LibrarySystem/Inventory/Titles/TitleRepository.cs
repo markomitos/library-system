@@ -43,5 +43,14 @@ namespace LibrarySystem.Inventory.Titles
         {
             return Titles;
         }
+
+        public bool AlreadyExists(int udk)
+        {
+            foreach (var title in Titles)
+            {
+                if (title.UDK == udk) return true;
+            }
+            return false;
+        }
     }
 }

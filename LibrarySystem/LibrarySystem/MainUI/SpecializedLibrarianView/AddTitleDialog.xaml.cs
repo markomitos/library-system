@@ -19,9 +19,9 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
     /// </summary>
     public partial class AddTitleDialog : Window
     {
-        public AddTitleDialog()
+        public AddTitleDialog(SpecializedLibrarianViewModel viewModel)
         {
-            DataContext = new AddTitleDialogViewModel(this);
+            DataContext = new AddTitleDialogViewModel(this, viewModel);
             InitializeComponent();
         }
     }
