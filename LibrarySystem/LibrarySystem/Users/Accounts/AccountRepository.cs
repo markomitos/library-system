@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibrarySystem.Users
+namespace LibrarySystem.Users.Accounts
 {
     public class AccountRepository
     {
-        public const string AccountsFilePath = "..\\..\\..\\Users\\Data\\accounts.json";
+        public const string AccountsFilePath = "..\\..\\..\\Users\\Accounts\\accounts.json";
         public List<Account> Accounts = new();
 
         public AccountRepository()
@@ -33,7 +33,7 @@ namespace LibrarySystem.Users
             Save();
         }
 
-        public Account? GetAccount(string username, string password)
+        public Account? Get(string username, string password)
         {
             return Accounts.FirstOrDefault(account => account.Username == username && account.Password == password);
         }

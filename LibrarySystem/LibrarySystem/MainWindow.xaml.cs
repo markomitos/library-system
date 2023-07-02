@@ -13,9 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.Users.Accounts;
 using ZdravoCorp.MainUI.NotificationDialogs;
-using static LibrarySystem.Users.Account;
+using static LibrarySystem.Users.Accounts.Account;
 
 namespace LibrarySystem
 {
@@ -29,7 +29,5 @@ namespace LibrarySystem
             DataContext = new MainWindowViewModel(this);
             InitializeComponent();
         }
-
-        
     }
 }

@@ -8,5 +8,28 @@ namespace LibrarySystem.Inventory.Copies
 {
     public class Copy
     {
+        public enum CopyStatus
+        {
+            Available,
+            Rented,
+            Lost,
+            Reserved
+        }
+
+        public int Id { get; set; }
+        public CopyStatus Status { get; set; }
+        public int Price { get; set; }
+        public bool IsDamaged { get; set; }
+
+        public string ISBN { get; set; }
+
+        public Copy(int id, CopyStatus status, int price, bool isDamaged, string isbn)
+        {
+            Id = id;
+            Status = status;
+            Price = price;
+            IsDamaged = isDamaged;
+            ISBN = isbn;
+        }
     }
 }

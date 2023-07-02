@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibrarySystem.Users
+namespace LibrarySystem.Users.Accounts
 {
     public class AccountService
     {
@@ -19,9 +19,9 @@ namespace LibrarySystem.Users
             _accountRepository.Add(account);
         }
 
-        public Account? GetAccount(string username, string password)
+        public Account? Get(string username, string password)
         {
-            return _accountRepository.GetAccount(username, password);
+            return _accountRepository.Get(username, password);
         }
     }
 }
