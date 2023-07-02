@@ -38,5 +38,15 @@ namespace LibrarySystem.Inventory.Books
         {
             return Books.FirstOrDefault(book => book.ISBN == isbn);
         }
+
+        public List<Book> GetBooksByIsbn(List<int> isbns)
+        {
+            return (from isbn in isbns from book in Books where isbn == book.ISBN select book).ToList();
+        }
+
+        public List<Book> GetAllBooks()
+        {
+            return Books;
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿using ZdravoCorp.MainUI.NotificationDialogs.Presentation;
+﻿using LibrarySystem.NotificationDialogs.Presentation;
 
-namespace ZdravoCorp.MainUI.NotificationDialogs
+namespace LibrarySystem.NotificationDialogs
 {
     public static class Notification
     {

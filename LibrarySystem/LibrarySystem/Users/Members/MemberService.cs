@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,14 +26,22 @@ namespace LibrarySystem.Users.Members
             return _memberRepository.Get(jmbg);
         }
 
-        public List<Member> GetAllMembers()
-        {
-            return _memberRepository.GetAllMembers();
-        }
-
         public bool AlreadyExistsJmbg(string jmbg)
         {
             return _memberRepository.Contains(jmbg);
+
+        public List<String> GetAllMembersJmbg()
+        {
+            return _memberRepository.GetAllMembersJmbg();
+        }
+
+        public ObservableCollection<Member> GetAll()
+        {
+            return _memberRepository.GetAll();
+        }
+        public Member? GetJMBG(string username)
+        {
+            return _memberRepository.GetJMBG(username);
         }
     }
 }

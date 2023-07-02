@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,14 +13,15 @@ namespace LibrarySystem.Users.Members
     public class MemberRepository
     {
         public const string MembersFilePath = "..\\..\\..\\Users\\Members\\members.json";
-        public List<Member> Members = new();
+        public ObservableCollection<Member> Members = new();
 
         public MemberRepository()
         {
             if (!File.Exists(MembersFilePath)) return;
 
             string json = File.ReadAllText(MembersFilePath);
-            Members = JsonConvert.DeserializeObject<List<Member>>(json);
+
+            Members = JsonConvert.DeserializeObject<ObservableCollection<Member>> (json);
         }
 
         public void Save()
@@ -44,9 +46,18 @@ namespace LibrarySystem.Users.Members
             return Members.Any(librarian => librarian.Jmbg == jmbg);
         }
 
-        public List<Member> GetAllMembers()
+        public List<String> GetAllMembersJmbg()
+        {
+            return Members.Select(member => member.Jmbg).ToList();
+        }
+
+        public ObservableCollection<Member> GetAll()
         {
             return Members;
+        }
+        public Member? GetJMBG(string username)
+        {
+            return Members.FirstOrDefault(member => member.Username == username);
         }
     }
 }

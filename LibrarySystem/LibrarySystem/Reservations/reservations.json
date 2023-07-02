@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "ReservationDate": "2023-07-02T15:23:58.0357281+02:00",
+    "State": 1,
+    "UserJMBG": "123456789",
+    "CopyId": 1,
+    "TitleUDK": 1000
+  },
+  {
+    "Id": 2,
+    "ReservationDate": "2023-07-03T15:23:58.0357281+02:00",
+    "State": 1,
+    "UserJMBG": "123456789",
+    "CopyId": 2,
+    "TitleUDK": 1001
+  },
+  {
+    "Id": 3,
+    "ReservationDate": "2023-07-04T15:23:58.0357281+02:00",
+    "State": 1,
+    "UserJMBG": "123456789",
+    "CopyId": 3,
+    "TitleUDK": 1002
+  },
+  {
+    "Id": 4,
+    "ReservationDate": "2023-07-05T15:23:58.0357281+02:00",
+    "State": 2,
+    "UserJMBG": "123456789",
+    "CopyId": 4,
+    "TitleUDK": 1003
+  },
+  {
+    "Id": 5,
+    "ReservationDate": "2023-07-06T15:23:58.0357281+02:00",
+    "State": 3,
+    "UserJMBG": "123456789",
+    "CopyId": 5,
+    "TitleUDK": 1004
+  },
+  {
+    "Id": 6,
+    "ReservationDate": "2023-07-07T15:23:58.0357281+02:00",
+    "State": 4,
+    "UserJMBG": "123456789",
+    "CopyId": 6,
+    "TitleUDK": 1005
+  },
+  {
+    "Id": 7,
+    "ReservationDate": "2023-07-08T15:23:58.0357281+02:00",
+    "State": 2,
+    "UserJMBG": "123456789",
+    "CopyId": 7,
+    "TitleUDK": 1006
+  },
+  {
+    "Id": 8,
+    "ReservationDate": "2023-07-09T15:23:58.0357281+02:00",
+    "State": 0,
+    "UserJMBG": "123456789",
+    "CopyId": 8,
+    "TitleUDK": 1007
+  },
+  {
+    "Id": 9,
+    "ReservationDate": "2023-07-10T15:23:58.0357281+02:00",
+    "State": 1,
+    "UserJMBG": "123456789",
+    "CopyId": 9,
+    "TitleUDK": 1008
+  },
+  {
+    "Id": 10,
+    "ReservationDate": "2023-07-11T15:23:58.0357281+02:00",
+    "State": 1,
+    "UserJMBG": "123456789",
+    "CopyId": 10,
+    "TitleUDK": 1009
+  }
+]

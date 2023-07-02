@@ -9,8 +9,7 @@ using System.Windows.Input;
 using System.Windows;
 using LibrarySystem.MainCommands;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
-using ZdravoCorp.MainUI.NotificationDialogs.Presentation;
+using LibrarySystem.Users.Accounts;
 
 namespace LibrarySystem
 {
@@ -55,6 +54,29 @@ namespace LibrarySystem
         public MainWindowViewModel(MainWindow mainWindow)
         {
             _mainWindow = mainWindow;
+        }
+
+        private void openRoleWindow(Account account)
+        {
+            switch (account.Type)
+            {
+                case Account.UserType.Administrator:
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
+                    break;
+                case Account.UserType.Librarian:
+                    LibrarianWindow librarianWindow = new LibrarianWindow();
+                    librarianWindow.Show();
+                    break;
+                case Account.UserType.SpecializedLibrarian:
+                    SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
+                    specializedLibrarianWindow.Show();
+                    break;
+                case Account.UserType.Member:
+                    MemberWindow memberWindow = new MemberWindow();
+                    memberWindow.Show();
+                    break;
+            }
         }
     }
 }

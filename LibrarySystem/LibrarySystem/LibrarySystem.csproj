@@ -24,4 +24,10 @@
     <Resource Include="NotificationDialogs\Presentation\warning.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Reservations\Views\CancelReservationView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
 </Project>

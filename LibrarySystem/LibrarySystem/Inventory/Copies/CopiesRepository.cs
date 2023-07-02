@@ -34,9 +34,25 @@ namespace LibrarySystem.Inventory.Copies
             Save();
         }
 
+        public void BorrowCopy(int id)
+        {
+            foreach (var copy in Copies.Where(copy => copy.Id == id))
+            {
+                copy.Borrow();
+                break;
+            }
+
+            Save();
+        }
+
         public Copy? Get(int id)
         {
             return Copies.FirstOrDefault(x => x.Id == id);
+        }
+
+        public List<Copy> GetCopiesById(List<int> ids)
+        {
+            return (from id in ids from copy in Copies where copy.Id == id select copy).ToList();
         }
     }
 }

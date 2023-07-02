@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LibrarySystem.Books
-{
-    class authors
-    {
-    }
-}
+﻿[
+  {
+    "Id": "1",
+    "FirstName": "Ivo",
+    "lastName": "Andric",
+    "BirthDate": "12.2.1975.",
+    "Biography": "Tralalala"
+  },
+  {
+    "Id": "2",
+    "FirstName": "Desanka",
+    "lastName": "Maksimovic",
+    "BirthDate": "12.2.1974.",
+    "Biography": "Tralalala"
+  }
+]
