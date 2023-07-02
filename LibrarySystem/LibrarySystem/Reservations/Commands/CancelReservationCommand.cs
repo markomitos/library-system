@@ -12,10 +12,12 @@ namespace LibrarySystem.Reservations.Commands
 {
     internal class CancelReservationCommand : CommandBase
     {
+        private ReservationService _reservationService;
         private CancelReservationView _cancelReservationView;
         private readonly CancelReservationViewModel _cancelReservationViewModel;
         public CancelReservationCommand(CancelReservationView cancelReservationView, CancelReservationViewModel cancelReservationViewModel)
         {
+            
             _cancelReservationView = cancelReservationView;
             _cancelReservationViewModel = cancelReservationViewModel;
             _cancelReservationViewModel.PropertyChanged += OnViewModelPropertyChanged;
@@ -31,8 +33,39 @@ namespace LibrarySystem.Reservations.Commands
 
         public override void Execute(object? parameter)
         {
+            _reservationService = new ReservationService(new ReservationRepository());
+            Reservation reservation = _cancelReservationViewModel.SelectedReservation!;
+
+            if (reservation.State == Reservation.ReservationState.Approved)
+            {
+                CancelApprovedReservation(reservation);
+            }else{
+                CancelNotApprovedReservations(reservation);
+            }
+        }
+
+        private void CancelNotApprovedReservations(Reservation reservation)
+        {
+            Reservation reservationToChange = _reservationService.Get(reservation.Id)!;
+            reservationToChange.State = Reservation.ReservationState.Canceled;
+            _reservationService.Save();
+            ReloadCancelReservationView();
+        }
+
+        private void ReloadCancelReservationView()
+        {
+
+            CancelReservationView newCancelReservationView = new CancelReservationView();
+            newCancelReservationView.Show();
+
+            _cancelReservationView.Close();
+        }
+
+        private void CancelApprovedReservation(Reservation reservation)
+        {
             throw new NotImplementedException();
         }
+
         public override bool CanExecute(object? parameter)
         {
             return _cancelReservationViewModel.SelectedReservation != null && base.CanExecute(parameter);
