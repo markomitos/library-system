@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LibrarySystem.MainUI;
 using LibrarySystem.Users;
 using ZdravoCorp.MainUI.NotificationDialogs;
 using static LibrarySystem.Users.Account;
@@ -57,20 +58,20 @@ namespace LibrarySystem
             switch (account.Type)
             {
                 case UserType.Administrator:
-                    //DoctorWindow dw = new DoctorWindow();
-                    //dw.Show();
+                    AdminWindow adminWindow = new AdminWindow();
+                    adminWindow.Show();
                     break;
                 case UserType.Librarian:
-                    //NurseWindow nw = new NurseWindow();
-                    //nw.Show();
+                    LibrarianWindow librarianWindow = new LibrarianWindow();
+                    librarianWindow.Show();
                     break;
                 case UserType.SpecializedLibrarian:
-                    //PatientWindow pd = new PatientWindow();
-                    //pd.Show();
+                    SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
+                    specializedLibrarianWindow.Show();
                     break;
                 case UserType.Member:
-                    //ManagerWindow wm = new ManagerWindow();
-                    //wm.Show();
+                    MemberWindow memberWindow = new MemberWindow();
+                    memberWindow.Show();
                     break;
             }
         }
