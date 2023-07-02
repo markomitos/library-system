@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibrarySystem.BookLoan;
 
 namespace LibrarySystem.MainUI
 {
@@ -22,6 +23,8 @@ namespace LibrarySystem.MainUI
         public LibrarianWindow()
         {
             InitializeComponent();
+            DataContext = new BookLoanViewModel();
         }
+
     }
 }

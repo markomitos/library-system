@@ -25,5 +25,10 @@ namespace LibrarySystem.Inventory.Titles
         {
             return _titleRepository.Get(udk);
         }
+
+        public List<Title> GetAllTitles()
+        {
+            return _titleRepository.GetAllTitles();
+        }
     }
 }
