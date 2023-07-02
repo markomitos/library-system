@@ -14,8 +14,17 @@ namespace LibrarySystem.Users.Members
 
         public Member(string jmbg, string firstName, string lastName, string address, string phone, string email, string username, bool isEmailWarning, MemberRule.MemberType type) : base(jmbg, firstName, lastName, address, phone, email, username)
         {
+            ValidateParameters(type);
             this.IsEmailWarning = isEmailWarning;
             Type = type;
+        }
+
+        private void ValidateParameters(MemberRule.MemberType type)
+        {
+            if (type == null)
+            {
+                throw new ArgumentException("Member must have its type");
+            }
         }
     }
 }

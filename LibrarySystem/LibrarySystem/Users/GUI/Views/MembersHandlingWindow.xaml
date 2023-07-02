@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystem.Users.GUI.Views"
         mc:Ignorable="d"
-        Title="MembersHandlingWindow" Height="630" Width="1272">
+        Title="MembersHandlingWindow" Height="630" Width="1490" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="membersDataGrid" ItemsSource="{Binding Members}" ColumnWidth="*" CanUserAddRows="False" IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="495" Width="1188" Margin="0,80,0,0" AutoGenerateColumns="False">
+        <DataGrid x:Name="membersDataGrid" ItemsSource="{Binding Members}" ColumnWidth="*" CanUserAddRows="False" IsReadOnly="True" HorizontalAlignment="Center" VerticalAlignment="Top" Height="495" Width="1406" Margin="0,80,0,0" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Jmbg" Binding="{Binding Jmbg}"></DataGridTextColumn>
                 <DataGridTextColumn Header="First name" Binding="{Binding FirstName}"></DataGridTextColumn>

@@ -15,7 +15,8 @@ namespace LibrarySystem.Users.GUI.ViewModels
 {
     public class RegisterMemberViewModel
     {
-        private readonly MembersHandlingWindow _membersHandlingWindow;
+        public readonly MembersHandlingWindow MembersHandlingWindow;
+        public readonly RegisterMemberWindow RegisterMemberWindow;
 
         public ObservableCollection<MemberType> AvailableMemberTypes { get; set; }
 
@@ -38,9 +39,10 @@ namespace LibrarySystem.Users.GUI.ViewModels
         }
 
 
-        public RegisterMemberViewModel(MembersHandlingWindow? membersHandlingWindow)
+        public RegisterMemberViewModel(MembersHandlingWindow? membersHandlingWindow, RegisterMemberWindow registerMemberWindow)
         {
-            _membersHandlingWindow = membersHandlingWindow;
+            MembersHandlingWindow = membersHandlingWindow;
+            RegisterMemberWindow = registerMemberWindow;
 
             fillMemberTypeComboBox();
         }
@@ -58,7 +60,7 @@ namespace LibrarySystem.Users.GUI.ViewModels
         {
             MembersHandlingWindow newMembersHandlingWindow = new();
             newMembersHandlingWindow.ShowDialog();
-            _membersHandlingWindow.Close();
+            MembersHandlingWindow.Close();
         }
     }
 }

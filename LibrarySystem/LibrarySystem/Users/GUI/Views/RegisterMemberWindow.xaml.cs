@@ -23,7 +23,7 @@ namespace LibrarySystem.Users.GUI.Views
         public RegisterMemberWindow(MembersHandlingWindow? membersHandlingWindow)
         {
             InitializeComponent();
-            RegisterMemberViewModel registerMemberViewModel = new(membersHandlingWindow);
+            RegisterMemberViewModel registerMemberViewModel = new(membersHandlingWindow, this);
             this.DataContext = registerMemberViewModel;
         }
     }

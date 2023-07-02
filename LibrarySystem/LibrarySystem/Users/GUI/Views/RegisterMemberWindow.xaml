@@ -20,17 +20,17 @@
         <TextBox x:Name="phoneTextBox" Text="{Binding Phone}" HorizontalAlignment="Left" Height="35" Margin="273,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="18" VerticalContentAlignment="Center"/>
         <Label Content="Email: " HorizontalAlignment="Left" Margin="206,455,0,0" VerticalAlignment="Top" FontSize="18"/>
         <TextBox x:Name="emailTextBox" Text="{Binding Email}" HorizontalAlignment="Left" Height="35" Margin="273,456,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="18" VerticalContentAlignment="Center"/>
-        <Label Content="Username: " HorizontalAlignment="Left" Margin="169,650,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox x:Name="usernameTextBox" Text="{Binding Username}" HorizontalAlignment="Left" Height="35" Margin="273,649,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="18" VerticalContentAlignment="Center"/>
-        <Label Content="Password: " HorizontalAlignment="Left" Margin="176,708,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.67,0.556"/>
-        <TextBox x:Name="passwordTextBox" Text="{Binding Password}" HorizontalAlignment="Left" Height="35" Margin="273,707,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="18" VerticalContentAlignment="Center"/>
-        <Label Content="Member type: " HorizontalAlignment="Left" Margin="143,767,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Username: " HorizontalAlignment="Left" Margin="169,690,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="usernameTextBox" Text="{Binding Username}" HorizontalAlignment="Left" Height="35" Margin="273,689,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="18" VerticalContentAlignment="Center"/>
+        <Label Content="Password: " HorizontalAlignment="Left" Margin="176,748,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.67,0.556"/>
+        <TextBox x:Name="passwordTextBox" Text="{Binding Password}" HorizontalAlignment="Left" Height="35" Margin="273,747,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="360" FontSize="18" VerticalContentAlignment="Center"/>
+        <Label Content="Member type: " HorizontalAlignment="Left" Margin="142,549,0,0" VerticalAlignment="Top" FontSize="18"/>
         <CheckBox x:Name="emailWarningCheckBox" IsChecked="{Binding IsEmailWarning}" Content="Email warnings" HorizontalAlignment="Left" Margin="273,507,0,0" VerticalAlignment="Top" FontSize="14" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Rectangle HorizontalAlignment="Center" Height="198" Margin="0,626,0,0" Stroke="Black" VerticalAlignment="Top" Width="586" Opacity="0.2" StrokeThickness="3"/>
-        <Label Content="Account details: " HorizontalAlignment="Left" Margin="107,589,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Rectangle HorizontalAlignment="Center" Height="422" Margin="0,136,0,0" Stroke="Black" VerticalAlignment="Top" Width="586" Opacity="0.2" StrokeThickness="3"/>
+        <Rectangle HorizontalAlignment="Center" Height="142" Margin="0,666,0,0" Stroke="Black" VerticalAlignment="Top" Width="586" Opacity="0.2" StrokeThickness="3"/>
+        <Label Content="Account details: " HorizontalAlignment="Left" Margin="107,629,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Rectangle HorizontalAlignment="Center" Height="471" Margin="0,136,0,0" Stroke="Black" VerticalAlignment="Top" Width="586" Opacity="0.2" StrokeThickness="3"/>
         <Label Content="Member details: " HorizontalAlignment="Left" Margin="107,99,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <ComboBox x:Name="memberTypeComboBox" SelectedItem="{Binding Type}" ItemsSource="{Binding AvailableMemberTypes}" HorizontalAlignment="Left" Margin="274,767,0,0" VerticalAlignment="Top" Width="230" Height="35" FontSize="18" SelectedIndex="0"/>
+        <ComboBox x:Name="memberTypeComboBox" SelectedItem="{Binding Type}" ItemsSource="{Binding AvailableMemberTypes}" HorizontalAlignment="Left" Margin="273,549,0,0" VerticalAlignment="Top" Width="230" Height="35" FontSize="18" SelectedIndex="0"/>
         <Button x:Name="registerButton" Command="{Binding RegisterMemberCommand}" Content="Register" HorizontalAlignment="Left" Margin="299,858,0,0" Width="200" FontSize="20" Background="#FF4FB53A" Foreground="White" Cursor="Hand" VerticalAlignment="Top" Height="50"/>
 
     </Grid>

@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "Username": "john_doe",
     "Password": "12345",
@@ -53,5 +53,10 @@
     "Username": "admin_user",
     "Password": "12345",
     "Type": 3
+  },
+  {
+    "Username": "maric300",
+    "Password": "12345",
+    "Type": 2
   }
 ]
