@@ -9,5 +9,16 @@
     "Phone": "0615568234",
     "Email": "maric.300@gmail.com",
     "Username": "maric300"
+  },
+  {
+    "IsEmailWarning": false,
+    "Type": 2,
+    "Jmbg": "1234567891235",
+    "FirstName": "Ilija",
+    "LastName": "Beslin",
+    "Address": "Teodora Mandica 46, Novi Sad",
+    "Phone": "0617597142",
+    "Email": "ilija.beslin@gmail.com",
+    "Username": "ilija02"
   }
 ]

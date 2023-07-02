@@ -58,9 +58,9 @@ namespace LibrarySystem.Users.GUI.ViewModels
 
         public void ReloadParentWindow()
         {
+            MembersHandlingWindow.Close();
             MembersHandlingWindow newMembersHandlingWindow = new();
             newMembersHandlingWindow.ShowDialog();
-            MembersHandlingWindow.Close();
         }
     }
 }
