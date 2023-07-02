@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="SpecializedLibrarianWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Button x:Name="addButton" Content="Add " HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="89" Height="28" FontSize="18" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <DataGrid x:Name="appointmentsDataGrid" ItemsSource="{Binding Appointments}" Margin="12,43,7,39" CanUserAddRows="False" IsReadOnly="True" AutoGenerateColumns="False" Height="NaN">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Start" Binding="{Binding TimeSlot.Start}"></DataGridTextColumn>
+                <DataGridTextColumn Header="End" Binding="{Binding TimeSlot.End}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Doctor username" Binding="{Binding DoctorUsername}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Patient username" Binding="{Binding PatientUsername}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Room name" Binding="{Binding RoomName}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label x:Name="loggedUsernameLabel" Content="USERNAME" HorizontalAlignment="Left" Margin="90,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
+        <Label x:Name="loggedLabel" Content="Logged in:" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
+        <Button x:Name="logOutButton" Content="Log out" HorizontalAlignment="Right" Height="32" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="106" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" Cursor="Hand"/>
+        <Button x:Name="chooseBookButton" Content="Choose book" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top" Width="158" Height="28" FontSize="18" Background="#009FFF" Foreground="White" Cursor="Hand"/>
     </Grid>
 </Window>
