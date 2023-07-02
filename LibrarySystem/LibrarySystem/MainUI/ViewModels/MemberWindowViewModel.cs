@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using LibrarySystem.MainUI.Commands;
 using LibrarySystem.Utils;
 
 namespace LibrarySystem.MainUI.ViewModels
@@ -29,6 +30,16 @@ namespace LibrarySystem.MainUI.ViewModels
             get
             {
                 return _logoutCommand ??= new LogoutCommand(_memberWindow);
+            }
+        }
+
+        private ICommand? _cancelReservationCommand { get; set; }
+
+        public ICommand CancelReservationCommand
+        {
+            get
+            {
+                return _cancelReservationCommand ??= new OpenCancelReservationViewCommand(_memberWindow);
             }
         }
 

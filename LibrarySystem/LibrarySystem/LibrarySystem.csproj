@@ -25,10 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="MainUI\Commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Page Update="Reservations\Views\CancelReservationView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
