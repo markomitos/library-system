@@ -1,0 +1,32 @@
+﻿[
+  {
+    "Type": 0,
+    "MembershipFee": 100,
+    "MaxRentDays": 7,
+    "MaxCopies": 2
+  },
+  {
+    "Type": 1,
+    "MembershipFee": 150,
+    "MaxRentDays": 14,
+    "MaxCopies": 3
+  },
+  {
+    "Type": 2,
+    "MembershipFee": 200,
+    "MaxRentDays": 30,
+    "MaxCopies": 4
+  },
+  {
+    "Type": 3,
+    "MembershipFee": 300,
+    "MaxRentDays": 30,
+    "MaxCopies": 5
+  },
+  {
+    "Type": 4,
+    "MembershipFee": 50,
+    "MaxRentDays": 14,
+    "MaxCopies": 2
+  }
+]

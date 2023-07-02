@@ -1,26 +1,5 @@
 [
   {
-    "Name": "On Drina a bridge",
-    "Language": "English",
-    "UDK": 1,
-    "Genre": "History",
-    "Authors": [
-      "1"
-    ],
-    "Books": []
-  },
-  {
-    "Name": "Fall in my street",
-    "Language": "English",
-    "UDK": 2,
-    "Genre": "History",
-    "Authors": [
-      "2",
-      "1"
-    ],
-    "Books": []
-  },
-  {
     "Name": "Sveti Sava gradi prozore",
     "Language": "Srpski",
     "UDK": 3,
@@ -29,5 +8,44 @@
       "2"
     ],
     "Books": []
+  }
+    "name": "Title 1",
+    "language": "English",
+    "udk": 123456,
+    "genre": "Fiction",
+    "authors": [ "Author 1" ],
+    "books": [ 1, 2 ]
+  },
+  {
+    "name": "Title 2",
+    "language": "Spanish",
+    "udk": 789012,
+    "genre": "Mystery",
+    "authors": [ "Author 2", "Author 3" ],
+    "books": [ 3, 4, 5 ]
+  },
+  {
+    "name": "Title 3",
+    "language": "French",
+    "udk": 345678,
+    "genre": "Romance",
+    "authors": [ "Author 4" ],
+    "books": [ 6 ]
+  },
+  {
+    "name": "Title 4",
+    "language": "German",
+    "udk": 901234,
+    "genre": "Thriller",
+    "authors": [ "Author 5", "Author 6" ],
+    "books": []
+  },
+  {
+    "name": "Title 5",
+    "language": "Italian",
+    "udk": 567890,
+    "genre": "Drama",
+    "authors": [ "Author 7" ],
+    "books": [ 2, 5 ]
   }
 ]

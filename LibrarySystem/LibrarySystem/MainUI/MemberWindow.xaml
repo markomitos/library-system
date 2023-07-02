@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MemberWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Button x:Name="logOutBtn" Command="{Binding LogoutCommand}" Content="Log out" HorizontalAlignment="Left" Height="31" Margin="650,367,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+        <Label x:Name="loggedUsernameLabel_Copy" Content="{Binding LoggedUser}" HorizontalAlignment="Left" Margin="106,364,0,0" VerticalAlignment="Top" FontSize="14" Width="193" Height="34"/>
+        <Label x:Name="loggedLabel_Copy" Content="Logged in:" HorizontalAlignment="Left" Margin="25,368,0,0" VerticalAlignment="Top" FontSize="14" Width="76" RenderTransformOrigin="0.526,0.581" Height="38">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.207"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.851"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="cancelReservationBtn" Command="{Binding CancelReservationCommand}" Content="Cancel Reservation" HorizontalAlignment="Center" Height="31" Margin="0,106,0,0" VerticalAlignment="Top" Width="215" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+
     </Grid>
 </Window>
