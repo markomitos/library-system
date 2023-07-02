@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.Users.Members;
 
 namespace LibrarySystem.Reservations
 {
@@ -40,12 +41,13 @@ namespace LibrarySystem.Reservations
             return Reservations.FirstOrDefault(reservation => reservation.Id == id);
         }
 
-        public ObservableCollection<Reservation> GetNotFinishedReservations()
+        public ObservableCollection<Reservation> GetNotFinishedReservations(string loggedUserJMBG)
         {
             ObservableCollection<Reservation> reservations = new ObservableCollection<Reservation>();
-            
+
             foreach (Reservation reservation in Reservations)
             {
+                if (reservation.UserJMBG != loggedUserJMBG) continue;
                 if (reservation.State != Reservation.ReservationState.Ended && reservation.State != Reservation.ReservationState.Canceled)
                 {
                     reservations.Add(reservation);

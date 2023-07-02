@@ -31,9 +31,9 @@ namespace LibrarySystem.Reservations
             _reservationRepository.Save();
         }
 
-        public ObservableCollection<Reservation> GetNotFinishedReservations()
+        public ObservableCollection<Reservation> GetNotFinishedReservations(string loggedUser)
         {
-            return _reservationRepository.GetNotFinishedReservations();
+            return _reservationRepository.GetNotFinishedReservations(loggedUser);
         }
     }
 }

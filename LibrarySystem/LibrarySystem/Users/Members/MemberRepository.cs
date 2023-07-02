@@ -43,5 +43,10 @@ namespace LibrarySystem.Users.Members
         {
             return Members.Any(librarian => librarian.Jmbg == jmbg);
         }
+
+        public Member? GetJMBG(string username)
+        {
+            return Members.FirstOrDefault(member => member.Username == username);
+        }
     }
 }
