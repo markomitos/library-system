@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 
 namespace LibrarySystem.BookBorrowings.Borrowing
 {
@@ -14,6 +15,12 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         public void Add(BookBorrowing bookBorrowing)
         {
             _bookBorrowingRepository.Add(bookBorrowing);
+        }
+
+        public void CreateBookBorrowing(DateTime returnDate, DateTime borrowDate, bool isBookReturned, bool isBookLost,
+            int bookId, string jmbg)
+        {
+            _bookBorrowingRepository.CreateBookBorrowing(returnDate,borrowDate,isBookReturned,isBookLost,bookId,jmbg);
         }
 
         public BookBorrowing? Get(int id)

@@ -13,15 +13,14 @@ namespace LibrarySystem.BookLoan
 {
     internal class LoadCopiesCommand : CommandBase
     {
-        private BookLoanViewModel _viewModel;
+        private BookBorrowingViewModel _viewModel;
         private CopiesService _copiesService;
 
-        public LoadCopiesCommand(BookLoanViewModel viewModel)
+        public LoadCopiesCommand(BookBorrowingViewModel viewModel)
         {
             _viewModel = viewModel;
             _copiesService = new CopiesService(new CopiesRepository());
         }
-
 
         public override void Execute(object? parameter)
         {

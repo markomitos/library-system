@@ -28,5 +28,10 @@ namespace LibrarySystem.Inventory.Copies
             Price = price;
             IsDamaged = isDamaged;
         }
+
+        public void Borrow()
+        {
+            Status = CopyStatus.Rented;
+        }
     }
 }

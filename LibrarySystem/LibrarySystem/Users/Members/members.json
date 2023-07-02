@@ -1,3 +1,57 @@
 ﻿[
-
+  {
+    "jmbg": "1234567890123",
+    "firstName": "John",
+    "lastName": "Doe",
+    "address": "123 Main St",
+    "phone": "555-1234",
+    "email": "john.doe@example.com",
+    "username": "johndoe",
+    "isEmailWarning": true,
+    "type": 0
+  },
+  {
+    "jmbg": "9876543210987",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "address": "456 Elm St",
+    "phone": "555-5678",
+    "email": "jane.smith@example.com",
+    "username": "janesmith",
+    "isEmailWarning": false,
+    "type": 1
+  },
+  {
+    "jmbg": "4567890123456",
+    "firstName": "Michael",
+    "lastName": "Johnson",
+    "address": "789 Oak St",
+    "phone": "555-9012",
+    "email": "michael.johnson@example.com",
+    "username": "michaeljohnson",
+    "isEmailWarning": true,
+    "type": 2
+  },
+  {
+    "jmbg": "7890123456789",
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "address": "321 Pine St",
+    "phone": "555-3456",
+    "email": "emily.davis@example.com",
+    "username": "emilydavis",
+    "isEmailWarning": false,
+    "type": 3
+  },
+  {
+    "jmbg": "2345678901234",
+    "firstName": "David",
+    "lastName": "Wilson",
+    "address": "567 Cedar St",
+    "phone": "555-7890",
+    "email": "david.wilson@example.com",
+    "username": "davidwilson",
+    "isEmailWarning": true,
+    "type": 2
+  }
 ]

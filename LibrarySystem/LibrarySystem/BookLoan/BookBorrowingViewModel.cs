@@ -9,12 +9,13 @@ using System.Windows;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
+using LibrarySystem.MainUI;
 using LibrarySystem.Utils;
 using LibrarySystem.Users.Members;
 
 namespace LibrarySystem.BookLoan
 {
-    public class BookLoanViewModel : ViewModelBase
+    public class BookBorrowingViewModel : ViewModelBase
     {
         private ObservableCollection<Title> _titles;
         public ObservableCollection<Title> Titles
@@ -49,8 +50,8 @@ namespace LibrarySystem.BookLoan
             }
         }
 
-        private ObservableCollection<Member> _members;
-        public ObservableCollection<Member> Members
+        private ObservableCollection<String> _members;
+        public ObservableCollection<String> Members
         {
             get { return _members; }
             set
@@ -93,24 +94,41 @@ namespace LibrarySystem.BookLoan
             }
         }
 
+        private String _selectedMember;
+        public String SelectedMember
+        {
+            get { return _selectedMember; }
+            set
+            {
+                _selectedMember = value;
+                OnPropertyChanged(nameof(SelectedMember));
+            }
+        }
 
 
         public ICommand LoadBooksCommand { get; set; }
         public ICommand LoadCopiesCommand { get; set; }
-        public ICommand LoanBookCommand { get; set; }
+        public ICommand BorrowBookCommand { get; set; }
 
         public TitleService TitleService { get; set; }
+        public MemberService MemberService { get; set; }
+        public DateTime ReturnDate { get; set; }
 
-        public BookLoanViewModel()
+        public BookBorrowingViewModel(BookBorrowingView bookBorrowingView)
         {
             LoadData();
             LoadBooksCommand = new LoadBooksCommand(this);
+            LoadCopiesCommand = new LoadCopiesCommand(this);
+            BorrowBookCommand = new BorrowBookCommand(this,bookBorrowingView);
         }
 
         public void LoadData()
         {
             TitleService = new TitleService(new TitleRepository());
+            MemberService = new MemberService(new MemberRepository());
             Titles = new ObservableCollection<Title>(TitleService.GetAllTitles());
+            Members = new ObservableCollection<string>(MemberService.GetAllMembersJmbg());
+            ReturnDate = DateTime.Now;
         }
     }
 }

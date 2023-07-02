@@ -45,6 +45,11 @@ namespace LibrarySystem.Users.Members
             return Members.Any(librarian => librarian.Jmbg == jmbg);
         }
 
+        public List<String> GetAllMembersJmbg()
+        {
+            return Members.Select(member => member.Jmbg).ToList();
+        }
+
         public ObservableCollection<Member> GetAll()
         {
             return Members;

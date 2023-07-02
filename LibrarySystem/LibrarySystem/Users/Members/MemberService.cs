@@ -26,6 +26,11 @@ namespace LibrarySystem.Users.Members
             return _memberRepository.Get(jmbg);
         }
 
+        public List<String> GetAllMembersJmbg()
+        {
+            return _memberRepository.GetAllMembersJmbg();
+        }
+
         public ObservableCollection<Member> GetAll()
         {
             return _memberRepository.GetAll();

@@ -15,10 +15,10 @@ namespace LibrarySystem.BookLoan
 {
     internal class LoadBooksCommand : CommandBase
     {
-        private BookLoanViewModel _viewModel;
+        private BookBorrowingViewModel _viewModel;
         private BookService _bookService; 
 
-        public LoadBooksCommand(BookLoanViewModel viewModel)
+        public LoadBooksCommand(BookBorrowingViewModel viewModel)
         {
             _viewModel = viewModel;
             _bookService = new BookService(new BookRepository());

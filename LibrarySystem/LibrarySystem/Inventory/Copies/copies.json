@@ -1,38 +1,38 @@
 [
   {
-    "id": 1,
-    "status": 0,
-    "price": 20,
-    "isDamaged": false,
+    "Id": 1,
+    "Status": 0,
+    "Price": 20,
+    "IsDamaged": false
   },
   {
-    "id": 2,
-    "status": 0,
-    "price": 15,
-    "isDamaged": false,
+    "Id": 2,
+    "Status": 0,
+    "Price": 15,
+    "IsDamaged": false
   },
   {
-    "id": 3,
-    "status": 0,
-    "price": 25,
-    "isDamaged": false,
+    "Id": 3,
+    "Status": 0,
+    "Price": 25,
+    "IsDamaged": false
   },
   {
-    "id": 4,
-    "status": 0,
-    "price": 18,
-    "isDamaged": false,
+    "Id": 4,
+    "Status": 0,
+    "Price": 18,
+    "IsDamaged": false
   },
   {
-    "id": 5,
-    "status": 0,
-    "price": 30,
-    "isDamaged": false,
+    "Id": 5,
+    "Status": 1,
+    "Price": 30,
+    "IsDamaged": true
   },
   {
-    "id": 6,
-    "status": 0,
-    "price": 22,
-    "isDamaged": false,
+    "Id": 6,
+    "Status": 0,
+    "Price": 22,
+    "IsDamaged": false
   }
 ]

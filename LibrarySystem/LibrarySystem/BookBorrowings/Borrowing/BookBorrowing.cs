@@ -11,8 +11,8 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         public bool IsBookLost { get; set; }
 
         public int BookId { get; set; }
-
         public string Jmbg { get; set; }
+
         public BookBorrowing(int id, DateTime returnDate, DateTime borrowDate, bool isBookReturned, bool isBookLost, int bookId, string jmbg)
         {
             Id = id;

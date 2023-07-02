@@ -21,6 +21,11 @@ namespace LibrarySystem.Inventory.Copies
             _copiesRepository.Add(copy);
         }
 
+        public void BorrowCopy(int id)
+        {
+            _copiesRepository.BorrowCopy(id);
+        }
+
         public Copy? Get(int id)
         {
             return _copiesRepository.Get(id);

@@ -26,35 +26,12 @@ namespace LibrarySystem.MainUI
         public LibrarianWindow()
         {
             InitializeComponent();
-            DataContext = new BookLoanViewModel();
         }
 
-        private void Titles_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Title SelectedTitle)
-            {
-                var viewModel = DataContext as BookLoanViewModel;
-                viewModel.SelectedTitle = SelectedTitle;
-            }
+            BookBorrowingView bbv = new BookBorrowingView();
+            bbv.ShowDialog();
         }
-
-        private void Books_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Book SelectedBook)
-            {
-                var viewModel = DataContext as BookLoanViewModel;
-                viewModel.SelectedBook = SelectedBook;
-            }
-        }
-
-        private void Copies_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Copy SelectedCopy)
-            {
-                var viewModel = DataContext as BookLoanViewModel;
-                viewModel.SelectedCopy = SelectedCopy;
-            }
-        }
-
     }
 }

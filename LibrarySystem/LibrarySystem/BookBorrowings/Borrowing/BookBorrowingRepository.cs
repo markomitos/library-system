@@ -1,14 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using Newtonsoft.Json;
 
 namespace LibrarySystem.BookBorrowings.Borrowing
 {
     public class BookBorrowingRepository
     {
-        public const string BorrowingFilePath = "..\\..\\..\\BookBorrowing\\Borrowing\\borrowings.json";
+        public const string BorrowingFilePath = "..\\..\\..\\BookBorrowings\\Borrowing\\borrowings.json";
         public ObservableCollection<BookBorrowing> Borrowings = new();
 
         public BookBorrowingRepository()
@@ -31,7 +33,35 @@ namespace LibrarySystem.BookBorrowings.Borrowing
             Save();
         }
 
-        public BookBorrowing Get(int id)
+        public void CreateBookBorrowing(DateTime returnDate, DateTime borrowDate, bool isBookReturned, bool isBookLost,
+            int bookId, string jmbg)
+        {
+            Add(new BookBorrowing(GenerateBorrowingId(),returnDate,borrowDate,isBookReturned,isBookLost,bookId,jmbg));
+        }
+
+
+        public static int GenerateRandomId()
+        {
+            Random random = new Random();
+            return random.Next(1, 1000);
+        }
+
+        public int GenerateBorrowingId()
+        {
+            while (true)
+            {
+                int id = GenerateRandomId();
+
+                if (!(Get(id) == null))
+                {
+                    continue;
+                }
+                return id;
+            }
+        }
+
+
+        public BookBorrowing? Get(int id)
         {
             return Borrowings.FirstOrDefault(borrowing => borrowing.Id == id);
         }
