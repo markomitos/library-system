@@ -27,8 +27,19 @@ namespace LibrarySystem.BookLoan
 
         public override void Execute(object? parameter)
         {
-            Console.WriteLine(_viewModel.SelectedTitle.Genre);
-            _viewModel.Books = new ObservableCollection<Book>(_bookService.GetBooksByIsbn(_viewModel.SelectedTitle.Books));
+            try
+            {
+                List<Book> books = _bookService.GetBooksByIsbn(_viewModel.SelectedTitle.Books);
+
+                if (books.Count == 0) throw new Exception("There are no books for chosen title! ");
+                _viewModel.Books = new ObservableCollection<Book>(books);
+            }
+            catch (Exception ex)
+            {
+                Notification.ShowErrorDialog(ex.Message);
+                _viewModel.Books = new ObservableCollection<Book>(new List<Book>());
+            }
+            
         }
 
 

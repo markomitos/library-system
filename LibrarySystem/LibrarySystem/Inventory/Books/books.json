@@ -1,56 +1,62 @@
 [
   {
-    "isbn": 1,
-    "published": "2022-01-01",
-    "price": 20,
-    "covering": "Hardcover",
-    "format": "Physical",
-    "titleUDK": 123456,
-    "publisherName": "Publisher 1"
+    "ISBN": 1,
+    "Published": "2022-01-01",
+    "Price": 20,
+    "Covering": "Hardcover",
+    "Format": "Physical",
+    "TitleUDK": 123456,
+    "PublisherName": "Publisher 1",
+    "Copies": [ 1 ]
   },
   {
-    "isbn": 2,
-    "published": "2022-02-01",
-    "price": 15,
-    "covering": "Paperback",
-    "format": "Physical",
-    "titleUDK": 123456,
-    "publisherName": "Publisher 2"
+    "ISBN": 2,
+    "Published": "2022-02-01",
+    "Price": 15,
+    "Covering": "Paperback",
+    "Format": "Physical",
+    "TitleUDK": 123456,
+    "PublisherName": "Publisher 2",
+    "Copies": [ 2 ]
   },
   {
-    "isbn": 3,
-    "published": "2022-03-01",
-    "price": 25,
-    "covering": "Hardcover",
-    "format": "Physical",
-    "titleUDK": 789012,
-    "publisherName": "Publisher 3"
+    "ISBN": 3,
+    "Published": "2022-03-01",
+    "Price": 25,
+    "Covering": "Hardcover",
+    "Format": "Physical",
+    "TitleUDK": 789012,
+    "PublisherName": "Publisher 3",
+    "Copies": [ 3 ]
   },
   {
-    "isbn": 4,
-    "published": "2022-04-01",
-    "price": 18,
-    "covering": "Paperback",
-    "format": "Physical",
-    "titleUDK": 789012,
-    "publisherName": "Publisher 4"
+    "ISBN": 4,
+    "Published": "2022-04-01",
+    "Price": 18,
+    "Covering": "Paperback",
+    "Format": "Physical",
+    "TitleUDK": 789012,
+    "PublisherName": "Publisher 4",
+    "Copies": [ 4 ]
   },
   {
-    "isbn": 5,
-    "published": "2022-05-01",
-    "price": 30,
-    "covering": "Hardcover",
-    "format": "Physical",
-    "titleUDK": 789012,
-    "publisherName": "Publisher 5"
+    "ISBN": 5,
+    "Published": "2022-05-01",
+    "Price": 30,
+    "Covering": "Hardcover",
+    "Format": "Physical",
+    "TitleUDK": 789012,
+    "PublisherName": "Publisher 5",
+    "Copies": [ 5 ]
   },
   {
-    "isbn": 6,
-    "published": "2022-06-01",
-    "price": 22,
-    "covering": "Paperback",
-    "format": "Physical",
-    "titleUDK": 345678,
-    "publisherName": "Publisher 6"
+    "ISBN": 6,
+    "Published": "2022-06-01",
+    "Price": 22,
+    "Covering": "Paperback",
+    "Format": "Physical",
+    "TitleUDK": 345678,
+    "PublisherName": "Publisher 6",
+    "Copies": [ 6 ]
   }
 ]

@@ -25,5 +25,11 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _copiesRepository.Get(id);
         }
+
+        public List<Copy> GetCopiesById(List<int> ids)
+        {
+            return _copiesRepository.GetCopiesById(ids);
+        }
+
     }
 }

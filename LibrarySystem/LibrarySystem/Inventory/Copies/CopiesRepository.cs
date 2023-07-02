@@ -38,5 +38,10 @@ namespace LibrarySystem.Inventory.Copies
         {
             return Copies.FirstOrDefault(x => x.Id == id);
         }
+
+        public List<Copy> GetCopiesById(List<int> ids)
+        {
+            return (from id in ids from copy in Copies where copy.Id == id select copy).ToList();
+        }
     }
 }

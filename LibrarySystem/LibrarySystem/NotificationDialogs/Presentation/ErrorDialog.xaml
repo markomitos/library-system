@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Title="Error" Height="190" Width="340" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Button x:Name="okayBtn" Content="Okay" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" FontSize="18" Width="80" Height="40" Click="okayBtn_Click" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="okayBtn" Content="Okay" HorizontalAlignment="Center" Margin="0,105,0,0" VerticalAlignment="Top" FontSize="18" Width="80" Height="40" Click="okayBtn_Click" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
