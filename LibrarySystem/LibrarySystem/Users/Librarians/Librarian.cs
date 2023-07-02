@@ -11,7 +11,7 @@ namespace LibrarySystem.Users.Librarians
     {
         public string BranchName { get; set; }
 
-        public Librarian(string jmbg, string firstName, string lastName, string adress, string phone, string email, string username, string branchName) : base(jmbg, firstName, lastName, adress, phone, email, username)
+        public Librarian(string jmbg, string firstName, string lastName, string address, string phone, string email, string username, string branchName) : base(jmbg, firstName, lastName, address, phone, email, username)
         {
             BranchName = branchName;
         }
