@@ -35,5 +35,10 @@ namespace LibrarySystem.Inventory.Titles
         {
             return _titleRepository.AlreadyExists(udk);
         }
+
+        public void AddBook(int udk, int isbn)
+        {
+            _titleRepository.AddBook(udk, isbn);
+        }
     }
 }

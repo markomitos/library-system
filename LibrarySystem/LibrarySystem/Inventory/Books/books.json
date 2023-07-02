@@ -1,62 +1,104 @@
 [
   {
     "ISBN": 1,
-    "Published": "2022-01-01",
+    "Published": "2022-01-01T00:00:00",
     "Price": 20,
     "Covering": "Hardcover",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Publisher 1",
-    "Copies": [ 1 ]
+    "Copies": [
+      1
+    ]
   },
   {
     "ISBN": 2,
-    "Published": "2022-02-01",
+    "Published": "2022-02-01T00:00:00",
     "Price": 15,
     "Covering": "Paperback",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Publisher 2",
-    "Copies": [ 2 ]
+    "Copies": [
+      2
+    ]
   },
   {
     "ISBN": 3,
-    "Published": "2022-03-01",
+    "Published": "2022-03-01T00:00:00",
     "Price": 25,
     "Covering": "Hardcover",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Publisher 3",
-    "Copies": [ 3 ]
+    "Copies": [
+      3
+    ]
   },
   {
     "ISBN": 4,
-    "Published": "2022-04-01",
+    "Published": "2022-04-01T00:00:00",
     "Price": 18,
     "Covering": "Paperback",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Publisher 4",
-    "Copies": [ 4 ]
+    "Copies": [
+      4
+    ]
   },
   {
     "ISBN": 5,
-    "Published": "2022-05-01",
+    "Published": "2022-05-01T00:00:00",
     "Price": 30,
     "Covering": "Hardcover",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Publisher 5",
-    "Copies": [ 5 ]
+    "Copies": [
+      5
+    ]
   },
   {
     "ISBN": 6,
-    "Published": "2022-06-01",
+    "Published": "2022-06-01T00:00:00",
     "Price": 22,
     "Covering": "Paperback",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 345678,
     "PublisherName": "Publisher 6",
-    "Copies": [ 6 ]
+    "Copies": [
+      6
+    ]
+  },
+  {
+    "ISBN": 1,
+    "Published": "1980-03-07T00:00:00",
+    "Price": 15,
+    "Covering": "Hard",
+    "Format": 1,
+    "TitleUDK": 3,
+    "PublisherName": "Klett",
+    "Copies": []
+  },
+  {
+    "ISBN": 2,
+    "Published": "1981-03-12T00:00:00",
+    "Price": 20,
+    "Covering": "Soft",
+    "Format": 1,
+    "TitleUDK": 3,
+    "PublisherName": "Klett",
+    "Copies": []
+  },
+  {
+    "ISBN": 155,
+    "Published": "2009-07-15T00:00:00",
+    "Price": 25,
+    "Covering": "None",
+    "Format": 0,
+    "TitleUDK": 3,
+    "PublisherName": "Klett",
+    "Copies": []
   }
 ]

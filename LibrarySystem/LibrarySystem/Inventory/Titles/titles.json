@@ -7,7 +7,11 @@
     "Authors": [
       "2"
     ],
-    "Books": []
+    "Books": [
+      1,
+      2,
+      155
+    ]
   },
   {
     "Name": "Title 1",

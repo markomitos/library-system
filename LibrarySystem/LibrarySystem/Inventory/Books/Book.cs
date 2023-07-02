@@ -29,6 +29,8 @@ namespace LibrarySystem.Inventory.Books
         public Book(int isbn, DateTime published, int price, string covering, BookFormat format, int titleUDK,
             string publisherName, List<int> copies)
         {
+            if (covering == "") throw new ArgumentNullException("covering cant be empty!");
+            if (publisherName == "") throw new ArgumentNullException("publisher name cant be empty!");
             ISBN = isbn;
             Published = published;
             Price = price;

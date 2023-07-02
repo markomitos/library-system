@@ -36,5 +36,15 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _bookRepository.GetAllBooks();
         }
+
+        public List<Book> GetBooksByUDK(int udk)
+        {
+            return _bookRepository.GetBooksByUDK(udk);
+        }
+
+        public bool AlreadyExists(int isbn)
+        {
+            return _bookRepository.AlreadyExists(isbn);
+        }
     }
 }

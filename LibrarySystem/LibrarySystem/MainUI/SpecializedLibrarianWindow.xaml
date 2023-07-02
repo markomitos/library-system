@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SpecializedLibrarianWindow" Height="550" Width="1092" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="titlesDataGrid" ItemsSource="{Binding Titles}" Margin="12,40,10,295" CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" AlternatingRowBackground="LightGray">
+        <DataGrid x:Name="titlesDataGrid" SelectedItem="{Binding SelectedTitle}" ItemsSource="{Binding Titles}" Margin="12,40,10,295" CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" AlternatingRowBackground="LightGray">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Language" Binding="{Binding Language}"></DataGridTextColumn>
@@ -39,7 +39,7 @@
         </DataGrid>
         <Label Content="Titles" HorizontalAlignment="Left" Margin="19,14,0,0" VerticalAlignment="Top"/>
         <Label Content="Books" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center"/>
-        <DataGrid x:Name="CopiesDataGrid" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,276,10,42">
+        <DataGrid x:Name="CopiesDataGrid" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,279,10,39">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
@@ -50,5 +50,9 @@
         </DataGrid>
         <Button x:Name="addBookButton" Command="{Binding ShowAddBookDialogCommand}"  Content="Add book" HorizontalAlignment="Left" Margin="88,0,0,0" VerticalAlignment="Center" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
         <Button x:Name="addTitleButton" Command="{Binding ShowAddTitleDialogCommand}"  Content="Add title" HorizontalAlignment="Left" Margin="88,18,0,0" VerticalAlignment="Top" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="UpdateBookDataGridButton" Command="{Binding UpdateBookDataGridCommand}" Content="Refresh" HorizontalAlignment="Left" Margin="458,260,0,0" VerticalAlignment="Top"/>
+        <Label Content="Copies" HorizontalAlignment="Left" Margin="596,252,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="UpdateCopyDataGridButton" Command="{Binding UpdateCopyDataGridCommand}" Content="Refresh" HorizontalAlignment="Left" Margin="1039,0,0,0" VerticalAlignment="Center"/>
+        <Button x:Name="addCopyButton" Command="{Binding ShowAddCopyDialogCommand}"  Content="Add copy" HorizontalAlignment="Left" Margin="665,255,0,0" VerticalAlignment="Top" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
     </Grid>
 </Window>

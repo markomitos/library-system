@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.Inventory.Books;
 
 namespace LibrarySystem.Inventory.Titles
 {
@@ -51,6 +52,12 @@ namespace LibrarySystem.Inventory.Titles
                 if (title.UDK == udk) return true;
             }
             return false;
+        }
+
+        public void AddBook(int udk, int isbn)
+        {
+            Get(udk).Books.Add(isbn);
+            Save();
         }
     }
 }
