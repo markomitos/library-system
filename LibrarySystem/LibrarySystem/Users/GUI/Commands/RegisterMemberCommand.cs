@@ -4,12 +4,12 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users.Accounts;
 using LibrarySystem.Users.GUI.ViewModels;
 using LibrarySystem.Users.MemberRules;
 using LibrarySystem.Users.Members;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
 
 namespace LibrarySystem.Users.GUI.Commands
 {

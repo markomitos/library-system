@@ -7,7 +7,6 @@ using System.Windows;
 using LibrarySystem.Users.GUI.ViewModels;
 using LibrarySystem.Users.GUI.Views;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
 
 namespace LibrarySystem.Users.GUI.Commands
 {

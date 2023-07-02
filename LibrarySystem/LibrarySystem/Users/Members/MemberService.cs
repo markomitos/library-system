@@ -29,6 +29,7 @@ namespace LibrarySystem.Users.Members
         public bool AlreadyExistsJmbg(string jmbg)
         {
             return _memberRepository.Contains(jmbg);
+        }
 
         public List<String> GetAllMembersJmbg()
         {

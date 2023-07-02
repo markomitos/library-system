@@ -29,7 +29,7 @@ namespace LibrarySystem.Users.GUI.ViewModels
 
         public void LoadMembers()
         {
-            Members = new ObservableCollection<Member>(_memberService.GetAllMembers());
+            Members = _memberService.GetAll();
         }
     }
 }
