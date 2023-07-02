@@ -57,5 +57,19 @@ namespace LibrarySystem.Reservations
 
             return reservations;
         }
+
+        public void CancelExpiredReservations()
+        {
+            foreach (Reservation reservation in Reservations)
+            {
+                if (reservation.ApprovalDate == null) continue;
+                if (reservation.State == Reservation.ReservationState.Approved &&
+                    reservation.ApprovalDate.Value.AddDays(2) < DateTime.Now)
+                {
+                    reservation.State = Reservation.ReservationState.Canceled;
+                }
+            }
+            Save();
+        }
     }
 }

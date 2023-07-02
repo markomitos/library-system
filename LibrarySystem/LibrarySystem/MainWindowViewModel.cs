@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using LibrarySystem.MainCommands;
+using LibrarySystem.Reservations;
 using LibrarySystem.Users.Accounts;
 using LibrarySystem.Utils;
 
@@ -16,7 +17,7 @@ namespace LibrarySystem
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        
+        private ReservationService _reservationService;
         private readonly MainWindow _mainWindow;
 
         private string? _username;
@@ -54,7 +55,10 @@ namespace LibrarySystem
 
         public MainWindowViewModel(MainWindow mainWindow)
         {
+            _reservationService = new ReservationService(new ReservationRepository());
             _mainWindow = mainWindow;
+            _reservationService.CancelExpiredReservations();
         }
+        
     }
 }
