@@ -55,10 +55,8 @@ namespace LibrarySystem.MainCommands
                     adminWindow.Show();
                     break;
                 case Account.UserType.Librarian:
-                    //LibrarianWindow librarianWindow = new LibrarianWindow();
-                    //librarianWindow.Show();
-                    MembersHandlingWindow membersHandlingWindow = new MembersHandlingWindow();
-                    membersHandlingWindow.Show();
+                    LibrarianWindow librarianWindow = new LibrarianWindow();
+                    librarianWindow.Show();
                     break;
                 case Account.UserType.SpecializedLibrarian:
                     SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
