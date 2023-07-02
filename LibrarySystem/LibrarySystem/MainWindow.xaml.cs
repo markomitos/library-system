@@ -13,9 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.Users.Accounts;
 using ZdravoCorp.MainUI.NotificationDialogs;
-using static LibrarySystem.Users.Account;
+using static LibrarySystem.Users.Accounts.Account;
 
 namespace LibrarySystem
 {
@@ -33,7 +33,7 @@ namespace LibrarySystem
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            Account account = _accountService.GetAccount(this.usernameTextbox.Text, this.passwordTextbox.Password);
+            Account account = _accountService.Get(this.usernameTextbox.Text, this.passwordTextbox.Password);
             if (account == null)
             {
                 errorLabel.Visibility = Visibility.Visible;
