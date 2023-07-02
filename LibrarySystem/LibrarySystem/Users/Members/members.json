@@ -68,13 +68,13 @@
   {
     "IsEmailWarning": true,
     "Type": 2,
-    "Jmbg": "3456789012345",
+    "Jmbg": "123456789",
     "FirstName": "Michael",
     "LastName": "Johnson",
     "Address": "789 Oak Street",
     "Phone": "555-123-4567",
     "Email": "michael.johnson@example.com",
-    "Username": "michaeljohnson"
+    "Username": "michael_jones"
   },
   {
     "IsEmailWarning": false,
