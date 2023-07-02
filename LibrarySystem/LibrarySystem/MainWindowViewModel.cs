@@ -60,19 +60,19 @@ namespace LibrarySystem
         {
             switch (account.Type)
             {
-                case UserType.Administrator:
+                case Account.UserType.Administrator:
                     AdminWindow adminWindow = new AdminWindow();
                     adminWindow.Show();
                     break;
-                case UserType.Librarian:
+                case Account.UserType.Librarian:
                     LibrarianWindow librarianWindow = new LibrarianWindow();
                     librarianWindow.Show();
                     break;
-                case UserType.SpecializedLibrarian:
+                case Account.UserType.SpecializedLibrarian:
                     SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
                     specializedLibrarianWindow.Show();
                     break;
-                case UserType.Member:
+                case Account.UserType.Member:
                     MemberWindow memberWindow = new MemberWindow();
                     memberWindow.Show();
                     break;

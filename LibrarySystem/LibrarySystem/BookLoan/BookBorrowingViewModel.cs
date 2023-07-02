@@ -126,7 +126,7 @@ namespace LibrarySystem.BookLoan
         {
             TitleService = new TitleService(new TitleRepository());
             MemberService = new MemberService(new MemberRepository());
-            Titles = new ObservableCollection<Title>(TitleService.GetAllTitles());
+            Titles = new ObservableCollection<Title>(TitleService.GetAll());
             Members = new ObservableCollection<string>(MemberService.GetAllMembersJmbg());
             ReturnDate = DateTime.Now;
         }

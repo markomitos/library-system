@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibrarySystem.Inventory.Titles;
+using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
 
 namespace LibrarySystem.MainUI.SpecializedLibrarianView.ICommands
 {
