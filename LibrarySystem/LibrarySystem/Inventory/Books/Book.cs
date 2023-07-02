@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.Inventory.Copies;
+using LibrarySystem.Inventory.Titles;
+using LibrarySystem.Publishing;
 
-namespace LibrarySystem.Books
+namespace LibrarySystem.Inventory.Books
 {
     public class Book
     {

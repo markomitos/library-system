@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibrarySystem.Books
+namespace LibrarySystem.Inventory.Copies
 {
     public class Copy
     {
