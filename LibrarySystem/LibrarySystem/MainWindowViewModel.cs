@@ -8,14 +8,16 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using LibrarySystem.MainCommands;
-using LibrarySystem.Utils;
+using LibrarySystem.Reservations;
 using LibrarySystem.Users.Accounts;
+using LibrarySystem.Utils;
+
 
 namespace LibrarySystem
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        
+        private ReservationService _reservationService;
         private readonly MainWindow _mainWindow;
 
         private string? _username;
@@ -53,30 +55,10 @@ namespace LibrarySystem
 
         public MainWindowViewModel(MainWindow mainWindow)
         {
+            _reservationService = new ReservationService(new ReservationRepository());
             _mainWindow = mainWindow;
+            _reservationService.CancelExpiredReservations();
         }
 
-        private void openRoleWindow(Account account)
-        {
-            switch (account.Type)
-            {
-                case Account.UserType.Administrator:
-                    AdminWindow adminWindow = new AdminWindow();
-                    adminWindow.Show();
-                    break;
-                case Account.UserType.Librarian:
-                    LibrarianWindow librarianWindow = new LibrarianWindow();
-                    librarianWindow.Show();
-                    break;
-                case Account.UserType.SpecializedLibrarian:
-                    SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
-                    specializedLibrarianWindow.Show();
-                    break;
-                case Account.UserType.Member:
-                    MemberWindow memberWindow = new MemberWindow();
-                    memberWindow.Show();
-                    break;
-            }
-        }
     }
 }

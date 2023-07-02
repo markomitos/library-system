@@ -21,7 +21,7 @@
         </Label>
         <Button x:Name="backBtn" Command="{Binding BackCommand}" Content="Back" HorizontalAlignment="Left" Height="31" Margin="650,26,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
         <DataGrid HorizontalAlignment="Center" SelectedItem="{Binding SelectedReservation}" ItemsSource="{Binding Reservations}" IsReadOnly="True" CanUserAddRows="False" ColumnWidth="*" Height="200" Margin="0,76,0,0" VerticalAlignment="Top" Width="716" />
-        <Button x:Name="logOutBtn_Copy" Command="{Binding CancelReservationCommand}" Content="Cancel" HorizontalAlignment="Center" Height="31" Margin="0,298,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+        <Button x:Name="cancelReservationBtn" Command="{Binding CancelReservationCommand}" Content="Cancel" HorizontalAlignment="Center" Height="31" Margin="0,298,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
 
     </Grid>
 </Window>
