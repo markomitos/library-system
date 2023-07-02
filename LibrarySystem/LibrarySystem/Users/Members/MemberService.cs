@@ -35,5 +35,9 @@ namespace LibrarySystem.Users.Members
         {
             return _memberRepository.GetAll();
         }
+        public Member? GetJMBG(string username)
+        {
+            return _memberRepository.GetJMBG(username);
+        }
     }
 }

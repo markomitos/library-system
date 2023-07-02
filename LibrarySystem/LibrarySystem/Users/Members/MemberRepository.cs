@@ -20,7 +20,7 @@ namespace LibrarySystem.Users.Members
             if (!File.Exists(MembersFilePath)) return;
 
             string json = File.ReadAllText(MembersFilePath);
-            Members = new (JsonConvert.DeserializeObject<List<Member>>(json));
+            Members = JsonConvert.DeserializeObject<List<Member>>(json);
         }
 
         public void Save()
@@ -53,6 +53,10 @@ namespace LibrarySystem.Users.Members
         public ObservableCollection<Member> GetAll()
         {
             return Members;
+        }
+        public Member? GetJMBG(string username)
+        {
+            return Members.FirstOrDefault(member => member.Username == username);
         }
     }
 }
