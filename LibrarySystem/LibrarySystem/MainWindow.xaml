@@ -18,7 +18,7 @@
         <PasswordBox x:Name="passwordTextbox" Password="{Binding Password, Mode=TwoWay}" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="45" Margin="0,218,0,0" VerticalAlignment="Top" Width="422" FontSize="20" />
         <Label x:Name="usernameLabel" Content="Username" HorizontalAlignment="Left" Margin="189,106,0,0" VerticalAlignment="Top" Width="159" FontSize="14" Opacity="0.8"/>
         <Label x:Name="passwordLabel" Content="Password" HorizontalAlignment="Left" Margin="189,189,0,0" VerticalAlignment="Top" Width="159" FontSize="14" Opacity="0.8"/>
-        <Button x:Name="loginBtn" Command="{Binding LogIn}"  Content="Log in" HorizontalAlignment="Center" Height="49" Margin="0,297,0,0" VerticalAlignment="Top" Width="120" FontSize="20" Click="loginBtn_Click" Background="#FF2498E4" BorderBrush="#FF5591B7" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="loginBtn" Command="{Binding LogIn}"  Content="Log in" HorizontalAlignment="Center" Height="49" Margin="0,297,0,0" VerticalAlignment="Top" Width="120" FontSize="20" Background="#FF2498E4" BorderBrush="#FF5591B7" Foreground="White" Cursor="Hand"/>
         <Label x:Name="errorLabel" Content="incorrect username or password" HorizontalAlignment="Left" Margin="403,263,0,0" VerticalAlignment="Top" Foreground="#FFD82828" FontSize="14" Visibility="Hidden"/>
 
     </Grid>

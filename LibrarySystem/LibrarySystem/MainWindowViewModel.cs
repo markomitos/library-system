@@ -32,14 +32,6 @@ namespace LibrarySystem
 
         private ICommand? _logIn { get; set; }
 
-        public ICommand LogIn
-        {
-            get
-            {
-                return _logIn ??= new 
-            }
-        }
-
         private string? _password;
         public string? Password
         {
@@ -55,28 +47,6 @@ namespace LibrarySystem
         {
             _accountService = new(new AccountRepository());
             _mainWindow = mainWindow;
-        }
-
-        private void loginBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Account account = _accountService.GetAccount(this.usernameTextbox.Text, this.passwordTextbox.Password);
-            if (account == null)
-            {
-                errorLabel.Visibility = Visibility.Visible;
-                return;
-            }
-
-            //Globals.LoggedUser = user;
-            try
-            {
-                openRoleWindow(account);
-            }
-            catch (Exception error)
-            {
-                Notification.ShowErrorDialog(error.Message);
-                return;
-            }
-            this.Close();
         }
 
         private void openRoleWindow(Account account)
@@ -100,12 +70,6 @@ namespace LibrarySystem
                     memberWindow.Show();
                     break;
             }
-        }
-
-        private void loginWindow_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-                loginBtn_Click(sender, e);
         }
     }
 }
