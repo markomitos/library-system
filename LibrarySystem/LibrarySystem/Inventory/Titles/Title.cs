@@ -20,6 +20,10 @@ namespace LibrarySystem.Inventory.Titles
 
         public Title(string name, string language, int udk, string genre, List<string> authors, List<int> books)
         {
+            if (name == "") throw new ArgumentNullException("name can't be empty");
+            if (language == "") throw new ArgumentNullException("language can't be empty");
+            if (genre == "") throw new ArgumentNullException("genre can't be empty");
+            if (authors.Count == 0) throw new ArgumentException("A title must have at least one author!");
             Name = name;
             Language = language;
             UDK = udk;

@@ -1,10 +1,62 @@
-{
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
-}
+[
+  {
+    "ISBN": 1,
+    "Published": "2022-01-01",
+    "Price": 20,
+    "Covering": "Hardcover",
+    "Format": "Physical",
+    "TitleUDK": 123456,
+    "PublisherName": "Tony",
+    "Copies": [ 1 ]
+  },
+  {
+    "ISBN": 2,
+    "Published": "2022-02-01",
+    "Price": 15,
+    "Covering": "Paperback",
+    "Format": "Physical",
+    "TitleUDK": 123456,
+    "PublisherName": "Montana",
+    "Copies": [ 2 ]
+  },
+  {
+    "ISBN": 3,
+    "Published": "2022-03-01",
+    "Price": 25,
+    "Covering": "Hardcover",
+    "Format": "Physical",
+    "TitleUDK": 789012,
+    "PublisherName": "Lagana",
+    "Copies": [ 3 ]
+  },
+  {
+    "ISBN": 4,
+    "Published": "2022-04-01",
+    "Price": 18,
+    "Covering": "Paperback",
+    "Format": "Physical",
+    "TitleUDK": 789012,
+    "PublisherName": "Prica",
+    "Copies": [ 4 ]
+  },
+  {
+    "ISBN": 5,
+    "Published": "2022-05-01",
+    "Price": 30,
+    "Covering": "Hardcover",
+    "Format": "Physical",
+    "TitleUDK": 789012,
+    "PublisherName": "Mala",
+    "Copies": [ 5 ]
+  },
+  {
+    "ISBN": 6,
+    "Published": "2022-06-01",
+    "Price": 22,
+    "Covering": "Paperback",
+    "Format": "Physical",
+    "TitleUDK": 345678,
+    "PublisherName": "Mana",
+    "Copies": [ 6 ]
+  }
+]

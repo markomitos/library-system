@@ -1,7 +1,7 @@
-﻿[
+[
   {
-    "Username": "john_doe",
-    "Password": "12345",
+    "Username": "tony",
+    "Password": "123",
     "Type": 0
   },
   {
@@ -53,5 +53,20 @@
     "Username": "admin_user",
     "Password": "12345",
     "Type": 3
+  },
+  {
+    "Username": "maric300",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "ilija02",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "perap",
+    "Password": "123",
+    "Type": 2
   }
 ]

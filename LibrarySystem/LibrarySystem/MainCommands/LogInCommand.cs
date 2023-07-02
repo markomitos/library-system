@@ -7,9 +7,8 @@ using LibrarySystem.MainUI;
 using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users;
 using LibrarySystem.Users.Accounts;
-
+using LibrarySystem.Users.GUI.Views;
 using LibrarySystem.Utils;
-
 
 namespace LibrarySystem.MainCommands
 {

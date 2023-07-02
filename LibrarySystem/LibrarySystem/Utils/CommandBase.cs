@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace LibrarySystem.Utils
 {
-    internal abstract class CommandBase : ICommand
+    public abstract class CommandBase : ICommand
     {
         public virtual bool CanExecute(object? parameter)
         {

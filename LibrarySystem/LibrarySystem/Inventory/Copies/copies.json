@@ -1,10 +1,38 @@
-{
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
-}
+[
+  {
+    "Id": 1,
+    "Status": 0,
+    "Price": 20,
+    "IsDamaged": false
+  },
+  {
+    "Id": 2,
+    "Status": 0,
+    "Price": 15,
+    "IsDamaged": false
+  },
+  {
+    "Id": 3,
+    "Status": 1,
+    "Price": 25,
+    "IsDamaged": false
+  },
+  {
+    "Id": 4,
+    "Status": 1,
+    "Price": 18,
+    "IsDamaged": false
+  },
+  {
+    "Id": 5,
+    "Status": 0,
+    "Price": 30,
+    "IsDamaged": true
+  },
+  {
+    "Id": 6,
+    "Status": 0,
+    "Price": 22,
+    "IsDamaged": false
+  }
+]
