@@ -20,54 +20,44 @@
     "Phone": "0617597142",
     "Email": "ilija.beslin@gmail.com",
     "Username": "ilija02"
-
-    "jmbg": "1234567890123",
-    "firstName": "John",
-    "lastName": "Doe",
-    "address": "123 Main St",
-    "phone": "555-1234",
-    "email": "john.doe@example.com",
-    "username": "johndoe",
-    "isEmailWarning": true,
-    "type": 0
   },
   {
-    "jmbg": "9876543210987",
-    "firstName": "Jane",
-    "lastName": "Smith",
-    "address": "456 Elm St",
-    "phone": "555-5678",
-    "email": "jane.smith@example.com",
-    "username": "janesmith",
-    "isEmailWarning": false,
-    "type": 1
+    "IsEmailWarning": true,
+    "Type": 0,
+    "Jmbg": "1234567890123",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Address": "123 Main St",
+    "Phone": "555-1234",
+    "Email": "john.doe@example.com",
+    "Username": "johndoe"
   },
   {
-    "jmbg": "123456789",
-    "firstName": "Michael",
-    "lastName": "Johnson",
-    "address": "789 Oak St",
-    "phone": "555-9012",
-    "email": "michael.johnson@example.com",
-    "username": "michael_jones",
-    "isEmailWarning": true,
-    "type": 2
+    "IsEmailWarning": false,
+    "Type": 1,
+    "Jmbg": "9876543210987",
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "Address": "456 Elm St",
+    "Phone": "555-5678",
+    "Email": "jane.smith@example.com",
+    "Username": "janesmith"
   },
   {
-    "jmbg": "7890123456789",
-    "firstName": "Emily",
-    "lastName": "Davis",
-    "address": "321 Pine St",
-    "phone": "555-3456",
-    "email": "emily.davis@example.com",
-    "username": "emilydavis",
-    "isEmailWarning": false,
-    "type": 3
+    "IsEmailWarning": false,
+    "Type": 3,
+    "Jmbg": "7890123456789",
+    "FirstName": "Emily",
+    "LastName": "Davis",
+    "Address": "321 Pine St",
+    "Phone": "555-3456",
+    "Email": "emily.davis@example.com",
+    "Username": "emilydavis"
   },
   {
-    "isEmailWarning": false,
-    "Type": "Pupil",
-    "JMBG": "2345678901234",
+    "IsEmailWarning": false,
+    "Type": 1,
+    "Jmbg": "2345678901234",
     "FirstName": "Jane",
     "LastName": "Smith",
     "Address": "456 Elm Street",
@@ -76,9 +66,9 @@
     "Username": "janesmith"
   },
   {
-    "isEmailWarning": true,
-    "Type": "Student",
-    "JMBG": "3456789012345",
+    "IsEmailWarning": true,
+    "Type": 2,
+    "Jmbg": "3456789012345",
     "FirstName": "Michael",
     "LastName": "Johnson",
     "Address": "789 Oak Street",
@@ -87,9 +77,9 @@
     "Username": "michaeljohnson"
   },
   {
-    "isEmailWarning": false,
-    "Type": "Employer",
-    "JMBG": "4567890123456",
+    "IsEmailWarning": false,
+    "Type": 3,
+    "Jmbg": "4567890123456",
     "FirstName": "Emily",
     "LastName": "Brown",
     "Address": "321 Pine Street",
@@ -98,9 +88,9 @@
     "Username": "emilybrown"
   },
   {
-    "isEmailWarning": true,
-    "Type": "Pensioner",
-    "JMBG": "5678901234567",
+    "IsEmailWarning": true,
+    "Type": 4,
+    "Jmbg": "5678901234567",
     "FirstName": "David",
     "LastName": "Wilson",
     "Address": "654 Maple Street",
@@ -109,9 +99,9 @@
     "Username": "davidwilson"
   },
   {
-    "isEmailWarning": false,
-    "Type": "Child",
-    "JMBG": "6789012345678",
+    "IsEmailWarning": false,
+    "Type": 0,
+    "Jmbg": "6789012345678",
     "FirstName": "Olivia",
     "LastName": "Taylor",
     "Address": "987 Birch Street",
@@ -120,9 +110,9 @@
     "Username": "oliviataylor"
   },
   {
-    "isEmailWarning": true,
-    "Type": "Pupil",
-    "JMBG": "7890123456789",
+    "IsEmailWarning": true,
+    "Type": 1,
+    "Jmbg": "7890123456789",
     "FirstName": "William",
     "LastName": "Anderson",
     "Address": "789 Oak Street",
@@ -131,9 +121,9 @@
     "Username": "williamanderson"
   },
   {
-    "isEmailWarning": false,
-    "Type": "Student",
-    "JMBG": "8901234567890",
+    "IsEmailWarning": false,
+    "Type": 2,
+    "Jmbg": "8901234567890",
     "FirstName": "Sophia",
     "LastName": "Clark",
     "Address": "654 Maple Street",
@@ -142,9 +132,9 @@
     "Username": "sophiaclark"
   },
   {
-    "isEmailWarning": true,
-    "Type": "Employer",
-    "JMBG": "9012345678901",
+    "IsEmailWarning": true,
+    "Type": 3,
+    "Jmbg": "9012345678901",
     "FirstName": "James",
     "LastName": "White",
     "Address": "789 Oak Street",
@@ -153,14 +143,25 @@
     "Username": "jameswhite"
   },
   {
-    "isEmailWarning": false,
-    "Type": "Pensioner",
-    "JMBG": "0123456789012",
+    "IsEmailWarning": false,
+    "Type": 4,
+    "Jmbg": "0123456789012",
     "FirstName": "Lily",
     "LastName": "Martinez",
     "Address": "654 Maple Street",
     "Phone": "666-777-8888",
     "Email": "lily.martinez@example.com",
     "Username": "lilymartinez"
+  },
+  {
+    "IsEmailWarning": false,
+    "Type": 3,
+    "Jmbg": "1234567892145",
+    "FirstName": "Pera",
+    "LastName": "Peric",
+    "Address": "Bulevar Oslobodjenja 4, Novi Sad",
+    "Phone": "06358882451",
+    "Email": "perap@gmail.com",
+    "Username": "perap"
   }
 ]

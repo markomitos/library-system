@@ -63,5 +63,10 @@
     "Username": "ilija02",
     "Password": "12345",
     "Type": 2
+  },
+  {
+    "Username": "perap",
+    "Password": "123",
+    "Type": 2
   }
 ]
