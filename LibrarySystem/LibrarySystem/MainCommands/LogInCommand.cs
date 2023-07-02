@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using LibrarySystem.MainUI;
 using LibrarySystem.Users;
+using LibrarySystem.Users.Accounts;
+using LibrarySystem.Users.GUI.Views;
 using LibrarySystem.Utils;
 using ZdravoCorp.MainUI.NotificationDialogs;
-using static LibrarySystem.Users.Account;
 
 namespace LibrarySystem.MainCommands
 {
@@ -25,7 +26,7 @@ namespace LibrarySystem.MainCommands
 
         public override void Execute(object? parameter)
         {
-            Account account = _accountService.GetAccount(_mainWindowViewModel.Username, _mainWindowViewModel.Password);
+            Account account = _accountService.Get(_mainWindowViewModel.Username, _mainWindowViewModel.Password);
             if (account == null)
             {
                 Notification.ShowErrorDialog("incorrect username or password");
@@ -49,19 +50,21 @@ namespace LibrarySystem.MainCommands
         {
             switch (account.Type)
             {
-                case UserType.Administrator:
+                case Account.UserType.Administrator:
                     AdminWindow adminWindow = new AdminWindow();
                     adminWindow.Show();
                     break;
-                case UserType.Librarian:
-                    LibrarianWindow librarianWindow = new LibrarianWindow();
-                    librarianWindow.Show();
+                case Account.UserType.Librarian:
+                    //LibrarianWindow librarianWindow = new LibrarianWindow();
+                    //librarianWindow.Show();
+                    MembersHandlingWindow membersHandlingWindow = new MembersHandlingWindow();
+                    membersHandlingWindow.Show();
                     break;
-                case UserType.SpecializedLibrarian:
+                case Account.UserType.SpecializedLibrarian:
                     SpecializedLibrarianWindow specializedLibrarianWindow = new SpecializedLibrarianWindow();
                     specializedLibrarianWindow.Show();
                     break;
-                case UserType.Member:
+                case Account.UserType.Member:
                     MemberWindow memberWindow = new MemberWindow();
                     memberWindow.Show();
                     break;

@@ -24,5 +24,10 @@ namespace LibrarySystem.Users.Members
         {
             return _memberRepository.Get(jmbg);
         }
+
+        public List<Member> GetAllMembers()
+        {
+            return _memberRepository.GetAllMembers();
+        }
     }
 }
