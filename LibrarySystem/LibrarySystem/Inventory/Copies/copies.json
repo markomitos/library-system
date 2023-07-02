@@ -7,7 +7,7 @@
   },
   {
     "Id": 2,
-    "Status": 0,
+    "Status": 1,
     "Price": 15,
     "IsDamaged": false
   },

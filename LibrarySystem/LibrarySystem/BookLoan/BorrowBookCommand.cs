@@ -9,9 +9,9 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using LibrarySystem.BookBorrowings.Borrowing;
 using LibrarySystem.MainUI;
+using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users.Members;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
 
 namespace LibrarySystem.BookLoan
 {

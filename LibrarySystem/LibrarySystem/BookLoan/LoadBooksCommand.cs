@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
+using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users.Accounts;
 using LibrarySystem.Utils;
-using ZdravoCorp.MainUI.NotificationDialogs;
 
 namespace LibrarySystem.BookLoan
 {

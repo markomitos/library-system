@@ -22,13 +22,13 @@
     "type": 1
   },
   {
-    "jmbg": "4567890123456",
+    "jmbg": "123456789",
     "firstName": "Michael",
     "lastName": "Johnson",
     "address": "789 Oak St",
     "phone": "555-9012",
     "email": "michael.johnson@example.com",
-    "username": "michaeljohnson",
+    "username": "michael_jones",
     "isEmailWarning": true,
     "type": 2
   },
