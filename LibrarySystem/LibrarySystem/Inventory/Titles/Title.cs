@@ -15,10 +15,10 @@ namespace LibrarySystem.Inventory.Titles
         public string Genre { get; set; }
         public List<string> Authors { get; set; }
 
-        public List<string> Books { get; set; }
+        public List<int> Books { get; set; }
 
 
-        public Title(string name, string language, int udk, string genre, List<string> authors, List<string> books)
+        public Title(string name, string language, int udk, string genre, List<string> authors, List<int> books)
         {
             Name = name;
             Language = language;
