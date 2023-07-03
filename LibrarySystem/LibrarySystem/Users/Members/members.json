@@ -155,11 +155,11 @@
   },
   {
     "IsEmailWarning": false,
-    "Type": 3,
+    "Type": 0,
     "Jmbg": "1234567892145",
     "FirstName": "Pera",
     "LastName": "Peric",
-    "Address": "Bulevar Oslobodjenja 4, Novi Sad",
+    "Address": "Bulevar Oslobodjenja 6, Novi Sad",
     "Phone": "06358882451",
     "Email": "perap@gmail.com",
     "Username": "perap"

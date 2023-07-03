@@ -25,7 +25,10 @@ namespace LibrarySystem.Users.Members
         {
             _memberRepository.Edit(member);
         }
-
+        public void Remove(Member member)
+        {
+            _memberRepository.Remove(member);
+        }
         public Member? Get(string jmbg)
         {
             return _memberRepository.Get(jmbg);

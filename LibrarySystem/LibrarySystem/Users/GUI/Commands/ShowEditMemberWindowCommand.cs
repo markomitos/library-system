@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users.GUI.ViewModels;
 using LibrarySystem.Utils;
 
@@ -19,18 +20,24 @@ namespace LibrarySystem.Users.GUI.Commands
         }
         public override void Execute(object? parameter)
         {
-            var membersHandlingWindow = parameter as MembersHandlingWindow;
-
-            if (_membersHandlingViewModel.SelectedMember == null)
+            try
             {
-                throw new InvalidOperationException("Member must be selected");
+                var membersHandlingWindow = parameter as MembersHandlingWindow;
+
+                if (_membersHandlingViewModel.SelectedMember == null)
+                {
+                    throw new InvalidOperationException("Member must be selected");
+                }
+
+                EditMemberWindow editMemberWindow = new(membersHandlingWindow, _membersHandlingViewModel.SelectedMember);
+                editMemberWindow.Owner = membersHandlingWindow;
+                editMemberWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+                editMemberWindow.ShowDialog();
             }
-
-            EditMemberWindow editMemberWindow = new(membersHandlingWindow, _membersHandlingViewModel.SelectedMember);
-            editMemberWindow.Owner = membersHandlingWindow;
-            editMemberWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            editMemberWindow.ShowDialog();
-
+            catch (Exception error)
+            {
+                Notification.ShowErrorDialog(error.Message);
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace LibrarySystem.Users.GUI.Views
     {
         public MembersHandlingWindow()
         {
-            MembersHandlingViewModel membersHandlingViewModel = new();
+            MembersHandlingViewModel membersHandlingViewModel = new(this);
             this.DataContext = membersHandlingViewModel;
             InitializeComponent();
         }

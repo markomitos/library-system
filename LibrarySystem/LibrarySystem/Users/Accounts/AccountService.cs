@@ -23,6 +23,10 @@ namespace LibrarySystem.Users.Accounts
         {
             _accountRepository.Edit(account);
         }
+        public void Remove(Account account)
+        {
+            _accountRepository.Remove(account);
+        }
 
         public Account? Get(string username, string password)
         {
