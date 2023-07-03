@@ -76,6 +76,16 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
                 return _payFeeCommand ??= new PayFeeCommand(this);
             }
         }
+
+        private ICommand _returnBookCommand;
+
+        public ICommand ReturnBookCommand
+        {
+            get
+            {
+                return _returnBookCommand ??= new ReturnBookCommand(this);
+            }
+        }
         public ReturnBookViewModel(BookBorrowing borrowing, BookBorrowingService borrowingService, CopiesService copiesService, ReturnBookDialog returnBookDialog)
         {
             Borrowing = borrowing;
