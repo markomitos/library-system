@@ -1,62 +1,126 @@
 [
   {
     "ISBN": 1,
-    "Published": "2022-01-01",
-    "Price": 20,
+    "Published": "2022-01-01T00:00:00",
     "Covering": "Hardcover",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Tony",
     "Copies": [ 1 ]
   },
   {
     "ISBN": 2,
-    "Published": "2022-02-01",
-    "Price": 15,
+    "Published": "2022-02-01T00:00:00",
     "Covering": "Paperback",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Montana",
     "Copies": [ 2 ]
   },
   {
     "ISBN": 3,
-    "Published": "2022-03-01",
-    "Price": 25,
+    "Published": "2022-03-01T00:00:00",
     "Covering": "Hardcover",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Lagana",
     "Copies": [ 3 ]
   },
   {
     "ISBN": 4,
-    "Published": "2022-04-01",
-    "Price": 18,
+    "Published": "2022-04-01T00:00:00",
     "Covering": "Paperback",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Prica",
     "Copies": [ 4 ]
   },
   {
     "ISBN": 5,
-    "Published": "2022-05-01",
-    "Price": 30,
+    "Published": "2022-05-01T00:00:00",
     "Covering": "Hardcover",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Mala",
     "Copies": [ 5 ]
   },
   {
     "ISBN": 6,
-    "Published": "2022-06-01",
-    "Price": 22,
+    "Published": "2022-06-01T00:00:00",
     "Covering": "Paperback",
-    "Format": "Physical",
+    "Format": 1,
     "TitleUDK": 345678,
-    "PublisherName": "Mana",
-    "Copies": [ 6 ]
+    "PublisherName": "Publisher 6",
+    "Copies": [
+      6
+    ]
+  },
+  {
+    "ISBN": 145,
+    "Published": "1980-03-07T00:00:00",
+    "Covering": "Hard",
+    "Format": 1,
+    "TitleUDK": 3,
+    "PublisherName": "Klett",
+    "Copies": [
+      51861,
+      20157,
+      72343,
+      80192,
+      83857,
+      239,
+      70557,
+      14580
+    ]
+  },
+  {
+    "ISBN": 255,
+    "Published": "1981-03-12T00:00:00",
+    "Covering": "Soft",
+    "Format": 1,
+    "TitleUDK": 3,
+    "PublisherName": "Klett",
+    "Copies": [
+      20477,
+      969,
+      53761,
+      77431,
+      61558,
+      11530,
+      4217,
+      53330,
+      67447,
+      98158
+    ]
+  },
+  {
+    "ISBN": 155,
+    "Published": "2009-07-15T00:00:00",
+    "Covering": "None",
+    "Format": 0,
+    "TitleUDK": 3,
+    "PublisherName": "Klett",
+    "Copies": [
+      95980,
+      91161
+    ]
+  },
+  {
+    "ISBN": 123,
+    "Published": "2023-08-05T00:00:00",
+    "Covering": "Hard",
+    "Format": 1,
+    "TitleUDK": 901234,
+    "PublisherName": "Gansebluchen",
+    "Copies": []
+  },
+  {
+    "ISBN": 124,
+    "Published": "2023-07-06T00:00:00",
+    "Covering": "Soft",
+    "Format": 1,
+    "TitleUDK": 901234,
+    "PublisherName": "Gansebluchen",
+    "Copies": []
   }
 ]

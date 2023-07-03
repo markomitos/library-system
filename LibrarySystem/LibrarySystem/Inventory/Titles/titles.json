@@ -7,7 +7,11 @@
     "Authors": [
       "2"
     ],
-    "Books": []
+    "Books": [
+      145,
+      255,
+      155
+    ]
   },
   {
     "Name": "Title 1",
@@ -38,8 +42,14 @@
     "Language": "German",
     "UDK": 901234,
     "Genre": "Thriller",
-    "Authors": [ "5", "1" ],
-    "Books": [2]
+    "Authors": [
+      "Author 5",
+      "Author 6"
+    ],
+    "Books": [
+      123,
+      124
+    ]
   },
   {
     "Name": "Title 5",

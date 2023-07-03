@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LibrarySystem.Utils;
+﻿using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView.ICommands
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.ICommands
 {
     class RemoveAuthorCommand : CommandBase
     {

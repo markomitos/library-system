@@ -30,6 +30,7 @@ namespace LibrarySystem.Inventory.Copies
 
         public void Add(Copy copy)
         {
+            AssignId(copy);
             Copies.Add(copy);
             Save();
         }
@@ -53,6 +54,30 @@ namespace LibrarySystem.Inventory.Copies
         public List<Copy> GetCopiesById(List<int> ids)
         {
             return (from id in ids from copy in Copies where copy.Id == id select copy).ToList();
+        }
+
+        private int GenerateId()
+        {
+            Random rnd = new Random();
+            return rnd.Next(1, 99999);
+        }
+
+        private bool ContainsId(int id)
+        {
+            foreach (var copy in Copies)
+            {
+                if (copy.Id == id) return true;
+            }
+
+            return false;
+        }
+
+        private void AssignId(Copy copy)
+        {
+            do
+            {
+                copy.Id = GenerateId();
+            } while (ContainsId(copy.Id));
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using LibrarySystem.MainUI;
+using LibrarySystem.MainUI.SpecializedLibrarianView;
 using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Users;
 using LibrarySystem.Users.Accounts;

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace LibrarySystem.MainUI
+namespace LibrarySystem.MainUI.SpecializedLibrarianView
 {
     /// <summary>
     /// Interaction logic for SpecializedLibrarianWindow.xaml

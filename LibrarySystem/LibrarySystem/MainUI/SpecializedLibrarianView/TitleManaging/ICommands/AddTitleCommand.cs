@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LibrarySystem.Inventory.Titles;
 using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView.ICommands
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.ICommands
 {
     class AddTitleCommand : CommandBase
     {

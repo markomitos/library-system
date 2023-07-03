@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using LibrarySystem.Publishing;
-using LibrarySystem.Utils;
+﻿using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView.ICommands
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.ICommands
 {
     class AddAuthorCommand : CommandBase
     {

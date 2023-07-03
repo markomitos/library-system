@@ -44,9 +44,36 @@ namespace LibrarySystem.Inventory.Books
             return (from isbn in isbns from book in Books where isbn == book.ISBN select book).ToList();
         }
 
+        public List<Book> GetBooksByUDK(int udk)
+        {
+            List<Book> retBooks = new();
+            foreach (Book book in Books)
+            {
+                if(book.TitleUDK == udk) retBooks.Add(book);
+            }
+
+            return retBooks;
+        }
+
         public List<Book> GetAllBooks()
         {
             return Books;
+        }
+
+        public bool AlreadyExists(int isbn)
+        {
+            foreach (Book book in Books)
+            {
+                if (book.ISBN == isbn) return true;
+            }
+
+            return false;
+        }
+
+        public void AddCopy(int selectedBookIsbn, int copyId)
+        {
+            Get(selectedBookIsbn).Copies.Add(copyId);
+            Save();
         }
     }
 }
