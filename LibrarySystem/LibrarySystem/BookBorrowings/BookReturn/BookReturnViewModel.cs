@@ -110,7 +110,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn
         {
             _members = _memberService.GetAll();
             SelectedMember = Members[0];
-            Borrowings = _borrowingService.GetAll(SelectedMember.Jmbg);
+            Borrowings = _borrowingService.GetAllBorrowed(SelectedMember.Jmbg);
         }
     }
 }

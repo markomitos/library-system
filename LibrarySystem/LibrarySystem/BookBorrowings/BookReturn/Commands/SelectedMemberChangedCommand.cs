@@ -17,7 +17,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.Commands
         public override void Execute(object? parameter)
         {
             _viewModel.Borrowings.Clear();
-            foreach (var borrowing in _borrowingService.GetAll(parameter.ToString()))
+            foreach (var borrowing in _borrowingService.GetAllBorrowed(parameter.ToString()))
             {
                 _viewModel.Borrowings.Add(borrowing);
             }
