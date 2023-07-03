@@ -73,7 +73,7 @@ namespace LibrarySystem.Inventory.Copies
 
         public int CalculateDamagedFee(int copyId)
         {
-            return IsCopyDamaged(copyId) ? 0 : GetCopyPrice(copyId);
+            return IsCopyDamaged(copyId) ? GetCopyPrice(copyId) : 0;
         }
     }
 }
