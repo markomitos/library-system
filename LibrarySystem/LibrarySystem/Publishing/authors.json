@@ -33,5 +33,12 @@
     "LastName": "Johnson",
     "BirthDate": "1978-09-30",
     "Biography": "Michael Johnson has written numerous books..."
+  },
+  {
+    "Id": "6",
+    "FirstName": "Miguel",
+    "LastName": "de Cervantes",
+    "BirthDate": "1547-09-29",
+    "Biography": "Miguel de Cervantes Saavedra was an Early Modern Spanish writer widely regarded as the greatest writer in the Spanish language and one of the world's pre-eminent novelists."
   }
 ]
