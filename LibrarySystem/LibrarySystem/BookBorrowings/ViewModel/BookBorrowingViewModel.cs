@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows;
+using LibrarySystem.BookBorrowings.Commands;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
 using LibrarySystem.MainUI;
-using LibrarySystem.Utils;
 using LibrarySystem.Users.Members;
+using LibrarySystem.Utils;
 
-namespace LibrarySystem.BookLoan
+namespace LibrarySystem.BookBorrowings.ViewModel
 {
     public class BookBorrowingViewModel : ViewModelBase
     {
-        private ObservableCollection<Title> _titles;
-        public ObservableCollection<Title> Titles
+        private ObservableCollection<TitleViewModel> _titles;
+        public ObservableCollection<TitleViewModel> Titles
         {
             get { return _titles; }
             set
@@ -28,8 +26,8 @@ namespace LibrarySystem.BookLoan
             }
         }
 
-        private ObservableCollection<Book> _books;
-        public ObservableCollection<Book> Books
+        private ObservableCollection<BookViewModel> _books;
+        public ObservableCollection<BookViewModel> Books
         {
             get { return _books; }
             set
@@ -61,8 +59,8 @@ namespace LibrarySystem.BookLoan
             }
         }
 
-        private Title _selectedTitle;
-        public Title SelectedTitle
+        private TitleViewModel _selectedTitle;
+        public TitleViewModel SelectedTitle
         {
             get { return _selectedTitle; }
             set
@@ -72,8 +70,8 @@ namespace LibrarySystem.BookLoan
             }
         }
 
-        private Book _selectedBook;
-        public Book SelectedBook
+        private BookViewModel _selectedBook;
+        public BookViewModel SelectedBook
         {
             get { return _selectedBook; }
             set
@@ -126,9 +124,29 @@ namespace LibrarySystem.BookLoan
         {
             TitleService = new TitleService(new TitleRepository());
             MemberService = new MemberService(new MemberRepository());
-            Titles = new ObservableCollection<Title>(TitleService.GetAll());
+            //Titles = new ObservableCollection<Title>(TitleService.GetAll());
             Members = new ObservableCollection<string>(MemberService.GetAllMembersJmbg());
             ReturnDate = DateTime.Now;
+            LoadTitles();
+        }
+
+        public void LoadTitles()
+        {
+            Titles = new ObservableCollection<TitleViewModel>();
+            foreach (var title in TitleService.GetAll())
+            {
+                Titles.Add(new TitleViewModel(title.Name,title.Language,title.UDK,title.Genre,title.Authors));
+            }
+        }
+
+        public void LoadBooks(List<Book> books)
+        {
+            Books = new ObservableCollection<BookViewModel>();
+
+            foreach (var book in books)
+            {
+                Books.Add(new BookViewModel(book.ISBN,book.Published,book.Price,book.Covering,book.Format,book.TitleUDK,book.PublisherName));
+            }
         }
     }
 }

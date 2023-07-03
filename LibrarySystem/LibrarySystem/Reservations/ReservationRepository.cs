@@ -57,5 +57,38 @@ namespace LibrarySystem.Reservations
 
             return reservations;
         }
+
+        public void CancelExpiredReservations()
+        {
+            foreach (Reservation reservation in Reservations)
+            {
+                if (reservation.ApprovalDate == null) continue;
+                if (reservation.State == Reservation.ReservationState.Approved &&
+                    reservation.ApprovalDate.Value.AddDays(2) < DateTime.Now)
+                {
+                    reservation.State = Reservation.ReservationState.Canceled;
+                }
+            }
+            Save();
+        }
+
+        public void ApproveNextInQueueForBook(int reservationTitleUdk, int? reservationCopyId)
+        {
+            DateTime latestReservationDate = DateTime.MaxValue;
+            Reservation nextReservationInQueue = new Reservation();
+            foreach (Reservation reservation in Reservations)
+            {
+                if (reservation.TitleUDK == reservationTitleUdk && reservation.State == Reservation.ReservationState.Waiting && reservation.ReservationDate < latestReservationDate )
+                {
+                    latestReservationDate = reservation.ReservationDate;
+                    nextReservationInQueue = reservation;
+                }
+            }
+
+            nextReservationInQueue.State = Reservation.ReservationState.Approved;
+            nextReservationInQueue.ApprovalDate = DateTime.Now;
+            nextReservationInQueue.CopyId = reservationCopyId;
+            Save();
+        }
     }
 }

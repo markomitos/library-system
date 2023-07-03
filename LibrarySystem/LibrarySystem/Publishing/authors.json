@@ -12,5 +12,26 @@
     "lastName": "Maksimovic",
     "BirthDate": "12.2.1974.",
     "Biography": "Tralalala"
+  },
+  {
+    "Id": "3",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "BirthDate": "1990-01-01",
+    "Biography": "John Doe is a renowned author..."
+  },
+  {
+    "Id": "4",
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "BirthDate": "1985-05-15",
+    "Biography": "Jane Smith is an award-winning author..."
+  },
+  {
+    "Id": "5",
+    "FirstName": "Michael",
+    "LastName": "Johnson",
+    "BirthDate": "1978-09-30",
+    "Biography": "Michael Johnson has written numerous books..."
   }
 ]

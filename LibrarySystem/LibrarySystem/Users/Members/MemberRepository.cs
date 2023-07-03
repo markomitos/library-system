@@ -20,6 +20,7 @@ namespace LibrarySystem.Users.Members
             if (!File.Exists(MembersFilePath)) return;
 
             string json = File.ReadAllText(MembersFilePath);
+
             Members = JsonConvert.DeserializeObject<ObservableCollection<Member>> (json);
         }
 

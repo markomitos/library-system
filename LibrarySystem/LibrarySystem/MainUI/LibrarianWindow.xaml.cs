@@ -11,10 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using LibrarySystem.BookLoan;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
+using LibrarySystem.Users.GUI.Views;
 
 namespace LibrarySystem.MainUI
 {
@@ -32,6 +32,12 @@ namespace LibrarySystem.MainUI
         {
             BookBorrowingView bbv = new BookBorrowingView();
             bbv.ShowDialog();
+        }
+
+        private void handleMembersButton_Click(object sender, RoutedEventArgs e)
+        {
+            MembersHandlingWindow membersHandlingWindow = new MembersHandlingWindow();
+            membersHandlingWindow.ShowDialog();
         }
     }
 }

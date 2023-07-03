@@ -63,7 +63,13 @@ namespace LibrarySystem.Reservations.Commands
 
         private void CancelApprovedReservation(Reservation reservation)
         {
-            throw new NotImplementedException();
+
+            _reservationService.ApproveNextInQueueForBook(reservation.TitleUDK, reservation.CopyId);
+
+            Reservation reservationToChange = _reservationService.Get(reservation.Id)!;
+            reservationToChange.State = Reservation.ReservationState.Canceled;
+            _reservationService.Save();
+            ReloadCancelReservationView();
         }
 
         public override bool CanExecute(object? parameter)

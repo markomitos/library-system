@@ -23,5 +23,10 @@ namespace LibrarySystem.Users.Accounts
         {
             return _accountRepository.Get(username, password);
         }
+
+        public bool AlreadyExistsUsername(string username)
+        {
+            return _accountRepository.Contains(username);
+        }
     }
 }

@@ -5,10 +5,8 @@
     "Covering": "Hardcover",
     "Format": 1,
     "TitleUDK": 123456,
-    "PublisherName": "Publisher 1",
-    "Copies": [
-      1
-    ]
+    "PublisherName": "Tony",
+    "Copies": [ 1 ]
   },
   {
     "ISBN": 2,
@@ -16,10 +14,8 @@
     "Covering": "Paperback",
     "Format": 1,
     "TitleUDK": 123456,
-    "PublisherName": "Publisher 2",
-    "Copies": [
-      2
-    ]
+    "PublisherName": "Montana",
+    "Copies": [ 2 ]
   },
   {
     "ISBN": 3,
@@ -27,10 +23,8 @@
     "Covering": "Hardcover",
     "Format": 1,
     "TitleUDK": 789012,
-    "PublisherName": "Publisher 3",
-    "Copies": [
-      3
-    ]
+    "PublisherName": "Lagana",
+    "Copies": [ 3 ]
   },
   {
     "ISBN": 4,
@@ -38,10 +32,8 @@
     "Covering": "Paperback",
     "Format": 1,
     "TitleUDK": 789012,
-    "PublisherName": "Publisher 4",
-    "Copies": [
-      4
-    ]
+    "PublisherName": "Prica",
+    "Copies": [ 4 ]
   },
   {
     "ISBN": 5,
@@ -49,10 +41,8 @@
     "Covering": "Hardcover",
     "Format": 1,
     "TitleUDK": 789012,
-    "PublisherName": "Publisher 5",
-    "Copies": [
-      5
-    ]
+    "PublisherName": "Mala",
+    "Copies": [ 5 ]
   },
   {
     "ISBN": 6,

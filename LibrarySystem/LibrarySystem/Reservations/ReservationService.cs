@@ -35,5 +35,15 @@ namespace LibrarySystem.Reservations
         {
             return _reservationRepository.GetNotFinishedReservations(loggedUser);
         }
+
+        public void CancelExpiredReservations()
+        {
+            _reservationRepository.CancelExpiredReservations();
+        }
+
+        public void ApproveNextInQueueForBook(int reservationTitleUdk, int? reservationCopyId)
+        {
+            _reservationRepository.ApproveNextInQueueForBook(reservationTitleUdk, reservationCopyId);
+        }
     }
 }
