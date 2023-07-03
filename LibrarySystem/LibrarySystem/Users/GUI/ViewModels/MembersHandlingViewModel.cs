@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LibrarySystem.Users.GUI.Commands;
+using LibrarySystem.Users.GUI.Views;
 using LibrarySystem.Users.Members;
 
 namespace LibrarySystem.Users.GUI.ViewModels
@@ -13,6 +14,8 @@ namespace LibrarySystem.Users.GUI.ViewModels
     public class MembersHandlingViewModel
     {
         private readonly MemberService _memberService = new MemberService(new MemberRepository());
+
+        private MembersHandlingWindow _membersHandlingWindow;
         public ObservableCollection<Member> Members { get; set; }
 
         public Member? SelectedMember { get; set; }
@@ -29,14 +32,28 @@ namespace LibrarySystem.Users.GUI.ViewModels
             get { return _showEditMemberWindowCommand ??= new ShowEditMemberWindowCommand(this); }
         }
 
-        public MembersHandlingViewModel()
+        private ICommand _removeSelectedMemberCommand;
+        public ICommand RemoveSelectedMemberCommand
         {
+            get { return _removeSelectedMemberCommand ??= new RemoveSelectedMemberCommand(this); }
+        }
+
+        public MembersHandlingViewModel(MembersHandlingWindow membersHandlingWindow)
+        {
+            _membersHandlingWindow = membersHandlingWindow;
             LoadMembers();
         }
 
         public void LoadMembers()
         {
             Members = _memberService.GetAll();
+        }
+
+        public void ReloadWindow()
+        {
+            _membersHandlingWindow.Close();
+            MembersHandlingWindow newMembersHandlingWindow = new();
+            newMembersHandlingWindow.ShowDialog();
         }
     }
 }

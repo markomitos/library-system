@@ -45,6 +45,13 @@ namespace LibrarySystem.Users.Members
             Save();
         }
 
+        public void Remove(Member member)
+        {
+            var found = Members.FirstOrDefault(oldMember => oldMember.Jmbg == member.Jmbg);
+            int i = Members.IndexOf(found);
+            Members.RemoveAt(i);
+            Save();
+        }
         public Member? Get(string jmbg)
         {
             return Members.FirstOrDefault(member => member.Jmbg == jmbg);
@@ -68,5 +75,7 @@ namespace LibrarySystem.Users.Members
         {
             return Members.FirstOrDefault(member => member.Username == username);
         }
+
+        
     }
 }

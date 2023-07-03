@@ -45,6 +45,19 @@ namespace LibrarySystem.Users.Accounts
             Save();
         }
 
+        public void Remove(Account account)
+        {
+            
+            int index = Accounts.FindIndex(oldAccount => oldAccount.Username == account.Username);
+
+            if (index == -1)
+            {
+                throw new ArgumentException("Account with username " + account.Username + " does not exist.");
+            }
+            Accounts.RemoveAt(index);
+            Save();
+        }
+
         public Account? Get(string username, string password)
         {
             return Accounts.FirstOrDefault(account => account.Username == username && account.Password == password);
@@ -59,5 +72,7 @@ namespace LibrarySystem.Users.Accounts
         {
             return Accounts.Any(account => account.Username == username);
         }
+
+        
     }
 }
