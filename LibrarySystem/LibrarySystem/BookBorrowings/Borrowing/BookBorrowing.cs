@@ -23,5 +23,11 @@ namespace LibrarySystem.BookBorrowings.Borrowing
             CopyId = copyId;
             Jmbg = jmbg;
         }
+
+        public void Finish()
+        {
+            ReturnDate = DateTime.Now;
+            IsBookReturned = true;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
         public ReturnBookDialog(BookBorrowing borrowing)
         {
             DataContext = new ReturnBookViewModel(borrowing, 
-                new BookBorrowingService(new BookBorrowingRepository()), new CopiesService(new CopiesRepository()));
+                new BookBorrowingService(new BookBorrowingRepository()), new CopiesService(new CopiesRepository()),this);
             InitializeComponent();
         }
     }

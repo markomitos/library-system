@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs;
 using LibrarySystem.Inventory.Titles;
 
 namespace LibrarySystem.Inventory.Copies
@@ -53,6 +54,11 @@ namespace LibrarySystem.Inventory.Copies
         public string GetTitleName(int copyId)
         {
             return _bookService.GetTitleName(GetISBN(copyId));
+        }
+
+        public void ReturnCopy(int id)
+        {
+            _copiesRepository.ReturnCopy(id);
         }
     }
 }

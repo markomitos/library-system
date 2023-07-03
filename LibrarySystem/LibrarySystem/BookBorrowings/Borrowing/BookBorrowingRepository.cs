@@ -75,5 +75,10 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         {
             return new(GetAll(jmbg).Where(borrowing=>!borrowing.IsBookReturned));
         }
+
+        public void Finish(BookBorrowing borrowing)
+        {
+            borrowing.Finish();
+        }
     }
 }

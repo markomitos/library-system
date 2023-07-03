@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.Users.MemberRules;
 
 namespace LibrarySystem.Users.Members
 {
@@ -43,6 +44,11 @@ namespace LibrarySystem.Users.Members
         public Member? GetJMBG(string username)
         {
             return _memberRepository.GetJMBG(username);
+        }
+
+        public MemberRule.MemberType GetMemberType(string jmbg)
+        {
+            return _memberRepository.GetMemberType(jmbg);
         }
     }
 }

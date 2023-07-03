@@ -23,7 +23,7 @@ namespace LibrarySystem.Users.MemberRules
         public int MaxRentDays { get; set; }
         public int MaxCopies { get; set; }
 
-        MemberRule(MemberType type, int membershipFee, int maxRentDays, int maxCopies)
+        public MemberRule(MemberType type, int membershipFee, int maxRentDays, int maxCopies)
         {
             Type = type;
             MembershipFee = membershipFee;

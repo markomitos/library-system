@@ -10,7 +10,7 @@ namespace LibrarySystem.Users.MemberRules
     {
         private readonly MemberRuleRepository _memberRuleRepository;
 
-        MemberRuleService(MemberRuleRepository memberRuleRepository)
+        public MemberRuleService(MemberRuleRepository memberRuleRepository)
         {
             _memberRuleRepository = memberRuleRepository;
         }
@@ -23,6 +23,11 @@ namespace LibrarySystem.Users.MemberRules
         public MemberRule? Get(MemberRule.MemberType type)
         {
             return _memberRuleRepository.Get(type);
+        }
+
+        public int GetMaxRentDays(MemberRule.MemberType type)
+        {
+            return _memberRuleRepository.GetMaxRentDays(type);
         }
     }
 }

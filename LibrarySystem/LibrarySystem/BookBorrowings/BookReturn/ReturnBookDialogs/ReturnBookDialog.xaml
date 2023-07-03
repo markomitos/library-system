@@ -4,12 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Return Book Dialog" Height="450" Width="360">
+        Title="Return Book Dialog" Height="300" Width="360" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="Converter" />
+    </Window.Resources>
     <Grid>
-        <Label Content="Copy:" HorizontalAlignment="Left" Height="30" Margin="39,36,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="{Binding Copy.Id}" HorizontalAlignment="Left" Height="30" Margin="151,36,0,0" VerticalAlignment="Top" Width="163"/>
-        <Label Content="Title:" HorizontalAlignment="Left" Height="35" Margin="39,90,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="{Binding Title}" HorizontalAlignment="Left" Height="35" Margin="151,90,0,0" VerticalAlignment="Top" Width="163"/>
+        <Label Content="Copy:" HorizontalAlignment="Left" Height="30" Margin="39,36,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label Content="{Binding Copy.Id}" HorizontalAlignment="Center" Height="30" Margin="0,36,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label Content="Title:" HorizontalAlignment="Left" Height="35" Margin="39,90,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label Content="{Binding Title}" HorizontalAlignment="Center" Height="35" Margin="0,90,0,0" VerticalAlignment="Top" Width="163"/>
+        <Button Content="Confirm Return" IsEnabled="{Binding IsFeePayed}" HorizontalAlignment="Left" Height="41" Margin="200,183,0,0" VerticalAlignment="Top" Width="150"/>
+        <Label Content="{Binding Fee}" HorizontalAlignment="Left" Height="36" Margin="39,130,0,0" VerticalAlignment="Top" Width="156" Foreground="#FFEE1414"/>
+        <Button x:Name="PayFeeButton" Visibility="{Binding Path=ShowFeeButton, Converter={StaticResource Converter}}" Command="{Binding PayFeeCommand}" Content="Pay fee" HorizontalAlignment="Left" Height="41" Margin="39,183,0,0" VerticalAlignment="Top" Width="141" Background="#FFF41E1E" BorderBrush="#FF200404" Foreground="#FFFFFDFD"/>
 
     </Grid>
 </Window>
