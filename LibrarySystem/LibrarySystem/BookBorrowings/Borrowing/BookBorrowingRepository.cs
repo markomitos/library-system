@@ -79,6 +79,7 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         public void Finish(BookBorrowing borrowing)
         {
             borrowing.Finish();
+            Save();
         }
     }
 }
