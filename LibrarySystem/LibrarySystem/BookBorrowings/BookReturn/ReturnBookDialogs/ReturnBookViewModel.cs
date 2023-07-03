@@ -83,7 +83,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
         {
             get
             {
-                return _returnBookCommand ??= new ReturnBookCommand(this);
+                return _returnBookCommand ??= new ReturnBookCommand(this,_borrowingService);
             }
         }
         public ReturnBookViewModel(BookBorrowing borrowing, BookBorrowingService borrowingService, CopiesService copiesService, ReturnBookDialog returnBookDialog)
