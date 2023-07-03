@@ -70,6 +70,18 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
             }
         }
 
+        private Copy? _selectedCopy;
+
+        public Copy? SelectedCopy
+        {
+            get => _selectedCopy;
+            set
+            {
+                _selectedCopy = value;
+                OnPropertyChanged(nameof(SelectedCopy));
+            }
+        }
+
         private ICommand _showAddTitleDialogCommand;
 
         public ICommand ShowAddTitleDialogCommand
@@ -111,6 +123,28 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
         {
             get { return _logoutCommand ??= new LogoutCommand(_SpecializedLibrarianWindow); }
         }
+
+        private ICommand _removeTitleCommand;
+
+        public ICommand RemoveTitleCommand
+        {
+            get { return _removeTitleCommand ??= new RemoveTitleCommand(this); }
+        }
+
+        private ICommand _removeBookCommand;
+
+        public ICommand RemoveBookCommand
+        {
+            get { return _removeBookCommand ??= new RemoveBookCommand(this); }
+        }
+
+        private ICommand _removeCopyCommand;
+
+        public ICommand RemoveCopyCommand
+        {
+            get { return _removeCopyCommand ??= new RemoveCopyCommand(this); }
+        }
+
 
         public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
         {
