@@ -32,5 +32,10 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         {
             return _bookBorrowingRepository.GetAll(jmbg);
         }
+
+        public ObservableCollection<BookBorrowing> GetAllBorrowed(string jmbg)
+        {
+            return _bookBorrowingRepository.GetAllBorrowed(jmbg);
+        }
     }
 }

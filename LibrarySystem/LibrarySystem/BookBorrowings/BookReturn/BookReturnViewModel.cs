@@ -1,4 +1,6 @@
 ﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
+using LibrarySystem.BookBorrowings.BookReturn.Commands;
 using LibrarySystem.BookBorrowings.Borrowing;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Users.Members;
@@ -8,19 +10,6 @@ namespace LibrarySystem.BookBorrowings.BookReturn
 {
     public class BookReturnViewModel : ViewModelBase
     {
-
-
-        private ObservableCollection<Copy> _copies;
-        public ObservableCollection<Copy> Copies
-        {
-            get { return _copies; }
-            set
-            {
-                _copies = value;
-                OnPropertyChanged(nameof(Copies));
-            }
-        }
-
         private ObservableCollection<Member> _members;
         public ObservableCollection<Member> Members
         {
@@ -32,14 +21,26 @@ namespace LibrarySystem.BookBorrowings.BookReturn
             }
         }
 
-        private Copy _selectedCopy;
-        public Copy SelectedCopy
+        private BookBorrowing _selectedBorrowing;
+        public BookBorrowing SelectedBorrowing
         {
-            get { return _selectedCopy; }
+            get { return _selectedBorrowing; }
             set
             {
-                _selectedCopy = value;
-                OnPropertyChanged(nameof(SelectedCopy));
+                _selectedBorrowing = value;
+                OnPropertyChanged(nameof(SelectedBorrowing));
+            }
+        }
+
+        private bool _hasSelectedBorrowing;
+
+        public bool HasSelectedBorrowing
+        {
+            get { return _hasSelectedBorrowing;  }
+            set
+            {
+                _hasSelectedBorrowing = value;
+                OnPropertyChanged(nameof(HasSelectedBorrowing));
             }
         }
 
@@ -68,16 +69,48 @@ namespace LibrarySystem.BookBorrowings.BookReturn
         }
 
         private MemberService _memberService { get; set; }
+        private BookBorrowingService _borrowingService { get; set; }
 
-        public BookReturnViewModel(MemberService memberService)
+        private ICommand _selectedMemberChangedCommand;
+        public ICommand SelectedMemberChangedCommand
+        {
+            get
+            {
+                return _selectedMemberChangedCommand ??= new SelectedMemberChangedCommand(this);
+            }
+        }
+
+        private ICommand _enableBookReturnButtonCommand { get; set; }
+
+        public ICommand EnableBookReturnButtonCommand
+        {
+            get
+            {
+                return _enableBookReturnButtonCommand ??= new EnableReturnBookButtonCommand(this);
+            }
+        }
+
+        private ICommand _showReturnBookDialogCommand { get; set; }
+
+        public ICommand ShowReturnBookDialogCommand
+        {
+            get
+            {
+                return _showReturnBookDialogCommand ??= new ShowReturnBookDialogCommand(this);
+            }
+        }
+        public BookReturnViewModel(MemberService memberService, BookBorrowingService borrowingService)
         {
             _memberService = memberService;
+            _borrowingService = borrowingService;
             LoadData();
         }
 
         public void LoadData()
         {
             _members = _memberService.GetAll();
+            SelectedMember = Members[0];
+            Borrowings = _borrowingService.GetAll(SelectedMember.Jmbg);
         }
     }
 }

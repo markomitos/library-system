@@ -59,5 +59,10 @@ namespace LibrarySystem.Inventory.Titles
             Get(udk).Books.Add(isbn);
             Save();
         }
+
+        public string GetTitleName(int isbn)
+        {
+            return Titles.FirstOrDefault(title => title.Books.Contains(isbn)).Name;
+        }
     }
 }

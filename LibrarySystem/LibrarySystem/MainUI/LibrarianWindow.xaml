@@ -9,6 +9,7 @@
     <Grid Margin="0,0,0,-6">
         <Button Content="Borrow book" HorizontalAlignment="Left" Height="38" Margin="52,44,0,0" VerticalAlignment="Top" Width="124" FontSize="14" FontWeight="Bold" Click="Button_Click"/>
         <Button x:Name="handleMembersButton" Content="Handle members" HorizontalAlignment="Left" Height="40" Margin="244,44,0,0" VerticalAlignment="Top" Width="150" FontSize="14" FontWeight="Bold" Click="handleMembersButton_Click"/>
+        <Button x:Name="ReturnBookButton" Content="Return book" HorizontalAlignment="Left" Height="46" Margin="52,118,0,0" VerticalAlignment="Top" Width="124" Click="ReturnBookButton_OnClick"/>
 
     </Grid>
 </Window>

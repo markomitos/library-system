@@ -75,5 +75,10 @@ namespace LibrarySystem.Inventory.Books
             Get(selectedBookIsbn).Copies.Add(copyId);
             Save();
         }
+
+        public int GetISBN(int copyId)
+        {
+            return Books.FirstOrDefault(book => book.Copies.Contains(copyId)).ISBN;
+        }
     }
 }
