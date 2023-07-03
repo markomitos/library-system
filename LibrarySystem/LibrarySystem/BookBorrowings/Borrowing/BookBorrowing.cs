@@ -29,5 +29,7 @@ namespace LibrarySystem.BookBorrowings.Borrowing
             ReturnDate = DateTime.Now;
             IsBookReturned = true;
         }
+
+        public DateTime GetBorrowDate() { return BorrowDate; }
     }
 }

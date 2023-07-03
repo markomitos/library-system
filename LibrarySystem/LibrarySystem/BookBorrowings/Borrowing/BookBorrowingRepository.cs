@@ -81,5 +81,10 @@ namespace LibrarySystem.BookBorrowings.Borrowing
             Get(id).Finish();
             Save();
         }
+
+        public DateTime GetBorrowDate(int id)
+        {
+            return Get(id).GetBorrowDate();
+        }
     }
 }
