@@ -23,8 +23,9 @@ namespace LibrarySystem.BookBorrowings.BookReturn
     {
         public BookReturnWindow()
         {
-            DataContext = new BookReturnViewModel(new MemberService(new MemberRepository()),new BookBorrowingService(new BookBorrowingRepository()));
+            DataContext = new BookReturnViewModel(new MemberService(new MemberRepository()),new BookBorrowingService(new BookBorrowingRepository()),this);
             InitializeComponent();
         }
+
     }
 }

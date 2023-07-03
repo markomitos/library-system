@@ -111,6 +111,14 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
             Copy = _copiesService.Get(Borrowing.CopyId);
             Title = _copiesService.GetTitleName(Copy.Id);
         }
+
+        public void RefreshData()
+        {
+            ReturnBookDialog.BookReturnWindow.Close();
+            BookReturnWindow newBookReturnWindow = new BookReturnWindow();
+            newBookReturnWindow.Show();
+            ReturnBookDialog.Close();
+        }
     }
     
 }

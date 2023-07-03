@@ -23,9 +23,8 @@ namespace LibrarySystem.BookBorrowings.BookReturn.Commands
 
         public override void Execute(object? parameter)
         {
-            SuccessDialog successDialog = new SuccessDialog("Book successfully returned!");
-            successDialog.ShowDialog();
             _bookBorrowingService.ReturnBook(_viewModel.Borrowing);
+            _viewModel.RefreshData();
         }
 
     }

@@ -99,12 +99,17 @@ namespace LibrarySystem.BookBorrowings.BookReturn
                 return _showReturnBookDialogCommand ??= new ShowReturnBookDialogCommand(this);
             }
         }
-        public BookReturnViewModel(MemberService memberService, BookBorrowingService borrowingService)
+
+        public BookReturnWindow BookReturnWindow;
+        public BookReturnViewModel(MemberService memberService, BookBorrowingService borrowingService, BookReturnWindow bookReturnWindow)
         {
             _memberService = memberService;
             _borrowingService = borrowingService;
+            BookReturnWindow = bookReturnWindow;
             LoadData();
         }
+
+
 
         public void LoadData()
         {

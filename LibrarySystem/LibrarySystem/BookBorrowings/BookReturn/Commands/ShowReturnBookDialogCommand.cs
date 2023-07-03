@@ -22,7 +22,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.Commands
 
         public override void Execute(object? parameter)
         {
-            ReturnBookDialog returnBookDialog = new ReturnBookDialog(_viewModel.SelectedBorrowing);
+            ReturnBookDialog returnBookDialog = new ReturnBookDialog(_viewModel.SelectedBorrowing,_viewModel.BookReturnWindow);
             returnBookDialog.ShowDialog();
         }
     }
