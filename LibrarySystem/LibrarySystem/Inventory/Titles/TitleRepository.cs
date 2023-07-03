@@ -59,5 +59,11 @@ namespace LibrarySystem.Inventory.Titles
             Get(udk).Books.Add(isbn);
             Save();
         }
+
+        public void Remove(int titleUdk)
+        {
+            Titles.Remove(Get(titleUdk));
+            Save();
+        }
     }
 }
