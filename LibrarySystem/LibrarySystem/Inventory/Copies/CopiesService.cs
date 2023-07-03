@@ -35,5 +35,10 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _copiesRepository.GetCopiesById(ids);
         }
+
+        public void Remove(int copyId)
+        {
+            _copiesRepository.Remove(copyId);
+        }
     }
 }
