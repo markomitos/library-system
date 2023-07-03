@@ -25,7 +25,6 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
             try
             {
                 int isbn = int.Parse(_viewModel._addBookdialog.ISBNTextBox.Text);
-                int price = int.Parse(_viewModel._addBookdialog.PriceTextBox.Text);
                 string covering = _viewModel._addBookdialog.CoveringTextBox.Text;
                 string publisherName = _viewModel._addBookdialog.PublisherNameTextBox.Text;
                 DateTime publishingDate = _viewModel._addBookdialog.PublishedDatePicker.SelectedDate.Value;
@@ -37,7 +36,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
                     throw new Exception("Book with this ISBN already exists!");
                 }
 
-                _bookService.Add(new Book(isbn, publishingDate, price, covering, format, udk, publisherName, new List<int>()));
+                _bookService.Add(new Book(isbn, publishingDate, covering, format, udk, publisherName, new List<int>()));
                 _titleService.AddBook(udk, isbn);
 
                 Notification.ShowSuccessDialog("Successfully added a book!");

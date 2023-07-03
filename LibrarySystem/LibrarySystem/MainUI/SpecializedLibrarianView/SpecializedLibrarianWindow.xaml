@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="SpecializedLibrarianWindow" Height="550" Width="1092" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid x:Name="titlesDataGrid" SelectedItem="{Binding SelectedTitle}" ItemsSource="{Binding Titles}" Margin="12,40,10,295" CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" AlternatingRowBackground="LightGray">
+        <DataGrid x:Name="titlesDataGrid" SelectedItem="{Binding SelectedTitle}" ItemsSource="{Binding Titles}" Margin="12,40,10,295" CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" AlternatingRowBackground="LightGray" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Language" Binding="{Binding Language}"></DataGridTextColumn>
@@ -26,11 +26,10 @@
         <Label x:Name="loggedUsernameLabel" Content="USERNAME" HorizontalAlignment="Left" Margin="90,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
         <Label x:Name="loggedLabel" Content="Logged in:" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
         <Button x:Name="logOutButton" Content="Log out" HorizontalAlignment="Right" Height="32" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="106" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" Cursor="Hand"/>
-        <DataGrid x:Name="BooksDataGrid" SelectedItem="{Binding SelectedBook}" ItemsSource="{Binding Books}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="12,279,594,39">
+        <DataGrid x:Name="BooksDataGrid" ColumnWidth="*" SelectedItem="{Binding SelectedBook}" ItemsSource="{Binding Books}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="12,279,594,39">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ISBN" Binding="{Binding ISBN}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Published" Binding="{Binding Published}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Covering" Binding="{Binding Covering}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Format" Binding="{Binding Format}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Title UDK" Binding="{Binding TitleUDK}"></DataGridTextColumn>
@@ -39,7 +38,7 @@
         </DataGrid>
         <Label Content="Titles" HorizontalAlignment="Left" Margin="19,14,0,0" VerticalAlignment="Top"/>
         <Label Content="Books" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center"/>
-        <DataGrid x:Name="CopiesDataGrid" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,279,10,39">
+        <DataGrid x:Name="CopiesDataGrid" ColumnWidth="*" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,279,10,39">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
