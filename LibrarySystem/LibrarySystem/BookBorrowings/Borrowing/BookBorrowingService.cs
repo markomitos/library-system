@@ -51,16 +51,14 @@ namespace LibrarySystem.BookBorrowings.Borrowing
 
         public bool IsReturnLate(BookBorrowing borrowing)
         {
-            return borrowing.BorrowDate.AddDays(
-                _memberRuleService.GetMaxRentDays(_memberService.GetMemberType(borrowing.Jmbg))) <= DateTime.Now;
+            return borrowing.BorrowDate.AddDays(GetMaxRentDays(borrowing.Jmbg)) <= DateTime.Now;
         }
 
         public int CalculateFee(BookBorrowing borrowing)
         {
             if (!IsReturnLate(borrowing)) return 0;
             int feePerDay = 20;
-            DateTime firstDayOfPenalty = borrowing.BorrowDate.AddDays(
-                _memberRuleService.GetMaxRentDays(_memberService.GetMemberType(borrowing.Jmbg)));
+            DateTime firstDayOfPenalty = borrowing.BorrowDate.AddDays(GetMaxRentDays(borrowing.Jmbg));
             return (DateTime.Now - firstDayOfPenalty).Days * feePerDay;
         }
         
