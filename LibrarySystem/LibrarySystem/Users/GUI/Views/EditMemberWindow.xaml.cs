@@ -12,19 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LibrarySystem.Users.GUI.ViewModels;
+using LibrarySystem.Users.Members;
 
 namespace LibrarySystem.Users.GUI.Views
 {
     /// <summary>
-    /// Interaction logic for MembersHandlingWindow.xaml
+    /// Interaction logic for EditMemberWindow.xaml
     /// </summary>
-    public partial class MembersHandlingWindow : Window
+    public partial class EditMemberWindow : Window
     {
-        public MembersHandlingWindow()
+        public EditMemberWindow(MembersHandlingWindow membersHandlingWindow, Member editedMember)
         {
-            MembersHandlingViewModel membersHandlingViewModel = new(this);
-            this.DataContext = membersHandlingViewModel;
             InitializeComponent();
+            DataContext = new EditMemberViewModel(membersHandlingWindow, this, editedMember);
         }
     }
 }

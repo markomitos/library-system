@@ -95,5 +95,11 @@ namespace LibrarySystem.Inventory.Copies
                 copy.Id = GenerateId();
             } while (ContainsId(copy.Id));
         }
+
+        public void Remove(int copyId)
+        {
+            Copies.Remove(Get(copyId));
+            Save();
+        }
     }
 }

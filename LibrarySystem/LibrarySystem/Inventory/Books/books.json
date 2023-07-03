@@ -6,7 +6,9 @@
     "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Tony",
-    "Copies": [ 1 ]
+    "Copies": [
+      1
+    ]
   },
   {
     "ISBN": 2,
@@ -15,7 +17,9 @@
     "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Montana",
-    "Copies": [ 2 ]
+    "Copies": [
+      2
+    ]
   },
   {
     "ISBN": 3,
@@ -24,7 +28,9 @@
     "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Lagana",
-    "Copies": [ 3 ]
+    "Copies": [
+      3
+    ]
   },
   {
     "ISBN": 4,

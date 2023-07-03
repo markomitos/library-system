@@ -4,12 +4,15 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.Inventory.Books;
+using LibrarySystem.Inventory.Copies;
 
 namespace LibrarySystem.Inventory.Titles
 {
     public class TitleService
     {
         private readonly TitleRepository _titleRepository;
+        private readonly BookService _bookService = new(new BookRepository());
 
         public TitleService(TitleRepository titleRepository)
         {
@@ -44,6 +47,16 @@ namespace LibrarySystem.Inventory.Titles
         public string GetTitleName(int isbn)
         {
             return _titleRepository.GetTitleName(isbn);
+        }
+      
+        public void Remove(int titleUdk)
+        {
+            Title title = Get(titleUdk);
+            _titleRepository.Remove(titleUdk);
+            for (int i = 0; i < title.Books.Count; i++)
+            {
+                _bookService.Remove(title.Books[i]);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using LibrarySystem.Users.Librarians;
+﻿using LibrarySystem.Users.Accounts;
+using LibrarySystem.Users.Librarians;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -37,6 +38,21 @@ namespace LibrarySystem.Users.Members
             Save();
         }
 
+        public void Edit(Member member)
+        {
+            var found = Members.FirstOrDefault(oldMember => oldMember.Jmbg == member.Jmbg);
+            int i = Members.IndexOf(found);
+            Members[i] = member;
+            Save();
+        }
+
+        public void Remove(Member member)
+        {
+            var found = Members.FirstOrDefault(oldMember => oldMember.Jmbg == member.Jmbg);
+            int i = Members.IndexOf(found);
+            Members.RemoveAt(i);
+            Save();
+        }
         public Member? Get(string jmbg)
         {
             return Members.FirstOrDefault(member => member.Jmbg == jmbg);

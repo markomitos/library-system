@@ -22,6 +22,14 @@ namespace LibrarySystem.Users.Members
             _memberRepository.Add(member);
         }
 
+        public void Edit(Member member)
+        {
+            _memberRepository.Edit(member);
+        }
+        public void Remove(Member member)
+        {
+            _memberRepository.Remove(member);
+        }
         public Member? Get(string jmbg)
         {
             return _memberRepository.Get(jmbg);

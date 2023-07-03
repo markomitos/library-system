@@ -45,7 +45,6 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _copiesRepository.GetCopiesById(ids);
         }
-
         public int GetISBN(int id)
         {
             return _bookService.GetISBN(id);
@@ -74,6 +73,11 @@ namespace LibrarySystem.Inventory.Copies
         public int CalculateDamagedFee(int copyId)
         {
             return IsCopyDamaged(copyId) ? GetCopyPrice(copyId) : 0;
+        }
+      
+        public void Remove(int copyId)
+        {
+            _copiesRepository.Remove(copyId);
         }
     }
 }

@@ -64,5 +64,11 @@ namespace LibrarySystem.Inventory.Titles
         {
             return Titles.FirstOrDefault(title => title.Books.Contains(isbn)).Name;
         }
+      
+        public void Remove(int titleUdk)
+        {
+            Titles.Remove(Get(titleUdk));
+            Save();
+        }
     }
 }
