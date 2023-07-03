@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs;
 using LibrarySystem.BookBorrowings.Borrowing;
 using LibrarySystem.NotificationDialogs.Presentation;
+using LibrarySystem.Payments;
 using LibrarySystem.Utils;
 
 namespace LibrarySystem.BookBorrowings.BookReturn.Commands
@@ -13,6 +14,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.Commands
     public class PayFeeCommand:CommandBase
     {
         private ReturnBookViewModel _viewModel;
+        private PaymentService _paymentService = new PaymentService(new PaymentRepository());
 
         public PayFeeCommand(ReturnBookViewModel viewModel)
         {
@@ -24,6 +26,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.Commands
             SuccessDialog successDialog = new SuccessDialog("Fee successfully payed!");
             successDialog.ShowDialog();
             HideFeeElements();
+            _paymentService.Add(new Payment(_viewModel.FeeAmount, DateTime.Now, "Fee payment"));
         }
 
         private void HideFeeElements()

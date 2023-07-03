@@ -39,6 +39,8 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
             }
         }
 
+        public int FeeAmount;
+
         private bool _isFeePayed;
 
         public bool IsFeePayed
@@ -98,10 +100,10 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
 
         private void CheckFee()
         {
-            var fee = _borrowingService.CalculateFee(Borrowing);
-            Fee = fee > 0 ? "Fee:  " + fee.ToString() : "";
-            IsFeePayed = fee == 0;
-            ShowFeeButton = fee > 0;
+            FeeAmount = _borrowingService.CalculateFee(Borrowing);
+            Fee = FeeAmount > 0 ? "Fee:  " + FeeAmount.ToString() : "";
+            IsFeePayed = FeeAmount == 0;
+            ShowFeeButton = FeeAmount > 0;
         }
 
         public void LoadData()
