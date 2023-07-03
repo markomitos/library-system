@@ -15,11 +15,18 @@ namespace LibrarySystem.Users.GUI.ViewModels
         private readonly MemberService _memberService = new MemberService(new MemberRepository());
         public ObservableCollection<Member> Members { get; set; }
 
-        private ICommand _showRegisterMemberWindowCommand;
+        public Member? SelectedMember { get; set; }
 
+        private ICommand _showRegisterMemberWindowCommand;
         public ICommand ShowRegisterMemberWindowCommand
         {
             get { return _showRegisterMemberWindowCommand ??= new ShowRegisterMemberWindowCommand(); }
+        }
+
+        private ICommand _showEditMemberWindowCommand;
+        public ICommand ShowEditMemberWindowCommand
+        {
+            get { return _showEditMemberWindowCommand ??= new ShowEditMemberWindowCommand(this); }
         }
 
         public MembersHandlingViewModel()

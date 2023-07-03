@@ -1,12 +1,12 @@
 [
   {
     "IsEmailWarning": true,
-    "Type": 2,
+    "Type": 0,
     "Jmbg": "1234567891234",
     "FirstName": "Branko",
     "LastName": "Maric",
     "Address": "Teodora Mandica 46, Novi Sad",
-    "Phone": "0615568234",
+    "Phone": "0615568235",
     "Email": "maric.300@gmail.com",
     "Username": "maric300"
   },
