@@ -70,5 +70,21 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         {
             return new (Borrowings.Where(borrowing => borrowing.Jmbg == jmbg));
         }
+
+        public ObservableCollection<BookBorrowing> GetAllBorrowed(string jmbg)
+        {
+            return new(GetAll(jmbg).Where(borrowing=>!borrowing.IsBookReturned));
+        }
+
+        public void Finish(int id)
+        {
+            Get(id).Finish();
+            Save();
+        }
+
+        public DateTime GetBorrowDate(int id)
+        {
+            return Get(id).GetBorrowDate();
+        }
     }
 }

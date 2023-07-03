@@ -39,9 +39,16 @@
     "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Prica",
-    "Copies": [
-      4
-    ]
+    "Copies": [ 4 ]
+  },
+  {
+    "ISBN": 5,
+    "Published": "2022-05-01T00:00:00",
+    "Covering": "Hardcover",
+    "Format": 1,
+    "TitleUDK": 789012,
+    "PublisherName": "OxfordBooks",
+    "Copies": [ 5 ]
   },
   {
     "ISBN": 6,

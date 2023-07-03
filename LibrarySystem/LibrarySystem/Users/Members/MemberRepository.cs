@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibrarySystem.Users.MemberRules;
 
 namespace LibrarySystem.Users.Members
 {
@@ -76,6 +77,9 @@ namespace LibrarySystem.Users.Members
             return Members.FirstOrDefault(member => member.Username == username);
         }
 
-        
+        public MemberRule.MemberType GetMemberType(string jmbg)
+        {
+            return Get(jmbg).Type;
+        }
     }
 }

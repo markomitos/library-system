@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LibrarySystem.BookBorrowings.BookReturn;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
@@ -38,6 +39,12 @@ namespace LibrarySystem.MainUI
         {
             MembersHandlingWindow membersHandlingWindow = new MembersHandlingWindow();
             membersHandlingWindow.ShowDialog();
+        }
+
+        private void ReturnBookButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            BookReturnWindow bookReturnWindow = new BookReturnWindow();
+            bookReturnWindow.ShowDialog();
         }
     }
 }

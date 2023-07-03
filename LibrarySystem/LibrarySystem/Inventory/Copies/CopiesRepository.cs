@@ -56,6 +56,22 @@ namespace LibrarySystem.Inventory.Copies
             return (from id in ids from copy in Copies where copy.Id == id select copy).ToList();
         }
 
+        public void ReturnCopy(int id)
+        {
+            Get(id).Return();
+            Save();
+        }
+
+        public bool IsCopyDamaged(int id)
+        {
+            return Get(id).IsDamaged;
+        }
+
+        public int GetCopyPrice(int id)
+        {
+            return Get(id).Price;
+        }
+
         private int GenerateId()
         {
             Random rnd = new Random();

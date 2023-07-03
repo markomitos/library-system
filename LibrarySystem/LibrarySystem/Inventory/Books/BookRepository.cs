@@ -76,6 +76,10 @@ namespace LibrarySystem.Inventory.Books
             Save();
         }
 
+        public int GetISBN(int copyId)
+        {
+            return Books.FirstOrDefault(book => book.Copies.Contains(copyId)).ISBN;
+        }
         public void Remove(int isbn)
         {
             Books.Remove(Get(isbn));

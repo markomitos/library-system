@@ -74,5 +74,13 @@
       "1"
     ],
     "Books": []
+  },
+  {
+    "Name": "Don Quixote",
+    "Language": "English",
+    "UDK": 144444,
+    "Genre": "Novel",
+    "Authors": [ "6" ],
+    "Books": [ 5 ]
   }
 ]

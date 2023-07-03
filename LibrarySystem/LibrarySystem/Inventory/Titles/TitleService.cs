@@ -44,6 +44,11 @@ namespace LibrarySystem.Inventory.Titles
             _titleRepository.AddBook(udk, isbn);
         }
 
+        public string GetTitleName(int isbn)
+        {
+            return _titleRepository.GetTitleName(isbn);
+        }
+      
         public void Remove(int titleUdk)
         {
             Title title = Get(titleUdk);

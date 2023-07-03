@@ -31,5 +31,10 @@ namespace LibrarySystem.Inventory.Copies
         {
             Status = CopyStatus.Rented;
         }
+
+        public void Return()
+        {
+            Status = CopyStatus.Available;
+        }
     }
 }

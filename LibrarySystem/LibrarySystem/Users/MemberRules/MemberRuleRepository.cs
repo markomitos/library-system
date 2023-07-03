@@ -39,5 +39,9 @@ namespace LibrarySystem.Users.MemberRules
             return MemberRules.FirstOrDefault(memberRule => memberRule.Type == type);
         }
 
+        public int GetMaxRentDays(MemberRule.MemberType type)
+        {
+            return Get(type).MaxRentDays;
+        }
     }
 }

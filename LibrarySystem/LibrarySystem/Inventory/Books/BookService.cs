@@ -11,11 +11,13 @@ namespace LibrarySystem.Inventory.Copies
     public class BookService
     {
         private readonly BookRepository _bookRepository;
+        private readonly TitleService _titleService;
         private readonly CopiesService _copiesService = new(new CopiesRepository());
 
         public BookService(BookRepository bookRepository)
         {
             _bookRepository = bookRepository;
+            _titleService = new TitleService(new TitleRepository());
         }
 
         public void Add(Book book)
@@ -53,6 +55,16 @@ namespace LibrarySystem.Inventory.Copies
             _bookRepository.AddCopy(selectedBookIsbn, copyId);
         }
 
+        public int GetISBN(int copyId)
+        {
+            return _bookRepository.GetISBN(copyId);
+        }
+
+        public string GetTitleName(int isbn)
+        {
+            return _titleService.GetTitleName(isbn);
+        }
+      
         public void Remove(int isbn)
         {
             Book book = Get(isbn);

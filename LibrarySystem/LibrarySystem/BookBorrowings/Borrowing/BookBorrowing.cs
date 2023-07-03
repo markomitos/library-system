@@ -10,18 +10,26 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         public bool IsBookReturned { get; set; }
         public bool IsBookLost { get; set; }
 
-        public int BookId { get; set; }
+        public int CopyId { get; set; }
         public string Jmbg { get; set; }
 
-        public BookBorrowing(int id, DateTime returnDate, DateTime borrowDate, bool isBookReturned, bool isBookLost, int bookId, string jmbg)
+        public BookBorrowing(int id, DateTime returnDate, DateTime borrowDate, bool isBookReturned, bool isBookLost, int copyId, string jmbg)
         {
             Id = id;
             ReturnDate = returnDate;
             BorrowDate = borrowDate;
             IsBookReturned = isBookReturned;
             IsBookLost = isBookLost;
-            BookId = bookId;
+            CopyId = copyId;
             Jmbg = jmbg;
         }
+
+        public void Finish()
+        {
+            ReturnDate = DateTime.Now;
+            IsBookReturned = true;
+        }
+
+        public DateTime GetBorrowDate() { return BorrowDate; }
     }
 }
