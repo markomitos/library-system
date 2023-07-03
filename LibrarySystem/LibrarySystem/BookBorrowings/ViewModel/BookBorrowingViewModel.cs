@@ -145,7 +145,7 @@ namespace LibrarySystem.BookBorrowings.ViewModel
 
             foreach (var book in books)
             {
-                Books.Add(new BookViewModel(book.ISBN,book.Published,book.Price,book.Covering,book.Format,book.TitleUDK,book.PublisherName));
+                Books.Add(new BookViewModel(book.ISBN,book.Published,book.Covering,book.Format,book.TitleUDK,book.PublisherName));
             }
         }
     }
