@@ -18,24 +18,38 @@
     "Language": "English",
     "UDK": 123456,
     "Genre": "Fiction",
-    "Authors": [ "1" ],
-    "Books": [ 1 ]
+    "Authors": [
+      "1"
+    ],
+    "Books": [
+      1
+    ]
   },
   {
     "Name": "Title 2",
     "Language": "Spanish",
     "UDK": 789012,
     "Genre": "Mystery",
-    "Authors": [ "2", "3" ],
-    "Books": [ 3, 4 ]
+    "Authors": [
+      "2",
+      "3"
+    ],
+    "Books": [
+      3,
+      4
+    ]
   },
   {
     "Name": "Title 3",
     "Language": "French",
     "UDK": 345678,
     "Genre": "Romance",
-    "Authors": [ "4" ],
-    "Books": [ 6 ]
+    "Authors": [
+      "4"
+    ],
+    "Books": [
+      6
+    ]
   },
   {
     "Name": "Title 4",
@@ -56,15 +70,9 @@
     "Language": "Italian",
     "UDK": 567890,
     "Genre": "Drama",
-    "Authors": [ "1" ],
+    "Authors": [
+      "1"
+    ],
     "Books": []
-  },
-  {
-    "Name": "delet",
-    "Language": "de",
-    "UDK": 1,
-    "Genre": "asd",
-    "Authors": [ "1" ],
-    "Books": [5]
   }
 ]

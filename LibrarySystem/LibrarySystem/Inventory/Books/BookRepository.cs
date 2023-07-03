@@ -75,5 +75,11 @@ namespace LibrarySystem.Inventory.Books
             Get(selectedBookIsbn).Copies.Add(copyId);
             Save();
         }
+
+        public void Remove(int isbn)
+        {
+            Books.Remove(Get(isbn));
+            Save();
+        }
     }
 }

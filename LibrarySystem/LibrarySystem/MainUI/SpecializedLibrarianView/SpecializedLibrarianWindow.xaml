@@ -30,9 +30,9 @@
                 <DataGridTextColumn Header="Publisher Name" Binding="{Binding PublisherName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Titles" HorizontalAlignment="Left" Margin="19,14,0,0" VerticalAlignment="Top"/>
-        <Label Content="Books" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Center"/>
-        <DataGrid x:Name="CopiesDataGrid" ColumnWidth="*" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,279,10,39">
+        <Label Content="Titles" HorizontalAlignment="Left" Margin="19,9,0,0" VerticalAlignment="Top"/>
+        <Label Content="Books" HorizontalAlignment="Left" Margin="19,251,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="CopiesDataGrid" ColumnWidth="*" SelectedItem="{Binding SelectedCopy}" ItemsSource="{Binding Copies}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="596,279,10,39">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
@@ -40,11 +40,23 @@
                 <DataGridCheckBoxColumn Header="Is damaged" Binding="{Binding IsDamaged}"></DataGridCheckBoxColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="addBookButton" Command="{Binding ShowAddBookDialogCommand}"  Content="Add book" HorizontalAlignment="Left" Margin="88,0,0,0" VerticalAlignment="Center" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
-        <Button x:Name="addTitleButton" Command="{Binding ShowAddTitleDialogCommand}"  Content="Add title" HorizontalAlignment="Left" Margin="88,18,0,0" VerticalAlignment="Top" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
-        <Button x:Name="UpdateBookDataGridButton" Command="{Binding UpdateBookDataGridCommand}" Content="Refresh" HorizontalAlignment="Left" Margin="458,260,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addBookButton" Command="{Binding ShowAddBookDialogCommand}"  Content="Add" HorizontalAlignment="Left" Margin="88,254,0,0" VerticalAlignment="Top" Width="55" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="addTitleButton" Command="{Binding ShowAddTitleDialogCommand}"  Content="Add" HorizontalAlignment="Left" Margin="88,13,0,0" VerticalAlignment="Top" Width="55" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
         <Label Content="Copies" HorizontalAlignment="Left" Margin="596,252,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="UpdateCopyDataGridButton" Command="{Binding UpdateCopyDataGridCommand}" Content="Refresh" HorizontalAlignment="Left" Margin="1039,0,0,0" VerticalAlignment="Center"/>
-        <Button x:Name="addCopyButton" Command="{Binding ShowAddCopyDialogCommand}"  Content="Add copy" HorizontalAlignment="Left" Margin="665,255,0,0" VerticalAlignment="Top" Width="82" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="addCopyButton" Command="{Binding ShowAddCopyDialogCommand}"  Content="Add" HorizontalAlignment="Left" Margin="665,254,0,0" VerticalAlignment="Top" Width="51" Height="22" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="removeTitleButton" Command="{Binding RemoveTitleCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="148,13,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.179"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="refreshBookDataGridButton" Command="{Binding UpdateBookDataGridCommand}"  Content="Refresh" HorizontalAlignment="Left" Margin="431,0,0,0" VerticalAlignment="Center" Width="67" Height="22" Background="	#306844" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="removeBookButton" Command="{Binding RemoveBookCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="148,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="refreshCopyDataGridButton" Command="{Binding UpdateCopyDataGridCommand}"  Content="Refresh" HorizontalAlignment="Left" Margin="1015,0,0,0" VerticalAlignment="Center" Width="67" Height="22" Background=" #306844" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="removeCopyButton" Command="{Binding RemoveCopyCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="721,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand"/>
     </Grid>
 </Window>
