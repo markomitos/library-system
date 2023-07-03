@@ -72,24 +72,44 @@
     ]
   },
   {
-    "ISBN": 1,
+    "ISBN": 145,
     "Published": "1980-03-07T00:00:00",
     "Price": 15,
     "Covering": "Hard",
     "Format": 1,
     "TitleUDK": 3,
     "PublisherName": "Klett",
-    "Copies": []
+    "Copies": [
+      51861,
+      20157,
+      72343,
+      80192,
+      83857,
+      239,
+      70557,
+      14580
+    ]
   },
   {
-    "ISBN": 2,
+    "ISBN": 255,
     "Published": "1981-03-12T00:00:00",
     "Price": 20,
     "Covering": "Soft",
     "Format": 1,
     "TitleUDK": 3,
     "PublisherName": "Klett",
-    "Copies": []
+    "Copies": [
+      20477,
+      969,
+      53761,
+      77431,
+      61558,
+      11530,
+      4217,
+      53330,
+      67447,
+      98158
+    ]
   },
   {
     "ISBN": 155,
@@ -99,6 +119,19 @@
     "Format": 0,
     "TitleUDK": 3,
     "PublisherName": "Klett",
+    "Copies": [
+      95980,
+      91161
+    ]
+  },
+  {
+    "ISBN": 123,
+    "Published": "2023-08-05T00:00:00",
+    "Price": 50,
+    "Covering": "Hard",
+    "Format": 1,
+    "TitleUDK": 901234,
+    "PublisherName": "Gansebluchen",
     "Copies": []
   }
 ]

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LibrarySystem.Inventory.Books;
+using LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands;
 using LibrarySystem.Utils;
 
 namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging

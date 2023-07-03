@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LibrarySystem.Inventory.Books;
-using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Utils;
 using static System.Reflection.Metadata.BlobBuilder;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
 {
     class UpdateBookDataGridCommand : CommandBase
     {

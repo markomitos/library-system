@@ -69,5 +69,11 @@ namespace LibrarySystem.Inventory.Books
 
             return false;
         }
+
+        public void AddCopy(int selectedBookIsbn, int copyId)
+        {
+            Get(selectedBookIsbn).Copies.Add(copyId);
+            Save();
+        }
     }
 }

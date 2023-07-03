@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using LibrarySystem.Inventory.Titles;
-using LibrarySystem.MainUI.SpecializedLibrarianView.ICommands;
+using LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.ICommands;
 using LibrarySystem.Publishing;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging
 {
     public class AddTitleDialogViewModel: ViewModelBase
     {

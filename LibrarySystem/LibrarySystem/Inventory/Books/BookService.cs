@@ -46,5 +46,10 @@ namespace LibrarySystem.Inventory.Copies
         {
             return _bookRepository.AlreadyExists(isbn);
         }
+
+        public void AddCopy(int selectedBookIsbn, int copyId)
+        {
+            _bookRepository.AddCopy(selectedBookIsbn, copyId);
+        }
     }
 }

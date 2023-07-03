@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
 using LibrarySystem.NotificationDialogs;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
 {
     class AddBookCommand : CommandBase
     {
@@ -45,6 +41,9 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging
                 _titleService.AddBook(udk, isbn);
 
                 Notification.ShowSuccessDialog("Successfully added a book!");
+                _viewModel._specializedLibrarianViewModel._SpecializedLibrarianWindow.Close();
+                SpecializedLibrarianWindow window = new();
+                window.Show();
                 _viewModel._addBookdialog.Close();
             }
             catch (Exception ex)

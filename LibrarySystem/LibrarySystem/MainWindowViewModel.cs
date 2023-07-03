@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using LibrarySystem.MainCommands;
+using LibrarySystem.MainUI.SpecializedLibrarianView;
 using LibrarySystem.Utils;
 using LibrarySystem.Users.Accounts;
 

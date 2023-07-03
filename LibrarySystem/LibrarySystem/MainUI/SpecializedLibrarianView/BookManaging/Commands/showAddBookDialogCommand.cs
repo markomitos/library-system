@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
 {
     class ShowAddBookDialogCommand : CommandBase
     {

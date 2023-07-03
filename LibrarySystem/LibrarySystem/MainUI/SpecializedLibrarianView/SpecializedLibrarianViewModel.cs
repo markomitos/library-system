@@ -1,25 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
-using LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging;
-using LibrarySystem.MainUI.SpecializedLibrarianView.ICommands;
+using LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands;
+using LibrarySystem.MainUI.SpecializedLibrarianView.CopyManaging.Commands;
+using LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.ICommands;
 using LibrarySystem.Utils;
 
-namespace LibrarySystem.MainUI
+namespace LibrarySystem.MainUI.SpecializedLibrarianView
 {
     public class SpecializedLibrarianViewModel : ViewModelBase
     {
         private readonly TitleService _titleService = new(new TitleRepository());
         public BookService _bookService = new(new BookRepository());
+        public CopiesService _copyService = new(new CopiesRepository());
+
         public SpecializedLibrarianWindow _SpecializedLibrarianWindow;
         public ObservableCollection<Title> Titles { get; set; }
+        private ObservableCollection<Copy>? _copies;
+
+        public ObservableCollection<Copy>? Copies
+        {
+            get => _copies;
+            set
+            {
+                _copies = value;
+                OnPropertyChanged(nameof(Copies));
+            }
+        }
+
         private ObservableCollection<Book>? _books;
         public ObservableCollection<Book>? Books
         {
@@ -43,6 +53,18 @@ namespace LibrarySystem.MainUI
             }
         }
 
+        private Book? _selectedBook;
+
+        public Book? SelectedBook
+        {
+            get => _selectedBook;
+            set
+            {
+                _selectedBook = value;
+                OnPropertyChanged(nameof(SelectedBook));
+            }
+        }
+
         private ICommand _showAddTitleDialogCommand;
 
         public ICommand ShowAddTitleDialogCommand
@@ -57,11 +79,25 @@ namespace LibrarySystem.MainUI
             get { return _showAddBookDialogCommand ??= new ShowAddBookDialogCommand(this); }
         }
 
+        private ICommand _showAddCopyDialogCommand;
+
+        public ICommand ShowAddCopyDialogCommand
+        {
+            get { return _showAddCopyDialogCommand ??= new ShowAddCopyDialogCommand(this); }
+        }
+
         private ICommand _updateBookDataGridCommand;
 
         public ICommand UpdateBookDataGridCommand
         {
             get { return _updateBookDataGridCommand ??= new UpdateBookDataGridCommand(this); }
+        }
+
+        private ICommand _updateCopyDataGridCommand;
+
+        public ICommand UpdateCopyDataGridCommand
+        {
+            get { return _updateCopyDataGridCommand ??= new UpdateCopyDataGridCommand(this); }
         }
 
         public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
