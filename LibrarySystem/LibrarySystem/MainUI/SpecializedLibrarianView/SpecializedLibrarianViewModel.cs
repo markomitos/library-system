@@ -1,5 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Windows.Documents;
 using System.Windows.Input;
+using LibrarySystem.BookBorrowings.ViewModel;
 using LibrarySystem.Inventory.Books;
 using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
@@ -17,7 +20,9 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
         public CopiesService _copyService = new(new CopiesRepository());
 
         public SpecializedLibrarianWindow _SpecializedLibrarianWindow;
-        public ObservableCollection<Title> Titles { get; set; }
+
+        public ObservableCollection<TitleViewModel> Titles { get; set; }
+
         private ObservableCollection<Copy>? _copies;
 
         public ObservableCollection<Copy>? Copies
@@ -41,9 +46,9 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
             }
         }
 
-        private Title? _selectedTitle;
+        private TitleViewModel? _selectedTitle;
 
-        public Title? SelectedTitle
+        public TitleViewModel? SelectedTitle
         {
             get => _selectedTitle;
             set
@@ -100,6 +105,13 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
             get { return _updateCopyDataGridCommand ??= new UpdateCopyDataGridCommand(this); }
         }
 
+        private ICommand _logoutCommand;
+
+        public ICommand LogoutCommand
+        {
+            get { return _logoutCommand ??= new LogoutCommand(_SpecializedLibrarianWindow); }
+        }
+
         public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
         {
             LoadTitles();
@@ -109,7 +121,12 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
 
         private void LoadTitles()
         {
-            Titles = new ObservableCollection<Title>(_titleService.GetAll());
+            List<TitleViewModel> titleViewModels = new();
+            foreach (Title title in _titleService.GetAll())
+            {
+                titleViewModels.Add(new TitleViewModel(title.Name, title.Language, title.UDK, title.Genre, title.Authors));
+            }
+            Titles = new ObservableCollection<TitleViewModel>(titleViewModels);
         }
     }
 }
