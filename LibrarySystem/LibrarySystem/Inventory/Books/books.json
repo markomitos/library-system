@@ -6,7 +6,9 @@
     "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Tony",
-    "Copies": [ 1 ]
+    "Copies": [
+      1
+    ]
   },
   {
     "ISBN": 2,
@@ -15,7 +17,9 @@
     "Format": 1,
     "TitleUDK": 123456,
     "PublisherName": "Montana",
-    "Copies": [ 2 ]
+    "Copies": [
+      2
+    ]
   },
   {
     "ISBN": 3,
@@ -24,7 +28,9 @@
     "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Lagana",
-    "Copies": [ 3 ]
+    "Copies": [
+      3
+    ]
   },
   {
     "ISBN": 4,
@@ -33,16 +39,9 @@
     "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Prica",
-    "Copies": [ 4 ]
-  },
-  {
-    "ISBN": 5,
-    "Published": "2022-05-01T00:00:00",
-    "Covering": "Hardcover",
-    "Format": 1,
-    "TitleUDK": 789012,
-    "PublisherName": "Mala",
-    "Copies": [ 5 ]
+    "Copies": [
+      4
+    ]
   },
   {
     "ISBN": 6,
