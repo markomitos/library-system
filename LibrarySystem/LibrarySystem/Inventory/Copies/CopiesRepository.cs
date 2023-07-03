@@ -62,6 +62,16 @@ namespace LibrarySystem.Inventory.Copies
             Save();
         }
 
+        public bool IsCopyDamaged(int id)
+        {
+            return Get(id).IsDamaged;
+        }
+
+        public int GetCopyPrice(int id)
+        {
+            return Get(id).Price;
+        }
+
         private int GenerateId()
         {
             Random rnd = new Random();

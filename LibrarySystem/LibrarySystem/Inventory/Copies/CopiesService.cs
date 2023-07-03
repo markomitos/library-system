@@ -60,5 +60,20 @@ namespace LibrarySystem.Inventory.Copies
         {
             _copiesRepository.ReturnCopy(id);
         }
+
+        public bool IsCopyDamaged(int id)
+        {
+            return _copiesRepository.IsCopyDamaged(id);
+        }
+
+        public int GetCopyPrice(int id)
+        {
+            return _copiesRepository.GetCopyPrice(id);
+        }
+
+        public int CalculateDamagedFee(int copyId)
+        {
+            return IsCopyDamaged(copyId) ? 0 : GetCopyPrice(copyId);
+        }
     }
 }

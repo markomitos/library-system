@@ -54,14 +54,19 @@ namespace LibrarySystem.BookBorrowings.Borrowing
             return borrowing.BorrowDate.AddDays(GetMaxRentDays(borrowing.Jmbg)) <= DateTime.Now;
         }
 
-        public int CalculateFee(BookBorrowing borrowing)
+        public int CalculateLateFee(BookBorrowing borrowing)
         {
             if (!IsReturnLate(borrowing)) return 0;
             int feePerDay = 20;
             DateTime firstDayOfPenalty = borrowing.BorrowDate.AddDays(GetMaxRentDays(borrowing.Jmbg));
             return (DateTime.Now - firstDayOfPenalty).Days * feePerDay;
         }
-        
+
+        public int CalculateFee(BookBorrowing borrowing)
+        {
+            return CalculateLateFee(borrowing) + _copiesService.CalculateDamagedFee(borrowing.CopyId);
+        }
+
         public void ReturnBook(BookBorrowing borrowing)
         {
             _bookBorrowingRepository.Finish(borrowing.Id);
