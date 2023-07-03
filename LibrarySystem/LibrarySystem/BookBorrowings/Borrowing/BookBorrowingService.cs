@@ -64,7 +64,7 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         
         public void ReturnBook(BookBorrowing borrowing)
         {
-            _bookBorrowingRepository.Finish(borrowing);
+            _bookBorrowingRepository.Finish(borrowing.Id);
             _copiesService.ReturnCopy(borrowing.CopyId);
         }   
     }
