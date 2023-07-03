@@ -12,9 +12,6 @@ namespace LibrarySystem.Users.GUI.Commands
 {
     class ShowRegisterMemberWindowCommand : CommandBase
     {
-        public ShowRegisterMemberWindowCommand()
-        {
-        }
 
         public override void Execute(object? parameter)
         {

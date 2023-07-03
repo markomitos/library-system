@@ -19,9 +19,19 @@ namespace LibrarySystem.Users.Accounts
             _accountRepository.Add(account);
         }
 
+        public void Edit(Account account)
+        {
+            _accountRepository.Edit(account);
+        }
+
         public Account? Get(string username, string password)
         {
             return _accountRepository.Get(username, password);
+        }
+
+        public Account? Get(string username)
+        {
+            return _accountRepository.Get(username);
         }
 
         public bool AlreadyExistsUsername(string username)
