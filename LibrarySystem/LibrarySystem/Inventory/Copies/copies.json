@@ -24,6 +24,12 @@
     "IsDamaged": false
   },
   {
+    "Id": 5,
+    "Status": 1,
+    "Price": 18,
+    "IsDamaged": false
+  },
+  {
     "Id": 6,
     "Status": 0,
     "Price": 22,

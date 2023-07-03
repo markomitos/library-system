@@ -6,16 +6,21 @@ using LibrarySystem.Utils;
 using System.Windows;
 using System.Windows.Input;
 using LibrarySystem.BookBorrowings.BookReturn.Commands;
+using LibrarySystem.Inventory.Books;
+using LibrarySystem.Inventory.Titles;
 
 namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
 {
     public class ReturnBookViewModel:ViewModelBase
     {
         
-        private MemberService _memberService { get; set; }
         private BookBorrowingService _borrowingService { get; set; }
 
         private CopiesService _copiesService { get; set; }
+
+        private BookService _bookService = new BookService(new BookRepository());
+
+        private TitleService _titleService = new TitleService(new TitleRepository());
 
         public Copy Copy { get; set; }
 
@@ -109,7 +114,7 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
         public void LoadData()
         {
             Copy = _copiesService.Get(Borrowing.CopyId);
-            Title = _copiesService.GetTitleName(Copy.Id);
+            Title = _titleService.GetTitleName(_bookService.GetISBN(Borrowing.CopyId));
         }
 
         public void RefreshData()

@@ -27,6 +27,8 @@ namespace LibrarySystem.Inventory.Copies
             IsDamaged = isDamaged;
         }
 
+
+
         public void Borrow()
         {
             Status = CopyStatus.Rented;
