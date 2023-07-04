@@ -60,6 +60,10 @@ namespace LibrarySystem.Inventory.Titles
             }
         }
 
+        public void Edit(Title title)
+        {
+            _titleRepository.Edit(title);
+        }
         public int GetAvailableCopy(int titleUdk)
         {
             var copyId = -1;

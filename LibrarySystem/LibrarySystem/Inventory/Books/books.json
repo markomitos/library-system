@@ -39,7 +39,10 @@
     "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "Prica",
-    "Copies": [ 4 ]
+    "Copies": [
+      4,
+      85255
+    ]
   },
   {
     "ISBN": 5,
@@ -48,7 +51,9 @@
     "Format": 1,
     "TitleUDK": 789012,
     "PublisherName": "OxfordBooks",
-    "Copies": [ 5 ]
+    "Copies": [
+      5
+    ]
   },
   {
     "ISBN": 6,
@@ -59,56 +64,6 @@
     "PublisherName": "Publisher 6",
     "Copies": [
       6
-    ]
-  },
-  {
-    "ISBN": 145,
-    "Published": "1980-03-07T00:00:00",
-    "Covering": "Hard",
-    "Format": 1,
-    "TitleUDK": 3,
-    "PublisherName": "Klett",
-    "Copies": [
-      51861,
-      20157,
-      72343,
-      80192,
-      83857,
-      239,
-      70557,
-      14580
-    ]
-  },
-  {
-    "ISBN": 255,
-    "Published": "1981-03-12T00:00:00",
-    "Covering": "Soft",
-    "Format": 1,
-    "TitleUDK": 3,
-    "PublisherName": "Klett",
-    "Copies": [
-      20477,
-      969,
-      53761,
-      77431,
-      61558,
-      11530,
-      4217,
-      53330,
-      67447,
-      98158
-    ]
-  },
-  {
-    "ISBN": 155,
-    "Published": "2009-07-15T00:00:00",
-    "Covering": "None",
-    "Format": 0,
-    "TitleUDK": 3,
-    "PublisherName": "Klett",
-    "Copies": [
-      95980,
-      91161
     ]
   },
   {
@@ -128,5 +83,20 @@
     "TitleUDK": 901234,
     "PublisherName": "Gansebluchen",
     "Copies": []
+  },
+  {
+    "ISBN": 245,
+    "Published": "2023-07-13T00:00:00",
+    "Covering": "Soft",
+    "Format": 1,
+    "TitleUDK": 1,
+    "PublisherName": "Kletta",
+    "Copies": [
+      38986,
+      9399,
+      57595,
+      72217,
+      15708
+    ]
   }
 ]

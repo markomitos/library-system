@@ -17,7 +17,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Label x:Name="loggedUsernameLabel" Content="USERNAME" HorizontalAlignment="Left" Margin="90,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
+        <Label x:Name="loggedUsernameLabel" Content="{Binding LoggedUsername}" HorizontalAlignment="Left" Margin="90,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
         <Label x:Name="loggedLabel" Content="Logged in:" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" FontSize="14"/>
         <Button x:Name="logOutButton" Command="{Binding LogoutCommand}" Content="Log out" HorizontalAlignment="Right" Height="32" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="106" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" Cursor="Hand"/>
         <DataGrid x:Name="BooksDataGrid" ColumnWidth="*" SelectedItem="{Binding SelectedBook}" ItemsSource="{Binding Books}"  CanUserAddRows="False" AutoGenerateColumns="False" Height="NaN" Margin="12,279,594,39">
@@ -58,5 +58,35 @@
         <Button x:Name="removeBookButton" Command="{Binding RemoveBookCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="148,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand"/>
         <Button x:Name="refreshCopyDataGridButton" Command="{Binding UpdateCopyDataGridCommand}"  Content="Refresh" HorizontalAlignment="Left" Margin="1015,0,0,0" VerticalAlignment="Center" Width="67" Height="22" Background=" #306844" Foreground="White" Cursor="Hand"/>
         <Button x:Name="removeCopyButton" Command="{Binding RemoveCopyCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="721,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="editTitleButton" Command="{Binding ShowEditTitleDialogCommand}"  Content="Edit" HorizontalAlignment="Left" Margin="213,13,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#24a0ed" Foreground="White" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.179"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="editBookButton" Command="{Binding ShowEditBookDialogCommand}"  Content="Edit" HorizontalAlignment="Left" Margin="213,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#24a0ed" Foreground="White" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.179"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="editCopyButton" Command="{Binding ShowEditCopyDialogCommand}"  Content="Edit" HorizontalAlignment="Left" Margin="786,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#24a0ed" Foreground="White" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.179"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>

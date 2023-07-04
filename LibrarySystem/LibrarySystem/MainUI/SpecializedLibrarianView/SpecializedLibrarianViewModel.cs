@@ -23,6 +23,21 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
 
         public ObservableCollection<TitleViewModel> Titles { get; set; }
 
+        private string _loggedUsername;
+
+        public string LoggedUsername
+        {
+            get { return _loggedUsername; }
+            set
+            {
+                if (_loggedUsername != value)
+                {
+                    _loggedUsername = value;
+                    OnPropertyChanged(nameof(LoggedUsername));
+                }
+            }
+        }
+
         private ObservableCollection<Copy>? _copies;
 
         public ObservableCollection<Copy>? Copies
@@ -145,12 +160,33 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
             get { return _removeCopyCommand ??= new RemoveCopyCommand(this); }
         }
 
+        private ICommand _showEditTitleDialogCommand;
+
+        public ICommand ShowEditTitleDialogCommand
+        {
+            get { return _showEditTitleDialogCommand ??= new ShowEditTitleDialogCommand(this); }
+        }
+
+        private ICommand _showEditBookDialogCommand;
+
+        public ICommand ShowEditBookDialogCommand
+        {
+            get { return _showEditBookDialogCommand ??= new ShowEditBookDialogCommand(this); }
+        }
+
+        private ICommand _showEditCopyDialogCommand;
+
+        public ICommand ShowEditCopyDialogCommand
+        {
+            get { return _showEditCopyDialogCommand ??= new ShowEditCopyDialogCommand(this); }
+        }
+
 
         public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
         {
             LoadTitles();
             _SpecializedLibrarianWindow = specializedLibrarianWindow;
-
+            LoggedUsername = Globals.LoggedUser.Username;
         }
 
         private void LoadTitles()

@@ -67,6 +67,10 @@ namespace LibrarySystem.Inventory.Copies
             }
         }
 
+        public void Edit(Book book)
+        {
+            _bookRepository.Edit(book);
+        }
         public int GetAvailableCopy(int isbn)
         {
             int availableCopyId = -1;

@@ -36,123 +36,39 @@
     "IsDamaged": false
   },
   {
-    "Id": 51861,
+    "Id": 38986,
     "Status": 0,
     "Price": 15,
     "IsDamaged": false
   },
   {
-    "Id": 20157,
+    "Id": 9399,
+    "Status": 0,
+    "Price": 20,
+    "IsDamaged": true
+  },
+  {
+    "Id": 57595,
     "Status": 0,
     "Price": 15,
     "IsDamaged": false
   },
   {
-    "Id": 72343,
+    "Id": 72217,
     "Status": 0,
     "Price": 15,
     "IsDamaged": false
   },
   {
-    "Id": 80192,
+    "Id": 15708,
     "Status": 0,
     "Price": 15,
     "IsDamaged": false
   },
   {
-    "Id": 83857,
+    "Id": 85255,
     "Status": 0,
-    "Price": 15,
-    "IsDamaged": false
-  },
-  {
-    "Id": 20477,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 969,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 53761,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 77431,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 61558,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 11530,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 4217,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 53330,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 67447,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 98158,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 95980,
-    "Status": 0,
-    "Price": 25,
-    "IsDamaged": false
-  },
-  {
-    "Id": 91161,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 239,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 70557,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
-  },
-  {
-    "Id": 14580,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": false
+    "Price": 18,
+    "IsDamaged": true
   }
 ]

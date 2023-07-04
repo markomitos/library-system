@@ -103,7 +103,21 @@ namespace LibrarySystem.Inventory.Copies
             Copies.Remove(Get(copyId));
             Save();
         }
+        public void Edit(int id, Copy newCopy)
+        {
+            foreach (var copy in Copies)
+            {
+                if (copy.Id == id)
+                {
+                    copy.Price = newCopy.Price;
+                    copy.IsDamaged = newCopy.IsDamaged;
+                    copy.Status = newCopy.Status;
 
+                    Save();
+                    return;
+                }
+            }
+        }
         public void ReportDamagedCopy(int copyId)
         {
             Get(copyId).ReportDamage();

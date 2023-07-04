@@ -63,6 +63,11 @@ namespace LibrarySystem.Inventory.Copies
             _copiesRepository.Remove(copyId);
         }
 
+        public void Edit(int id, Copy copy)
+        {
+            _copiesRepository.Edit(id, copy);
+        }
+      
         public void ReportDamagedCopy(int copyId)
         {
             _copiesRepository.ReportDamagedCopy(copyId);

@@ -85,5 +85,23 @@ namespace LibrarySystem.Inventory.Books
             Books.Remove(Get(isbn));
             Save();
         }
+
+        public void Edit(Book newBook)
+        {
+            foreach (Book book in Books)
+            {
+                if (book.ISBN == newBook.ISBN)
+                {
+                    book.Copies = newBook.Copies;
+                    book.Format = newBook.Format;
+                    book.Published = newBook.Published;
+                    book.Covering = newBook.Covering;
+                    book.PublisherName = newBook.PublisherName;
+
+                    Save();
+                    return;
+                }
+            }
+        }
     }
 }
