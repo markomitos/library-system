@@ -8,15 +8,15 @@ namespace LibrarySystem.Payments
 {
     public class Payment
     {
-        public int Price { get; set; }
-        public DateTime Time { get; set; }
+        public int Amount { get; set; }
+        public DateTime Date { get; set; }
 
         public string Reason { get; set; }
 
-        public Payment(int price, DateTime time, string reason)
+        public Payment(int amount, DateTime date, string reason)
         {
-            Price = price;
-            Time = time;
+            Amount = amount;
+            Date = date;
             Reason = reason;
         }
     }
