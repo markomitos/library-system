@@ -66,5 +66,10 @@ namespace LibrarySystem.Inventory.Copies
                 _copiesService.Remove(book.Copies[i]);
             }
         }
+
+        public void Edit(Book book)
+        {
+            _bookRepository.Edit(book);
+        }
     }
 }

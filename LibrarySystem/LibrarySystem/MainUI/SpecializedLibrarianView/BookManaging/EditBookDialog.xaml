@@ -1,0 +1,21 @@
+﻿<Window x:Class="LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.EditBookDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrarySystem.MainUI.SpecializedLibrarianView"
+        mc:Ignorable="d"
+        Title="Edit book" Height="305" Width="384">
+    <Grid>
+        <Label Content="Covering" HorizontalAlignment="Left" Margin="58,55,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CoveringTextBox" HorizontalAlignment="Left" Margin="201,59,0,0" TextWrapping="Wrap" Text="{Binding Covering}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Format" HorizontalAlignment="Left" Margin="58,92,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="FormatComboBox" ItemsSource="{Binding Formats}" SelectedItem="{Binding SelectedFormat}" HorizontalAlignment="Left" Margin="201,94,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1"/>
+        <Label Content="Publisher name" HorizontalAlignment="Left" Margin="58,132,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PublisherNameTextBox" HorizontalAlignment="Left" Margin="201,136,0,0" TextWrapping="Wrap" Text="{Binding PublisherName}" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Date published" HorizontalAlignment="Left" Margin="58,170,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="PublishedDatePicker" SelectedDate="{Binding SelectedDate}" HorizontalAlignment="Left" Margin="201,171,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="editBookButton" Command="{Binding EditBookCommand}"  Content="Edit book" HorizontalAlignment="Center" Margin="0,219,0,0" VerticalAlignment="Top" Width="140" Height="34" Background="#24a0ed" Foreground="White" Cursor="Hand"/>
+
+    </Grid>
+</Window>

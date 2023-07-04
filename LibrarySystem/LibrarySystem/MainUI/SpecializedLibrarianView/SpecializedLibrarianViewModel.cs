@@ -152,6 +152,13 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
             get { return _showEditTitleDialogCommand ??= new ShowEditTitleDialogCommand(this); }
         }
 
+        private ICommand _showEditBookDialogCommand;
+
+        public ICommand ShowEditBookDialogCommand
+        {
+            get { return _showEditBookDialogCommand ??= new ShowEditBookDialogCommand(this); }
+        }
+
 
         public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
         {
