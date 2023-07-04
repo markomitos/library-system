@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibrarySystem.Users.Members;
+using LibrarySystem.Inventory.Copies;
 
 namespace LibrarySystem.Reservations
 {
@@ -32,6 +33,7 @@ namespace LibrarySystem.Reservations
 
         public void Add(Reservation reservation)
         {
+            AssignId(reservation);
             Reservations.Add(reservation);
             Save();
         }
@@ -89,6 +91,30 @@ namespace LibrarySystem.Reservations
             nextReservationInQueue.ApprovalDate = DateTime.Now;
             nextReservationInQueue.CopyId = reservationCopyId;
             Save();
+        }
+
+        private int GenerateId()
+        {
+            Random rnd = new Random();
+            return rnd.Next(1, 99999);
+        }
+
+        private bool ContainsId(int id)
+        {
+            foreach (var reservation in Reservations)
+            {
+                if (reservation.Id == id) return true;
+            }
+
+            return false;
+        }
+
+        private void AssignId(Reservation reservation)
+        {
+            do
+            {
+                reservation.Id = GenerateId();
+            } while (ContainsId(reservation.Id));
         }
     }
 }

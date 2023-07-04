@@ -67,5 +67,10 @@ namespace LibrarySystem.Inventory.Copies
         {
             _copiesRepository.ReportDamagedCopy(copyId);
         }
+
+        public void Reserve(int copyId)
+        {
+            _copiesRepository.Reserve(copyId);
+        }
     }
 }

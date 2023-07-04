@@ -66,5 +66,21 @@ namespace LibrarySystem.Inventory.Copies
                 _copiesService.Remove(book.Copies[i]);
             }
         }
+
+        public int GetAvailableCopy(int isbn)
+        {
+            int availableCopyId = -1;
+            Book book = Get(isbn);
+            foreach(var copyId in book.Copies)
+            {
+                var copy = _copiesService.Get(copyId);
+                if (copy.IsAvailable())
+                {
+                    availableCopyId = copyId;
+                    break;
+                }
+            }
+            return availableCopyId;
+        }
     }
 }

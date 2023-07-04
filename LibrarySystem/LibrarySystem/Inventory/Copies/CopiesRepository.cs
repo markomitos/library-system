@@ -109,5 +109,11 @@ namespace LibrarySystem.Inventory.Copies
             Get(copyId).ReportDamage();
             Save();
         }
+
+        public void Reserve(int copyId)
+        {
+            Get(copyId).Reserve();
+            Save();
+        }
     }
 }
