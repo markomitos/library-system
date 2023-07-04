@@ -42,12 +42,6 @@
     "IsDamaged": false
   },
   {
-    "Id": 9399,
-    "Status": 0,
-    "Price": 20,
-    "IsDamaged": true
-  },
-  {
     "Id": 57595,
     "Status": 0,
     "Price": 15,

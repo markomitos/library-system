@@ -103,5 +103,18 @@ namespace LibrarySystem.Inventory.Books
                 }
             }
         }
+
+        public void RemoveCopy(int isbn, int copyId)
+        {
+            foreach (Book book in Books)
+            {
+                if (book.ISBN == isbn)
+                {
+                    book.Copies.Remove(copyId);
+                    Save();
+                    return;
+                }
+            }
+        }
     }
 }

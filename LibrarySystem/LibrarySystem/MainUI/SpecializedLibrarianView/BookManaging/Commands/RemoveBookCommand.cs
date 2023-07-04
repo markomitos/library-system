@@ -16,6 +16,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
     {
         SpecializedLibrarianViewModel _viewModel;
         BookService _bookService = new(new BookRepository());
+        private TitleService _titleService = new(new TitleRepository());
         public RemoveBookCommand(SpecializedLibrarianViewModel viewModel)
         {
             _viewModel = viewModel;
@@ -40,7 +41,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging.Commands
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 Book book = _bookService.Get(_viewModel.SelectedBook.ISBN);
-                _bookService.Remove(book.ISBN);
+                _titleService.RemoveBook(book.TitleUDK, book.ISBN);
                 SpecializedLibrarianWindow window = new();
                 window.Show();
                 _viewModel._SpecializedLibrarianWindow.Close();

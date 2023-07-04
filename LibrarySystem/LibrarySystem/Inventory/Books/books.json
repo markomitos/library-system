@@ -86,11 +86,11 @@
   },
   {
     "ISBN": 245,
-    "Published": "2023-07-13T00:00:00",
-    "Covering": "Soft",
+    "Published": "1989-07-12T00:00:00",
+    "Covering": "Hard",
     "Format": 1,
     "TitleUDK": 1,
-    "PublisherName": "Kletta",
+    "PublisherName": "Klett",
     "Copies": [
       38986,
       9399,

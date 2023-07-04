@@ -60,6 +60,12 @@ namespace LibrarySystem.Inventory.Titles
             }
         }
 
+        public void RemoveBook(int titleUdk, int isbn)
+        {
+            _titleRepository.RemoveBook(titleUdk, isbn);
+            _bookService.Remove(isbn);
+        }
+
         public void Edit(Title title)
         {
             _titleRepository.Edit(title);

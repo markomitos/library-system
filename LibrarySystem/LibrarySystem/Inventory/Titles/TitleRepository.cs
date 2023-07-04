@@ -89,5 +89,18 @@ namespace LibrarySystem.Inventory.Titles
                 }
             }
         }
+
+        public void RemoveBook(int titleUdk, int isbn)
+        {
+            foreach (Title title in Titles)
+            {
+                if (title.UDK == titleUdk)
+                {
+                    title.Books.Remove(isbn);
+                    Save();
+                    return;
+                }
+            }
+        }
     }
 }
