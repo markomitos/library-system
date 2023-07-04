@@ -58,5 +58,10 @@ namespace LibrarySystem.Inventory.Titles
                 _bookService.Remove(title.Books[i]);
             }
         }
+
+        public void Edit(Title title)
+        {
+            _titleRepository.Edit(title);
+        }
     }
 }

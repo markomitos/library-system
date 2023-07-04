@@ -40,7 +40,6 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.ICommands
 
                 _viewModel._titleService.Add(new Title(name, language, udk, genre, authors, new List<int>()));
 
-                Notification.ShowSuccessDialog("Successfully added a title");
                 _specializedLibrarianViewModel._SpecializedLibrarianWindow.Close();
                 SpecializedLibrarianWindow window = new();
                 window.Show();

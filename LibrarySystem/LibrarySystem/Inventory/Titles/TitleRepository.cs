@@ -70,5 +70,23 @@ namespace LibrarySystem.Inventory.Titles
             Titles.Remove(Get(titleUdk));
             Save();
         }
+
+        public void Edit(Title newTitle)
+        {
+            foreach (Title title in Titles)
+            {
+                if (title.UDK == newTitle.UDK)
+                {
+                    title.Name = newTitle.Name;
+                    title.Language = newTitle.Language;
+                    title.Genre = newTitle.Genre;
+                    title.Authors = newTitle.Authors;
+                    title.Books = newTitle.Books;
+                    
+                    Save();
+                    return;
+                }
+            }
+        }
     }
 }

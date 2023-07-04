@@ -145,6 +145,13 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
             get { return _removeCopyCommand ??= new RemoveCopyCommand(this); }
         }
 
+        private ICommand _showEditTitleDialogCommand;
+
+        public ICommand ShowEditTitleDialogCommand
+        {
+            get { return _showEditTitleDialogCommand ??= new ShowEditTitleDialogCommand(this); }
+        }
+
 
         public SpecializedLibrarianViewModel(SpecializedLibrarianWindow specializedLibrarianWindow)
         {

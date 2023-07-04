@@ -53,5 +53,29 @@ namespace LibrarySystem.Publishing
             }
             return readableAuthors;
         }
+
+        public List<string> GetAllToString(List<string> authors)
+        {
+            List<string> readableAuthors = new List<string>();
+            foreach (string id in authors)
+            {
+                Author author = Get(id);
+                readableAuthors.Add(author.Id + "|" + author.FirstName + "|" + author.LastName + "|" + author.BirthDate + "|" + author.Biography);
+            }
+            return readableAuthors;
+        }
+
+        public List<string> GetAllToStringWithout(List<string> authors)
+        {
+            List<string> readableAuthors = new List<string>();
+            foreach (Author author in Authors)
+            {
+                if (!authors.Contains(author.Id))
+                {
+                    readableAuthors.Add(author.Id + "|" + author.FirstName + "|" + author.LastName + "|" + author.BirthDate + "|" + author.Biography);
+                }
+            }
+            return readableAuthors;
+        }
     }
 }

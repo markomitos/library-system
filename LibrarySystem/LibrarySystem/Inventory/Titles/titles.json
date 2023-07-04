@@ -1,23 +1,9 @@
 [
   {
-    "Name": "Sveti Sava gradi prozore",
-    "Language": "Srpski",
-    "UDK": 3,
-    "Genre": "Nemanjici",
-    "Authors": [
-      "2"
-    ],
-    "Books": [
-      145,
-      255,
-      155
-    ]
-  },
-  {
     "Name": "Title 1",
     "Language": "English",
     "UDK": 123456,
-    "Genre": "Fiction",
+    "Genre": "Science Fiction",
     "Authors": [
       "1"
     ],
@@ -80,7 +66,23 @@
     "Language": "English",
     "UDK": 144444,
     "Genre": "Novel",
-    "Authors": [ "6" ],
-    "Books": [ 5 ]
+    "Authors": [
+      "6"
+    ],
+    "Books": [
+      5
+    ]
+  },
+  {
+    "Name": "Sveti Sava",
+    "Language": "Srpski",
+    "UDK": 1,
+    "Genre": "Nemanjici",
+    "Authors": [
+      "1"
+    ],
+    "Books": [
+      245
+    ]
   }
 ]

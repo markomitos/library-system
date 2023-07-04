@@ -34,5 +34,15 @@ namespace LibrarySystem.Publishing
         {
             return _authorRepository.GetAllToString();
         }
+
+        public List<string> GetAllToString(List<string> authors)
+        {
+            return _authorRepository.GetAllToString(authors);
+        }
+
+        public List<string> GetAllToStringWithout(List<string> authors)
+        {
+            return _authorRepository.GetAllToStringWithout(authors);
+        }
     }
 }

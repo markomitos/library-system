@@ -58,5 +58,15 @@
         <Button x:Name="removeBookButton" Command="{Binding RemoveBookCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="148,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand"/>
         <Button x:Name="refreshCopyDataGridButton" Command="{Binding UpdateCopyDataGridCommand}"  Content="Refresh" HorizontalAlignment="Left" Margin="1015,0,0,0" VerticalAlignment="Center" Width="67" Height="22" Background=" #306844" Foreground="White" Cursor="Hand"/>
         <Button x:Name="removeCopyButton" Command="{Binding RemoveCopyCommand}"  Content="Remove" HorizontalAlignment="Left" Margin="721,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#c70000" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="editTitleButton" Command="{Binding ShowEditTitleDialogCommand}"  Content="Edit" HorizontalAlignment="Left" Margin="213,13,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#24a0ed" Foreground="White" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.179"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>
