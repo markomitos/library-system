@@ -37,13 +37,13 @@
   },
   {
     "Id": 38986,
-    "Status": 0,
+    "Status": 3,
     "Price": 15,
     "IsDamaged": false
   },
   {
     "Id": 57595,
-    "Status": 0,
+    "Status": 3,
     "Price": 15,
     "IsDamaged": false
   },

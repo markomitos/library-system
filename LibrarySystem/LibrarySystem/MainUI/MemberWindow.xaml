@@ -19,8 +19,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="cancelReservationBtn" Command="{Binding CancelReservationCommand}" Content="Cancel Reservation" HorizontalAlignment="Center" Height="31" Margin="0,106,0,0" VerticalAlignment="Top" Width="215" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
-        <Button Content="Reserve Title" Command="{Binding ShowReserveDialogCommand}" HorizontalAlignment="Center" Height="29" Margin="0,61,0,0" VerticalAlignment="Top" Width="216" Background="#FF71FF0E" BorderBrush="White" Foreground="White"/>
+        <Button x:Name="cancelReservationBtn" Command="{Binding CancelReservationCommand}" Content="Cancel Reservation" HorizontalAlignment="Center" Height="44" Margin="0,144,0,0" VerticalAlignment="Top" Width="220" FontSize="18" Background="#FFEA5454" Foreground="White" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+        <Button Content="Reserve Title" Command="{Binding ShowReserveDialogCommand}" HorizontalAlignment="Center" Height="44" Margin="0,78,0,0" VerticalAlignment="Top" Width="220" FontSize="18" Background="#FF4FB53A" Cursor="Hand" BorderBrush="White" Foreground="White"/>
 
     </Grid>
 </Window>

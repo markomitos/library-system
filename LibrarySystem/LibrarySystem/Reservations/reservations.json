@@ -88,5 +88,14 @@
     "UserJMBG": "1234567891011",
     "CopyId": 10,
     "TitleUDK": 1009
+  },
+  {
+    "Id": 16422,
+    "ReservationDate": "2023-07-04T20:35:54.4450145+02:00",
+    "ApprovalDate": null,
+    "State": 1,
+    "UserJMBG": "1234567891235",
+    "CopyId": null,
+    "TitleUDK": 567890
   }
 ]
