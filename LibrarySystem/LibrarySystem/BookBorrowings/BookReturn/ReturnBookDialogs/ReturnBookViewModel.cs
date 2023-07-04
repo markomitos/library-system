@@ -93,6 +93,16 @@ namespace LibrarySystem.BookBorrowings.BookReturn.ReturnBookDialogs
                 return _returnBookCommand ??= new ReturnBookCommand(this,_borrowingService);
             }
         }
+
+        private ICommand _reportDamageCommand;
+
+        public ICommand ReportDamageCommand
+        {
+            get
+            {
+                return _reportDamageCommand ??= new ReportDamageCommand(this,_borrowingService,_copiesService);
+            }
+        }
         public ReturnBookViewModel(BookBorrowing borrowing, BookBorrowingService borrowingService, CopiesService copiesService, ReturnBookDialog returnBookDialog)
         {
             Borrowing = borrowing;

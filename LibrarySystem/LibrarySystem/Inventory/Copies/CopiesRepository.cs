@@ -58,7 +58,9 @@ namespace LibrarySystem.Inventory.Copies
 
         public void ReturnCopy(int id)
         {
-            Get(id).Return();
+            Copy copy = Get(id);
+            copy.Return();
+            copy.Repair();
             Save();
         }
 
@@ -99,6 +101,12 @@ namespace LibrarySystem.Inventory.Copies
         public void Remove(int copyId)
         {
             Copies.Remove(Get(copyId));
+            Save();
+        }
+
+        public void ReportDamagedCopy(int copyId)
+        {
+            Get(copyId).ReportDamage();
             Save();
         }
     }

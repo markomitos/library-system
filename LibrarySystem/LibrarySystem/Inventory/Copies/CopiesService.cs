@@ -62,5 +62,10 @@ namespace LibrarySystem.Inventory.Copies
         {
             _copiesRepository.Remove(copyId);
         }
+
+        public void ReportDamagedCopy(int copyId)
+        {
+            _copiesRepository.ReportDamagedCopy(copyId);
+        }
     }
 }
