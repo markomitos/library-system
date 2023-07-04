@@ -1,0 +1,100 @@
+[
+  {
+    "ISBN": 1,
+    "Published": "2022-01-01T00:00:00",
+    "Covering": "Hardcover",
+    "Format": 1,
+    "TitleUDK": 123456,
+    "PublisherName": "Tony",
+    "Copies": [
+      1
+    ]
+  },
+  {
+    "ISBN": 2,
+    "Published": "2022-02-01T00:00:00",
+    "Covering": "Paperback",
+    "Format": 1,
+    "TitleUDK": 123456,
+    "PublisherName": "Montana",
+    "Copies": [
+      2
+    ]
+  },
+  {
+    "ISBN": 3,
+    "Published": "2022-03-01T00:00:00",
+    "Covering": "Hardcover",
+    "Format": 1,
+    "TitleUDK": 789012,
+    "PublisherName": "Lagana",
+    "Copies": [
+      3
+    ]
+  },
+  {
+    "ISBN": 4,
+    "Published": "2022-04-01T00:00:00",
+    "Covering": "Paperback",
+    "Format": 1,
+    "TitleUDK": 789012,
+    "PublisherName": "Prica",
+    "Copies": [
+      4,
+      85255
+    ]
+  },
+  {
+    "ISBN": 5,
+    "Published": "2022-05-01T00:00:00",
+    "Covering": "Hardcover",
+    "Format": 1,
+    "TitleUDK": 789012,
+    "PublisherName": "OxfordBooks",
+    "Copies": [
+      5
+    ]
+  },
+  {
+    "ISBN": 6,
+    "Published": "2022-06-01T00:00:00",
+    "Covering": "Paperback",
+    "Format": 1,
+    "TitleUDK": 345678,
+    "PublisherName": "Publisher 6",
+    "Copies": [
+      6
+    ]
+  },
+  {
+    "ISBN": 123,
+    "Published": "2023-08-05T00:00:00",
+    "Covering": "Hard",
+    "Format": 1,
+    "TitleUDK": 901234,
+    "PublisherName": "Gansebluchen",
+    "Copies": []
+  },
+  {
+    "ISBN": 124,
+    "Published": "2023-07-06T00:00:00",
+    "Covering": "Soft",
+    "Format": 1,
+    "TitleUDK": 901234,
+    "PublisherName": "Gansebluchen",
+    "Copies": []
+  },
+  {
+    "ISBN": 245,
+    "Published": "1989-07-12T00:00:00",
+    "Covering": "Hard",
+    "Format": 1,
+    "TitleUDK": 1,
+    "PublisherName": "Klett",
+    "Copies": [
+      38986,
+      57595,
+      72217
+    ]
+  }
+]

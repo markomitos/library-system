@@ -1,0 +1,72 @@
+[
+  {
+    "Username": "tony",
+    "Password": "123",
+    "Type": 0
+  },
+  {
+    "Username": "emma_smith",
+    "Password": "12345",
+    "Type": 1
+  },
+  {
+    "Username": "michael_jones",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "sarah_wilson",
+    "Password": "12345",
+    "Type": 0
+  },
+  {
+    "Username": "david_thompson",
+    "Password": "12345",
+    "Type": 1
+  },
+  {
+    "Username": "jennifer_brown",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "alexander_hall",
+    "Password": "12345",
+    "Type": 0
+  },
+  {
+    "Username": "olivia_lee",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "william_scott",
+    "Password": "12345",
+    "Type": 0
+  },
+  {
+    "Username": "sophia_clark",
+    "Password": "12345",
+    "Type": 1
+  },
+  {
+    "Username": "admin_user",
+    "Password": "12345",
+    "Type": 3
+  },
+  {
+    "Username": "maric300",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "ilija02",
+    "Password": "12345",
+    "Type": 2
+  },
+  {
+    "Username": "perap",
+    "Password": "123",
+    "Type": 2
+  }
+]

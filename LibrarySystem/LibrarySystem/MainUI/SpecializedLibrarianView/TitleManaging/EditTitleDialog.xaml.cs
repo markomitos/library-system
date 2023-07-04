@@ -10,21 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.Inventory.Titles;
 
-namespace LibrarySystem
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EditTitleDialog.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditTitleDialog : Window
     {
-        public MainWindow()
+        public EditTitleDialog(Title selectedTitle, SpecializedLibrarianViewModel specializedLibrarianViewModel)
         {
-            DataContext = new MainWindowViewModel(this);
+            DataContext = new EditTitleDialogViewModel(this, selectedTitle, specializedLibrarianViewModel);
             InitializeComponent();
         }
     }

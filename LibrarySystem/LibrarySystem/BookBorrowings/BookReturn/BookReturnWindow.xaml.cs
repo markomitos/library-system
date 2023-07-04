@@ -10,22 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.BookBorrowings.Borrowing;
+using LibrarySystem.Users.Members;
 
-namespace LibrarySystem
+namespace LibrarySystem.BookBorrowings.BookReturn
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BookReturnWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BookReturnWindow : Window
     {
-        public MainWindow()
+        public BookReturnWindow()
         {
-            DataContext = new MainWindowViewModel(this);
+            DataContext = new BookReturnViewModel(new MemberService(new MemberRepository()),new BookBorrowingService(new BookBorrowingRepository()),this);
             InitializeComponent();
         }
+
     }
 }

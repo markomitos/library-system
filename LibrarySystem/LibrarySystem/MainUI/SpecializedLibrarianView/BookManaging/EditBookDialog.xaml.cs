@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
 
-namespace LibrarySystem
+namespace LibrarySystem.MainUI.SpecializedLibrarianView.BookManaging
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EditBookDialog.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditBookDialog : Window
     {
-        public MainWindow()
+        public EditBookDialog(SpecializedLibrarianViewModel viewModel)
         {
-            DataContext = new MainWindowViewModel(this);
+            DataContext = new EditBookDialogViewModel(this, viewModel);
             InitializeComponent();
         }
     }

@@ -10,21 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.Inventory.Titles;
+using LibrarySystem.Reservations.ViewModels;
 
-namespace LibrarySystem
+namespace LibrarySystem.Reservations.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ReserveTitleDialog.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ReserveTitleDialog : Window
     {
-        public MainWindow()
+        public ReserveTitleDialog()
         {
-            DataContext = new MainWindowViewModel(this);
+            DataContext = new ReserveTitleDialogViewModel(this,new TitleService(new TitleRepository()));
             InitializeComponent();
         }
     }

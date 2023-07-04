@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "Status": 0,
+    "Price": 20,
+    "IsDamaged": false
+  },
+  {
+    "Id": 2,
+    "Status": 0,
+    "Price": 15,
+    "IsDamaged": false
+  },
+  {
+    "Id": 3,
+    "Status": 1,
+    "Price": 25,
+    "IsDamaged": false
+  },
+  {
+    "Id": 4,
+    "Status": 1,
+    "Price": 18,
+    "IsDamaged": false
+  },
+  {
+    "Id": 5,
+    "Status": 1,
+    "Price": 18,
+    "IsDamaged": false
+  },
+  {
+    "Id": 6,
+    "Status": 0,
+    "Price": 22,
+    "IsDamaged": false
+  },
+  {
+    "Id": 38986,
+    "Status": 3,
+    "Price": 15,
+    "IsDamaged": false
+  },
+  {
+    "Id": 57595,
+    "Status": 3,
+    "Price": 15,
+    "IsDamaged": false
+  },
+  {
+    "Id": 72217,
+    "Status": 0,
+    "Price": 15,
+    "IsDamaged": false
+  },
+  {
+    "Id": 85255,
+    "Status": 0,
+    "Price": 18,
+    "IsDamaged": true
+  }
+]

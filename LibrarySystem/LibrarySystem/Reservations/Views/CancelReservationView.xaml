@@ -1,0 +1,27 @@
+﻿<Window x:Class="LibrarySystem.MainUI.CancelReservationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrarySystem.MainUI"
+        mc:Ignorable="d"
+        Title="CancelReservationView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="logOutBtn" Command="{Binding LogoutCommand}" Content="Log out" HorizontalAlignment="Left" Height="31" Margin="650,367,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+        <Label x:Name="loggedUsernameLabel_Copy" Content="{Binding LoggedUser}" HorizontalAlignment="Left" Margin="106,364,0,0" VerticalAlignment="Top" FontSize="14" Width="193" Height="34"/>
+        <Label x:Name="loggedLabel_Copy" Content="Logged in:" HorizontalAlignment="Left" Margin="25,368,0,0" VerticalAlignment="Top" FontSize="14" Width="76" RenderTransformOrigin="0.526,0.581" Height="38">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="2.207"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.851"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="backBtn" Command="{Binding BackCommand}" Content="Back" HorizontalAlignment="Left" Height="31" Margin="650,26,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+        <DataGrid HorizontalAlignment="Center" SelectedItem="{Binding SelectedReservation}" ItemsSource="{Binding Reservations}" IsReadOnly="True" CanUserAddRows="False" ColumnWidth="*" Height="200" Margin="0,76,0,0" VerticalAlignment="Top" Width="716" />
+        <Button x:Name="cancelReservationBtn" Command="{Binding CancelReservationCommand}" Content="Cancel" HorizontalAlignment="Center" Height="31" Margin="0,298,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+
+    </Grid>
+</Window>

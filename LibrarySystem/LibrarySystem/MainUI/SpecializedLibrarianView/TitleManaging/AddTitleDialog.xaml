@@ -1,0 +1,28 @@
+﻿<Window x:Class="LibrarySystem.MainUI.SpecializedLibrarianView.TitleManaging.AddTitleDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibrarySystem.MainUI.SpecializedLibrarianView"
+        mc:Ignorable="d"
+        Title="AddTitleDialog" Height="453" Width="512">
+    <Grid>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="136,81,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="257,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Language" HorizontalAlignment="Left" Margin="136,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="languageTextBox" HorizontalAlignment="Left" Margin="257,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="UDK" HorizontalAlignment="Left" Margin="136,137,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UDKTextBox" HorizontalAlignment="Left" Margin="257,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Genre" HorizontalAlignment="Left" Margin="136,165,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="GenreTextBox" HorizontalAlignment="Left" Margin="257,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Add a new title" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="addTitleButton" Command ="{Binding AddTitleCommand}"  Content="Add title" HorizontalAlignment="Center" Margin="0,393,0,0" VerticalAlignment="Top" Width="144" Height="32" FontSize="18" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <ListBox x:Name="loadedAuthorsBox" ItemsSource="{Binding Authors}" Margin="10,228,266,96"/>
+        <ListBox x:Name="addedAuthorsBox" Margin="266,228,10,96"/>
+        <Button x:Name="addAuthorButton" Command="{Binding AddAuthorCommand}" Content="Add author ->" HorizontalAlignment="Left" Margin="78,0,0,70" VerticalAlignment="Bottom" Width="95" Height="21" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="removeAuthorButton" Command="{Binding RemoveAuthorCommand}" Content="Remove author" HorizontalAlignment="Left" Margin="345,0,0,70" VerticalAlignment="Bottom" Width="95" Height="21" Background="#CC0000" Foreground="White" Cursor="Hand"/>
+        <Label Content="Loaded authors:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <Label Content="Added authors:" HorizontalAlignment="Left" Margin="266,0,0,0" VerticalAlignment="Center"/>
+
+    </Grid>
+</Window>

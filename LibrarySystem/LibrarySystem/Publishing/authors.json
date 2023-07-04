@@ -1,0 +1,44 @@
+﻿[
+  {
+    "Id": "1",
+    "FirstName": "Ivo",
+    "lastName": "Andric",
+    "BirthDate": "12.2.1975.",
+    "Biography": "Tralalala"
+  },
+  {
+    "Id": "2",
+    "FirstName": "Desanka",
+    "lastName": "Maksimovic",
+    "BirthDate": "12.2.1974.",
+    "Biography": "Tralalala"
+  },
+  {
+    "Id": "3",
+    "FirstName": "John",
+    "LastName": "Doe",
+    "BirthDate": "1990-01-01",
+    "Biography": "John Doe is a renowned author..."
+  },
+  {
+    "Id": "4",
+    "FirstName": "Jane",
+    "LastName": "Smith",
+    "BirthDate": "1985-05-15",
+    "Biography": "Jane Smith is an award-winning author..."
+  },
+  {
+    "Id": "5",
+    "FirstName": "Michael",
+    "LastName": "Johnson",
+    "BirthDate": "1978-09-30",
+    "Biography": "Michael Johnson has written numerous books..."
+  },
+  {
+    "Id": "6",
+    "FirstName": "Miguel",
+    "LastName": "de Cervantes",
+    "BirthDate": "1547-09-29",
+    "Biography": "Miguel de Cervantes Saavedra was an Early Modern Spanish writer widely regarded as the greatest writer in the Spanish language and one of the world's pre-eminent novelists."
+  }
+]

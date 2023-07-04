@@ -10,21 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.Users.GUI.ViewModels;
 
-namespace LibrarySystem
+namespace LibrarySystem.Users.GUI.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MembersHandlingWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MembersHandlingWindow : Window
     {
-        public MainWindow()
+        public MembersHandlingWindow()
         {
-            DataContext = new MainWindowViewModel(this);
+            MembersHandlingViewModel membersHandlingViewModel = new(this);
+            this.DataContext = membersHandlingViewModel;
             InitializeComponent();
         }
     }

@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
 
-namespace LibrarySystem
+namespace LibrarySystem.Payments.Reports
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PaymentReportWIndow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PaymentReportWindow : Window
     {
-        public MainWindow()
+        public PaymentReportWindow()
         {
-            DataContext = new MainWindowViewModel(this);
+            DataContext = new PaymentReportsViewModel(new PaymentService(new PaymentRepository()));
             InitializeComponent();
         }
     }

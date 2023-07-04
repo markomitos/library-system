@@ -10,22 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LibrarySystem.MainUI;
-using LibrarySystem.Users;
+using LibrarySystem.BookBorrowings.BookReturn;
+using LibrarySystem.Inventory.Books;
+using LibrarySystem.Inventory.Copies;
+using LibrarySystem.Inventory.Titles;
+using LibrarySystem.MainUI.ViewModels;
+using LibrarySystem.Users.GUI.Views;
 
-namespace LibrarySystem
+namespace LibrarySystem.MainUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LibrarianWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LibrarianWindow : Window
     {
-        public MainWindow()
+        public LibrarianWindow()
         {
-            DataContext = new MainWindowViewModel(this);
             InitializeComponent();
+            DataContext = new LibrarianViewModel(this);
         }
     }
 }
