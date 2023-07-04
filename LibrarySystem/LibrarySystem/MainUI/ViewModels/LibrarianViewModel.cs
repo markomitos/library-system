@@ -51,6 +51,12 @@ namespace LibrarySystem.MainUI.ViewModels
             get { return _logoutCommand ??= new LogoutCommand(_librarianWindow); }
         }
 
+        private ICommand _showPaymentReportsCommand;
+        public ICommand ShowPaymentReportsCommand
+        {
+            get { return _showPaymentReportsCommand ??= new ShowPaymentReportsCommand(); }
+        }
+
         public LibrarianViewModel(LibrarianWindow librarianWindow)
         {
             _librarianWindow = librarianWindow;
