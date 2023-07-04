@@ -11,9 +11,9 @@ namespace LibrarySystem.Utils
     {
 
         private readonly Window _window;
-        public LogoutCommand(Window hospitalTreatmentCheckInView)
+        public LogoutCommand(Window windowToClose)
         {
-            _window = hospitalTreatmentCheckInView;
+            _window = windowToClose;
         }
 
         public override void Execute(object? parameter)

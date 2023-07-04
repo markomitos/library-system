@@ -34,7 +34,7 @@ namespace LibrarySystem.MainCommands
                 return;
             }
 
-            //Globals.LoggedUser = user;
+            Globals.LoggedUser = account;
             try
             {
                 openRoleWindow(account);
