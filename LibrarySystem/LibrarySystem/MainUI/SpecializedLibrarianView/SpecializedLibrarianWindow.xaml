@@ -78,5 +78,15 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button x:Name="editCopyButton" Command="{Binding ShowEditCopyDialogCommand}"  Content="Edit" HorizontalAlignment="Left" Margin="786,254,0,0" VerticalAlignment="Top" Width="60" Height="22" Background="#24a0ed" Foreground="White" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.179"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>

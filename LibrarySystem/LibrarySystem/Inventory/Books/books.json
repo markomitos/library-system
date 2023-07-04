@@ -40,7 +40,8 @@
     "TitleUDK": 789012,
     "PublisherName": "Prica",
     "Copies": [
-      4
+      4,
+      85255
     ]
   },
   {
@@ -87,7 +88,7 @@
     "ISBN": 245,
     "Published": "2023-07-13T00:00:00",
     "Covering": "Soft",
-    "Format": 0,
+    "Format": 1,
     "TitleUDK": 1,
     "PublisherName": "Kletta",
     "Copies": [

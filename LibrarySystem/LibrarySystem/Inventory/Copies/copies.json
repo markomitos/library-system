@@ -44,8 +44,8 @@
   {
     "Id": 9399,
     "Status": 0,
-    "Price": 15,
-    "IsDamaged": false
+    "Price": 20,
+    "IsDamaged": true
   },
   {
     "Id": 57595,
@@ -64,5 +64,11 @@
     "Status": 0,
     "Price": 15,
     "IsDamaged": false
+  },
+  {
+    "Id": 85255,
+    "Status": 0,
+    "Price": 18,
+    "IsDamaged": true
   }
 ]

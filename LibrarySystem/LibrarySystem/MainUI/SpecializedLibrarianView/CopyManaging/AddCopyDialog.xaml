@@ -11,7 +11,7 @@
         <TextBox x:Name="priceTextBox" HorizontalAlignment="Right" Margin="0,34,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Number of copies" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="numberOfCopiesTextBox" HorizontalAlignment="Right" Margin="0,68,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="addBookButton" Command="{Binding AddCopyCommand}"  Content="Add book" HorizontalAlignment="Center" Margin="0,134,0,0" VerticalAlignment="Top" Width="140" Height="34" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
+        <Button x:Name="addCopyButton" Command="{Binding AddCopyCommand}"  Content="Add copy" HorizontalAlignment="Center" Margin="0,134,0,0" VerticalAlignment="Top" Width="140" Height="34" Background="#FF4FB53A" Foreground="White" Cursor="Hand"/>
 
     </Grid>
 </Window>
