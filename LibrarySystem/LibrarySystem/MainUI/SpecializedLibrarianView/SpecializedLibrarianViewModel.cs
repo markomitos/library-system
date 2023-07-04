@@ -23,6 +23,21 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
 
         public ObservableCollection<TitleViewModel> Titles { get; set; }
 
+        private string _loggedUsername;
+
+        public string LoggedUsername
+        {
+            get { return _loggedUsername; }
+            set
+            {
+                if (_loggedUsername != value)
+                {
+                    _loggedUsername = value;
+                    OnPropertyChanged(nameof(LoggedUsername));
+                }
+            }
+        }
+
         private ObservableCollection<Copy>? _copies;
 
         public ObservableCollection<Copy>? Copies
@@ -171,7 +186,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView
         {
             LoadTitles();
             _SpecializedLibrarianWindow = specializedLibrarianWindow;
-
+            LoggedUsername = Globals.LoggedUser.Username;
         }
 
         private void LoadTitles()
