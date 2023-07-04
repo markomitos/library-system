@@ -15,6 +15,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.CopyManaging.Commands
     {
         SpecializedLibrarianViewModel _viewModel;
         CopiesService _copiesService = new(new CopiesRepository());
+        BookService _bookService = new(new BookRepository());
         public RemoveCopyCommand(SpecializedLibrarianViewModel viewModel)
         {
             _viewModel = viewModel;
@@ -39,7 +40,7 @@ namespace LibrarySystem.MainUI.SpecializedLibrarianView.CopyManaging.Commands
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 Copy copy = _viewModel.SelectedCopy;
-                _copiesService.Remove(copy.Id);
+                _bookService.RemoveCopy(_viewModel.SelectedBook.ISBN, copy.Id);
                 SpecializedLibrarianWindow window = new();
                 window.Show();
                 _viewModel._SpecializedLibrarianWindow.Close();
