@@ -36,5 +36,25 @@ namespace LibrarySystem.Inventory.Copies
         {
             Status = CopyStatus.Available;
         }
+
+        public void ReportDamage()
+        {
+            IsDamaged = true;
+        }
+
+        public void Repair()
+        {
+            IsDamaged = false;
+        }
+
+        public bool IsAvailable()
+        {
+            return Status == CopyStatus.Available;
+        }
+
+        public void Reserve()
+        {
+            Status = CopyStatus.Reserved;
+        }
     }
 }

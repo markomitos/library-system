@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using LibrarySystem.MainUI.Commands;
+using LibrarySystem.Reservations.Commands;
 using LibrarySystem.Utils;
 
 namespace LibrarySystem.MainUI.ViewModels
@@ -30,6 +31,16 @@ namespace LibrarySystem.MainUI.ViewModels
             get
             {
                 return _logoutCommand ??= new LogoutCommand(_memberWindow);
+            }
+        }
+
+        private ICommand _showReserveDialogCommand { get; set; }
+
+        public ICommand ShowReserveDialogCommand
+        {
+            get
+            {
+                return _showReserveDialogCommand ??= new ShowReserveDialogCommand();
             }
         }
 

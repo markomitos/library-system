@@ -11,24 +11,20 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using LibrarySystem.BookBorrowings.BookReturn;
-using LibrarySystem.Inventory.Books;
-using LibrarySystem.Inventory.Copies;
 using LibrarySystem.Inventory.Titles;
-using LibrarySystem.MainUI.ViewModels;
-using LibrarySystem.Users.GUI.Views;
+using LibrarySystem.Reservations.ViewModels;
 
-namespace LibrarySystem.MainUI
+namespace LibrarySystem.Reservations.Views
 {
     /// <summary>
-    /// Interaction logic for LibrarianWindow.xaml
+    /// Interaction logic for ReserveTitleDialog.xaml
     /// </summary>
-    public partial class LibrarianWindow : Window
+    public partial class ReserveTitleDialog : Window
     {
-        public LibrarianWindow()
+        public ReserveTitleDialog()
         {
+            DataContext = new ReserveTitleDialogViewModel(this,new TitleService(new TitleRepository()));
             InitializeComponent();
-            DataContext = new LibrarianViewModel(this);
         }
     }
 }

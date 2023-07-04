@@ -11,11 +11,16 @@ namespace LibrarySystem.BookBorrowings.Borrowing
         private readonly BookBorrowingRepository _bookBorrowingRepository;
         private readonly MemberService _memberService=new MemberService(new MemberRepository());
         private readonly MemberRuleService _memberRuleService = new MemberRuleService(new MemberRuleRepository());
-        private readonly CopiesService _copiesService = new CopiesService(new CopiesRepository());
+        private CopiesService _copiesService = new CopiesService(new CopiesRepository());
 
         public BookBorrowingService(BookBorrowingRepository bookBorrowingRepository)
         {
             _bookBorrowingRepository = bookBorrowingRepository;
+        }
+
+        public void SetCopiesService(CopiesService copiesService)
+        {
+            _copiesService = copiesService;
         }
 
         public void Add(BookBorrowing bookBorrowing)

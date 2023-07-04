@@ -12,7 +12,7 @@ namespace LibrarySystem.Payments
 {
     public class PaymentRepository
     {
-        public const string PaymentsFilePath = "..\\..\\..\\BookBorrowings\\Borrowing\\payments.json";
+        public const string PaymentsFilePath = "..\\..\\..\\Payments\\payments.json";
         public ObservableCollection<Payment> Payments = new();
 
         public PaymentRepository()
@@ -33,6 +33,16 @@ namespace LibrarySystem.Payments
         {
             Payments.Add(payment);
             Save();
+        }
+
+        public ObservableCollection<Payment> Get(DateTime date)
+        {
+            return new (Payments.Where(payment => payment.Date.Date == date.Date));
+        }
+
+        public int GetTotalAmount(DateTime date)
+        {
+            return Get(date).Sum(payment => payment.Amount);
         }
     }
 }

@@ -30,5 +30,38 @@ namespace LibrarySystem.Reservations
             ApprovalDate = DateTime.Now;
         }
 
+        public Reservation(int id, DateTime reservationDate, DateTime? approvalDate, ReservationState state, string userJmbg, int? copyId, int titleUdk)
+        {
+            Id = id;
+            ReservationDate = reservationDate;
+            ApprovalDate = approvalDate;
+            State = state;
+            UserJMBG = userJmbg;
+            CopyId = copyId;
+            TitleUDK = titleUdk;
+        }
+
+        public Reservation(string userJmbg, int titleUdk)
+        {
+            ReservationDate = DateTime.Now;
+            State = ReservationState.Created;
+            UserJMBG = userJmbg;
+            TitleUDK = titleUdk;
+        }
+
+        public Reservation()
+        {
+            
+        }
+
+        public void AssignCopy(int copyId)
+        {
+            CopyId = copyId;
+        }
+
+        public void PutOnWaitList()
+        {
+            State = ReservationState.Waiting;
+        }
     }
 }

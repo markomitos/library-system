@@ -1,15 +1,19 @@
-﻿<Window x:Class="LibrarySystem.MainUI.LibrarianWindow"
+﻿<Window x:Name="librarianWindow" x:Class="LibrarySystem.MainUI.LibrarianWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibrarySystem.MainUI"
         mc:Ignorable="d"
-        Title="LibrarianWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="LibrarianWindow" Height="480" Width="661" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-6">
-        <Button Content="Borrow book" HorizontalAlignment="Left" Height="38" Margin="52,44,0,0" VerticalAlignment="Top" Width="124" FontSize="14" FontWeight="Bold" Click="Button_Click"/>
-        <Button x:Name="handleMembersButton" Content="Handle members" HorizontalAlignment="Left" Height="40" Margin="244,44,0,0" VerticalAlignment="Top" Width="150" FontSize="14" FontWeight="Bold" Click="handleMembersButton_Click"/>
-        <Button x:Name="ReturnBookButton" Content="Return book" HorizontalAlignment="Left" Height="46" Margin="52,118,0,0" VerticalAlignment="Top" Width="124" Click="ReturnBookButton_OnClick"/>
-
+        <Button x:Name="borrowBookButton" Content="Borrow book" CommandParameter="{x:Reference Name = librarianWindow}" Command="{Binding ShowBookBorrowingViewCommand}" HorizontalAlignment="Center" Height="45" Margin="0,92,0,0" VerticalAlignment="Top" Width="160" Cursor="Hand" FontSize="18"/>
+        <Button x:Name="handleMembersButton" Content="Handle members" CommandParameter="{x:Reference Name = librarianWindow}" Command="{Binding ShowMembersHandlingWindowCommand}" HorizontalAlignment="Center" Height="45" Margin="0,239,0,0" VerticalAlignment="Top" Width="160" Cursor="Hand" FontSize="18"/>
+        <Button x:Name="ReturnBookButton" Content="Return book" CommandParameter="{x:Reference Name = librarianWindow}" Command="{Binding ShowBookReturnWindowCommand}" HorizontalAlignment="Center" Height="45" Margin="0,166,0,0" VerticalAlignment="Top" Width="160" Cursor="Hand" FontSize="18" />
+        <Label Content="Librarian" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="logOutBtn" Command="{Binding LogoutCommand}" Content="Log out" HorizontalAlignment="Left" Height="31" Margin="523,391,0,0" VerticalAlignment="Top" Width="108" FontSize="14" Background="#FFEA5454" Foreground="White" FontWeight="Bold" BorderBrush="#FFF96363" RenderTransformOrigin="0.515,0.523"/>
+        <Label x:Name="loggedUsernameLabel" Content="{Binding LoggedUser}" HorizontalAlignment="Left" Margin="111,396,0,0" VerticalAlignment="Top" FontSize="14" Width="193" Height="34"/>
+        <Label x:Name="loggedLabel_Copy" Content="Logged in:" HorizontalAlignment="Left" Margin="30,395,0,0" VerticalAlignment="Top" FontSize="14" Width="76" RenderTransformOrigin="0.526,0.581" Height="38"/>
+        <Button Content="Payment Reports" Command="{Binding ShowPaymentReportsCommand}" HorizontalAlignment="Center" Height="47" Margin="0,311,0,0" VerticalAlignment="Top" Width="160" FontSize="14"/>
     </Grid>
 </Window>

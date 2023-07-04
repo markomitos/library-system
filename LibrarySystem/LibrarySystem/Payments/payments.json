@@ -1,1 +1,27 @@
-﻿
+[
+  {
+    "Amount": 2250,
+    "Date": "2023-07-03T13:33:25.686284+02:00",
+    "Reason": "Fee payment"
+  },
+  {
+    "Amount": 3050,
+    "Date": "2023-07-04T13:33:25.686284+02:00",
+    "Reason": "Fee payment"
+  },
+  {
+    "Amount": 3360,
+    "Date": "2023-07-04T13:34:42.4533087+02:00",
+    "Reason": "Fee payment"
+  },
+  {
+    "Amount": 3378,
+    "Date": "2023-07-04T15:45:36.5344466+02:00",
+    "Reason": "Fee payment"
+  },
+  {
+    "Amount": 25,
+    "Date": "2023-07-04T15:48:54.4659615+02:00",
+    "Reason": "Fee payment"
+  }
+]

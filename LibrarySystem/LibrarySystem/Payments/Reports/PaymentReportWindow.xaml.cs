@@ -11,24 +11,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using LibrarySystem.BookBorrowings.BookReturn;
-using LibrarySystem.Inventory.Books;
-using LibrarySystem.Inventory.Copies;
-using LibrarySystem.Inventory.Titles;
-using LibrarySystem.MainUI.ViewModels;
-using LibrarySystem.Users.GUI.Views;
 
-namespace LibrarySystem.MainUI
+namespace LibrarySystem.Payments.Reports
 {
     /// <summary>
-    /// Interaction logic for LibrarianWindow.xaml
+    /// Interaction logic for PaymentReportWIndow.xaml
     /// </summary>
-    public partial class LibrarianWindow : Window
+    public partial class PaymentReportWindow : Window
     {
-        public LibrarianWindow()
+        public PaymentReportWindow()
         {
+            DataContext = new PaymentReportsViewModel(new PaymentService(new PaymentRepository()));
             InitializeComponent();
-            DataContext = new LibrarianViewModel(this);
         }
     }
 }

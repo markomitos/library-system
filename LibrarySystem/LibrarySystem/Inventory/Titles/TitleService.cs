@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,20 @@ namespace LibrarySystem.Inventory.Titles
         public void Edit(Title title)
         {
             _titleRepository.Edit(title);
+        }
+        public int GetAvailableCopy(int titleUdk)
+        {
+            var copyId = -1;
+            Title title = Get(titleUdk);
+            for (int i = 0; i < title.Books.Count; i++)
+            { 
+                copyId = _bookService.GetAvailableCopy(title.Books[i]);
+                if (copyId != -1)
+                {
+                    break;
+                }
+            }
+            return copyId;
         }
     }
 }
