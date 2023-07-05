@@ -6,7 +6,7 @@
     "IsBookReturned": false,
     "IsBookLost": false,
     "CopyId": 3,
-    "Jmbg": "5678901234567"
+    "Jmbg": "1234567891234"
   },
   {
     "Id": 635,
@@ -15,7 +15,7 @@
     "IsBookReturned": false,
     "IsBookLost": false,
     "CopyId": 4,
-    "Jmbg": "7890123456789"
+    "Jmbg": "1234567891235"
   },
   {
     "Id": 636,
@@ -24,6 +24,6 @@
     "IsBookReturned": false,
     "IsBookLost": false,
     "CopyId": 5,
-    "Jmbg": "5678901234567"
+    "Jmbg": "1234567891234"
   }
 ]

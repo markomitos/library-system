@@ -4,7 +4,7 @@
     "ReservationDate": "2023-07-02T15:23:58.0357281+02:00",
     "ApprovalDate": null,
     "State": 1,
-    "UserJMBG": "1234567891011",
+    "UserJMBG": "1234567891234",
     "CopyId": 1,
     "TitleUDK": 1000
   },
@@ -13,7 +13,7 @@
     "ReservationDate": "2023-07-03T15:23:58.0357281+02:00",
     "ApprovalDate": null,
     "State": 1,
-    "UserJMBG": "1234567891011",
+    "UserJMBG": "1234567891234",
     "CopyId": 2,
     "TitleUDK": 1001
   },
@@ -22,7 +22,7 @@
     "ReservationDate": "2023-07-04T15:23:58.0357281+02:00",
     "ApprovalDate": null,
     "State": 1,
-    "UserJMBG": "1234567891011",
+    "UserJMBG": "1234567891235",
     "CopyId": 3,
     "TitleUDK": 1002
   },
@@ -40,7 +40,7 @@
     "ReservationDate": "2023-07-06T15:23:58.0357281+02:00",
     "ApprovalDate": null,
     "State": 2,
-    "UserJMBG": "1234567891011",
+    "UserJMBG": "1234567891235",
     "CopyId": null,
     "TitleUDK": 1003
   },
@@ -85,7 +85,7 @@
     "ReservationDate": "2023-07-11T15:23:58.0357281+02:00",
     "ApprovalDate": null,
     "State": 1,
-    "UserJMBG": "1234567891011",
+    "UserJMBG": "1234567891235",
     "CopyId": 10,
     "TitleUDK": 1009
   },
