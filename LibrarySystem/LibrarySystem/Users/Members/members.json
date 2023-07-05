@@ -31,5 +31,16 @@
     "Phone": "06358882451",
     "Email": "perap@gmail.com",
     "Username": "perap"
+  },
+  {
+    "IsEmailWarning": false,
+    "Type": 0,
+    "Jmbg": "1234567891011",
+    "FirstName": "Michael",
+    "LastName": "Jones",
+    "Address": "Bulevar Oslobodjenja 6, Novi Sad",
+    "Phone": "06358882451",
+    "Email": "michaelj@gmail.com",
+    "Username": "michael_jones"
   }
 ]
